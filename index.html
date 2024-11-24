@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Looking g͔ͪļ̙̩̍̒ã̝͙͍͖̀͆̑̍ͭs̳̾̀ͦs̴͉̺̯͒̌̆̎̆͐͢</title>
+    <link href="./style.css" rel="stylesheet"/>
+    <script src="./howler.core.min.js"></script>
+    <script src="./utility.js"></script>
+    <script src="./engine.js"></script>
+    <style>
+      .inteltrax {
+          --light: pink;
+      }
+
+      .government {
+          --light: rgb(248, 251, 251);
+      }
+
+      .inbox {
+          --light: rgb(36, 251, 255);
+      }
+
+      .news {
+          --light: rgb(255, 235, 197);
+      }
+
+      .emergency{
+          --light: rgb(245, 39, 39);
+      }
+
+      .science {
+          --light: burlywood;
+      }
+
+      .rumour {
+          --light: SlateBlue;
+      }
+
+      .opinion {
+          --light: Moccasin;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="screen"></div>
+    <div id="title-board" hidden="hidden">
+      <div id="title">shuttle five</div>
+    </div>
+    <template id="audio-data">
+      <audio id="audio/clips/click" src="assets/click.mp3"></audio>
+      <audio id="audio/clips/move" src="assets/buzz-grain.mp3" volume=".2"></audio>
+      <audio id="audio/clips/notification" src="assets/notification.mp3"></audio>
+      <audio id="audio/clips/blip" src="assets/ui-confusion.mp3"></audio>
+      <audio id="audio/clips/click2" src="assets/click-2.mp3"></audio>
+      <audio id="audio/clips/error" src="assets/error.mp3"></audio>
+
+      <audio id="audio/music/mundane" src="assets/info-loop.mp3" loop volume=".1"></audio>
+      <audio id="audio/music/mystery" src="assets/sssm-tapes.mp3" loop volume=".1"></audio>
+      <audio id="audio/music/evolution" src="assets/sssm-flesh.mp3" loop volume=".1"></audio>
+      <audio id="audio/music/credits" src="assets/SCP-x7x.mp3" loop volume=".1"></audio>
+    </template>
+    <template id="window-data">
+      <div class="inbox" id="inbox" title="Electronic Inbox" data-pinned>
+        <h1>Electronic Inbox</h1>
+        
+        
+        <ul>
+          
+          <li>[Oct.22.1989 New Info|email-2]</li>
+          <li>[Oct.16.1989 Leaked Incident Report at Joint Base Anderson-Kotova|email-3]</li>
+        </ul>
+      </div>
+      <div id="inbox-update-1" title="Electronic Inbox" data-pinned>
+        <h1>Electronic Inbox</h1>
+        
+        
+        <ul>
+          <li>[Nov.05.1989 Has it arrived yet?|email-1]</li>
+          <li>[Oct.22.1989 New Info|email-2]</li>
+          <li>[Oct.16.1989 Leaked Incident Report at Joint Base Anderson-Kotova|email-3]</li>
+          
+        </ul>
+      </div>
+      <div id="inbox-update-2" title="Electronic Inbox" data-pinned>
+        <h1>Electroni Inbox</h1>
+        
+        <ul>
+          <li>[Nov.05.1989 Something is wrong|email-4]</li></li>
+          <li>[Nov.05.1989 Has it arrived yet?|email-1]</li>
+          <li>[Oct.22.1989 New Info|email-2]</li>
+          <li>[Oct.16.1989 Leaked Incident Report at Joint Base Anderson-Kotova|email-3]</li>
+        </ul>
+      </div>
+
+      
+
+      <div class="inbox" id="email-1" title="Has it arrived yet?">
+        <p>I’m sorry if I sound annoyed, but if they discover that hard drive is missing, they will have my head. You have no idea what I had to do to get it out of quarantine.</p>
+        <p>When you install it find what you need to find and return it as soon as you can.</p> 
+        <p></p>
+        <p></p>
+        <p></p>
+        <ul>
+          <ul>
+            <ul>
+              <ul>
+                [Install hard drive|installing-hd]
+              </ul>
+              
+            </ul>
+          </ul>
+        </ul>
+      </div>
+
+      <div class="inbox" id="email-4" title="Something is wrong">
+        <p>ḩ̷̷̵̴̨̪̞̮̼͍̥̞͔̻̭͕̠̫̲̳̭̝̯̳̖̫̜̜̦̲̘̬̼̼̪̩̩̯̭̻̬͙ͣ́̓ͪͬ̀͆̏̃̄͑̾ͮ̒̋ͪ̃̐͐̈́̅͌͊ͬ͑ͬ̇̋͂ͮ̒ͮͯ̉͆̊̀̀͑̿̿̚͘̕͟͢_̴̸̴̷̨̨̛̣͎͍͇̭̗͔͖̱̙̹̦̗͔̦̭͎̺̣͖̭̝̣̟̞̠͈͇̭̻̬͈̱͚̬̊͑̃̏̈́̿̐̏ͩͦ̃̏̈́ͯ̅̈̾̑͗͛ͨ͌̑̓ͦ͑ͥ̍͒ͬ̓̎͆ͤ͆ͯͬͮ̾͘͘̕̕͘͟͟͢͟͡͠ͅͅȩ̷̸̧̛͙̱̩̣͚̜̠̩̰̣̠̫͈͔̯̹͓̤̞̲̱͖͉̳̮͙̰̟̲̎̈́ͣͩ͐̇ͥ̾̌̀ͣ̀́̾͐̋͊ͥͯ̈̽̀̓̇͘͢͟͢͞͞͞͡͠_̴̸̴̛͇̻̝̳̥̪͚̬̼̯̳͈͔̟̐̓ͬ̇̈͊̇̍͊ͯͥ͋͂͂ͣ̆ͦ́́̆̓̎͂̽ͩ̂̊͋ͧͯͫ̚͜͢͢͢͡͠͞_̶̶̵̛̙̞̥̗͈̜̟̞̼͍̪̙̖͓͈͙͚͔̺̥͔̖̭̰̤̘̎ͨ̊ͯͦ́̂̎ͥͪ͌̑̐̀̒́̇͊̅͌̓ͥ̃͆̎̒͗̋ͪ́̋̇͌̽͂ͣ̊ͦͯ̕͘͘̕͟͟͟͜͜͢͞_̴̸̶̴̸̴̶̶̢̨̨̡̧̛̛̹͓͉̥͚͇̩̮̜̟̼̻͕̝̟͍̯͓͙̬̗̠͓̬͈̺̦̯͈̰̜͖͚̠̺̤̭͖̘̭̥̣̖̻̜̖̙͙̤̦̜̯̙͖͉̫̖͉̮̙̼̻͚̖̼͖͐̐̑̿ͯ͊̍̈ͦ̌̆̂̍ͮ̈́̋̀͑͛̋ͣ͋͛ͦ̿ͩ̉͗̐ͧ͑̍ͧ́ͦͬͦ̅̽̒̑ͫ̇ͬ͒̆͊̎ͪͮ̃̽̃̃̍̐̄ͭ̆̀̓̀ͪͣ̿̒̇͛ͣ͌̒ͯ̚̚̕̚̚͟͟͜͜͜͡͡͝͠͠͝͞ͅͅ_̵̸̷̵̸̴̷̴̴̵̷̴̴̶̷̵̸̶̧̢̢̨̡̢̧̡̨̢̢̡̡̛̛̛̩͖̦͍̜̳̯̩͈͚̲̯̜͎̭̬͙̼̼͔̱̖̙̯̜̲͓̮̞̬̪͚̠͚͙͍̯͙͉̙̬̝̩͇̳̳̝̝̤̫̥̹̥̞͉̖̲̖͚͇̟̣̗̜͓̟͈̦͙̮̙̬̮̠̰̗͖̫͔̟͓̼̗̂̀ͥͦ̉̈̍̐̋͊̒̽ͥ̀̉̒̀͐͋̐͊ͣ̅ͪ̽̾͊̃ͧ̎̾̎ͪ͐̽ͦͯͥ̎̉ͤ̓ͤ̉́̽̎̐̑̀͋̾ͥ̌̑̌͛͋ͩ͐͊̓͋̀ͥ̀͆̑̆̂̍̎̓̓ͬͤ́̽̿͊ͣ̅̍ͩͩͦ̀̓̀͐̈́͐ͪ͆̏ͨͩ̒̏̃̀ͯ͊͊̈́̓͌̓̏̎͒̔͑̀̅ͨ̅͋͘͘̕͘̕̕͘̕͜͜͢͢͟͠͠͡͝͞͝͝͠͠͝ͅ_̸̶̢̡̨̛̬̱̖̤̤̘̺̱͚̞̹̜̥̪͈̜̗͍͈̜̖͍̰̙̫̻͉͙̜͗̇ͩ̌ͨ͐͊ͮ̋̀̿͊̔̉́̀͂͌̿͛͒͆̆͑ͧ̐͌̇ͫ̌ͣ̋̌ͧ̎̾̒̆͋ͣ͒ͫ̂͂͟͜͠ͅͅͅ_̴̶̡̛̥͓̳͚̙͍͚̫̩͉̓ͨ̽̾̓͗̎ͨ̎̉̉̉̆̆̄ͫ̈͑̍͘͜͝_̷̸̷̨̨̪͇̝̤̞͎͔̱̖͈̺̣͓̮̜̥͓̍̽ͨ̽ͮ̓̐ͣ͌͋ͫ͛̌ͬ͒̀ͩ̚̕͡͡͠_̷̴̶̵̵̧̢̧̛̛̛̥̤̤̪̞̬̯͇̞̘̙̖̳̳̭̼̺̜̟̲̣̪͈̤̻̬͎̱͎͙͚͕̦̮͎̞̥̝̫̳̞̰̝͓͍̣̯͎̜͙͉͇̜̱͆͌̾̋̽́ͪ̓̎͐̈̀̌̄̀̐́͌́ͭ̀͆̊ͩͤ̌̿̊͒͂͋̒̌͐ͯ̉ͥ̽ͬͫ̀ͥ̆̿ͭ͂ͫ̿ͫ͋̇͌ͦ͘̚͘̕͢͟͢͜͜͢͡͝͞͠ͅͅͅͅ_̷̷̷̸̸̴̷̵̸̴̢̧̡̧̨̧̨͈̦̤̹͔̻̺͓̗̞̮͓̮̼͕̯̳͙̳̲̳͓͇̦͖̬̰̗̜̗͉̻̠̙̲̙̱͇̼̟̻̼̝͖̀̇ͫ̈̉̍̇̏̀͛ͭ̑͛̔ͥ̄͒̒̌ͬͭ̓̎̀̿͑̃̈ͭ͒̌ͩͭ̿ͯ̈̑ͬͧ͛̊̆̑̍̈͂́̋̀̓̈̂͗͐ͦ͆ͣͫͫͬ̒̚͘̚͘͢͟͢͟͜͝͝͠͝͝ͅͅͅ_̡͙̦͚̳͈̙͈̯͇ͨ͐́͛͝_̡̜̟̣͉͈̝̓͐̐̀̇ͥͤ̎͆ͮͪ͂ͣ̕̕̕̕͟_̸̵̷̷̢̞̯̦̼̜̪̤͚͕̯̲̲̙͍͉̫̥͙͗̒̃ͫͪ͛̾͂̔̀ͫ͊̈́ͤ̀͆ͦ̚͘͜͜͟͞͝͞_̸̛̜̲͕̬͉̰̞͎̺̟͎͕̘̝̟̱̄ͩ͑̊̋̃̇͗̀́̌͒̾ͥ̀̚̚͞͞ͅ_̛͍̰̞̖̟̓ͨ͛ͫ͊͢n̶̵̶̵̡͖̹̪͙̮̹̗̦̖͕̫̠͔͇̺̓̏̓̀̾ͮ̋ͣͯͬ̓̅ͯ̉ͯ͌͛͊̾͊ͭͯ̈͒̈͌ͮ̐̆ͧ͌̊̐̕̚͘̚͝ͅ_̶̴̷̴̷̧̢̨̛̛̦͚̠̟̦̜̳͍̜͇͖̱͔̰̫̩͎̥̭͈̯̘̮̩͚͔̫̭̝̞̬̤̖̜̞̱̯̺͖͖̬̪͔̖͙͍͍̠͉̬͇̙̯̘͔̬̦̗̞̻̙̪̭ͬ̄ͬͭ̽͗́̑̈̍͋̈ͭ̎̄͆͐̊ͩ͊͆̄̿́̀̂̉͑ͦ̾̓͊̐̈͗̃ͦ̂̒́̑ͤ̍̌͒̓ͤͪ̀ͯ͒̓̄̃ͬ͛̒́̌ͪ̔̓ͦ̚̚͘̕͢͜͢͢͟͟͝͠͞͞͞͝_̵̷̢̢̛͖͈̪͉͎̥̣͍̱͍̥̟̫͎͇͕͍͓͙̱̀̀ͩ͂̓̾̃͋̔ͮ͂ͤ̏̐ͪͣ͌ͪ̅͌ͥͪ̌ͧ̉ͪ͗ͩ̈́̀̉̽ͭͣͬ̕̚̕͟͝͝͠_̵̸̶̴̢̢̩̯̳̼̠̩̰̙̥̹̹͍̠̖͉͌̒͋̍̀̏͒ͩ̀͌͌ͨͮ̇̈́ͤ̌ͯͤ͂̓ͮͭ͘̚̚͢͡͠ͅ_̶̢̛͔̪̰̩̯͍̲̼͚̠̤̯̹͔͙ͥ͌̈͑ͧ̂́̾ͨͣ̽ͭ͗̉̏ͯ̃͒ͧ̕_̵̸̴̸̶̶̸̶̴̴̷̢̡̧̛͎̣̫̺̮̗̦̮̺̥̟̟͇͙͇̞̱̥̬͔̜̻͚̟̤͈̻͇̦̻̲̦̻̙͎͔́͛̓ͯ̏̒̅͊̽ͥ̓̀ͥ̈́͊̊́ͫ̏̓́̓̉̊̑ͬ̔̍̐̋ͯ͊ͯͫ̾ͨͫ̌̾͂ͦ̀̌ͪ̚̕͜͜͜͡͞͡ͅͅ_̶̵̶̸̷̶̸̶̵̷̴̵̵̴̸̶̵̡̡̧̢̢̨̡̨̨̧̢̧̨̧̡̧̢̧̛̛̛͍̗̮͇̞͈̭͔̻̩͙̪͎͈̰̘̮̟͉͍͙̺̥̺̩̣͎͖̹̥̬̻̥͖̲̠̲̳͙͖͚̞̞̟̭̝̭̺̘͉͎̺̠̬̰͈̹͓̯̤͎̫͇͖̟͓̠̹̭̜̭̼̫̣̩̞̖̪̮̬̞͈̻̮̻̻̱̖̲̣̰̜͙̬̺̫̲̯̬̦̣̰͓̬͍̬̹͉̙̭͚̺̼̺̟̯̮̰̞̹͓̣̰̣̯̟̝̖̪̬̜͔̳͉͚͔̙͙͕͎͙͓͓̠̪͙̠̟̙͇̳̭̗̩̗̺̙̗̩͖̲̠̪͔͎̫͎͇̥̜̋̂̀̇̒͆̏ͣ̽̌͂͌̉̔̏͛͑ͬ̿́ͧͧ̓ͧͪ̒ͪ͌͗͛ͩ̂ͭͮ́̎̓͒͂̌͌̌̇̇ͫͤͤ̀̏ͫ̓̏ͪ̇͐ͦͭͧ͗ͨ̋͊ͣ͊ͨ́̋̌ͭ̍̔ͮ̆̀̔ͬ́̾̒́̋̇̊̏ͫͣ́͆̽̌̇̀̋͂̑͂ͩ̈́̓ͮ̊̎ͩͩ̊̄̒͆̄̉͗̒̆̈́̋͌ͫͯ̋̍ͯ̋͂͆ͮ̆̐͑̔͐̀́͒̔ͤ̽̆͂ͣͮͪ͑̍͐̅ͬ̓͑ͧͭ̇ͧ̃̇͆̇̈́ͭ̀̉̽ͭ́̇͗͊̓͑ͤ̆͂̃̎̏̅ͪͬ̐ͥ́̀̿̄̂͛̓̉ͦ͂͋̀ͯͨ͊̎͗̃͑ͨͣ̊ͧͫ́͐ͭͨͬ̅̏̒͂̽͆ͨ̌͐̕̚̕̕͘̕̚͘̚͘͘̕͘̕͘̚͢͟͢͢͢͜͜͢͟͜͜͢͟͟͢͜͢͝͝͝͠͝͞͠͝͡͝͞͝͝͞͡͠͞͠͡͝͞͡ͅͅͅͅͅr̷̴̶̶̷̶̴̴̡̨̧̢̨̡̢̨̡̡̡̧̡̛͚̞͇͓̜̠̭̮̞̜̗̯̳͔̟̠͓̮̼̝̫̰̮̼̣̖̜̖̱̜̱̥̤̠̩̦̻̮̖̟̗̭̫̻̙̲̙̜͉̹͚̮͇̹͚̮͖̮̻̹̦̟̪̫͕̫̫̺͉̲̗̳̘͋́̀ͧ̀ͨ̽͂͆͛͌͒ͣ̄̃͒̇͐ͤ̑͗̾͆͑̃̀͗̽̍ͦ͐̆ͧͪ̋͊ͦͧͫ̋̄͌̇ͧ͒̂̄͋͋ͣ̓̏̑͗ͤͬ͂̐͌ͨͨ̅̋͒ͮ̔ͩ̽ͧ̀̄ͨ̌̐ͫͥ̃͛̈̉̈́ͯ̕̕̕̕͘̚͘̕͘͜͜͜͞͡͠͠͡͝͠͠͞ͅ_̢̢̛̝̭͇̦̟̏ͥ̄ͯ̌̂͌̿̃͘̚͡_̸̸̷̶̴̴̴̧̨̛̛̟̞͇̘̪̥̰̼͈͍̺̟̜̖̭̲̺̮̺̯͎̰͙̯̠̺̰͇̗̹̦̳̘̥͙̳̘̥̮̊̀͗͗̄ͥͩ͂̒͛̾ͪͥ͐͂ͪ́̉̏̂ͦͭ͂̂̐ͬ͒͒ͮͣͬ̍ͫ̽̈̾ͨͧ̇͊ͥ͗̇ͤ̋ͨ̽̆̄ͥ́͌ͥͩ̾̔̀ͮ͆ͥ͜͜͠͝͡͞͡͡͡͡͝͡͠_̷̧̡̧̞̠̫̙̙̫̼̦͕̣̻͈͈͈͒̽ͧ̌̍͐͗̀̔̐ͨ̑ͧͩ͌ͯ̕̕͢͜͢͟͢͝͠͠_̵̸̢̨̰͙̯͙͔̗̓͛ͭͮ͆̍̊́̋̉̏͝͞͝_̸̧̛̣͖̮̲͚̥̯̩͉͚̫̱̼̗̭̗̼̼͙̯̞̺̞̟̓ͥ̆̾ͭ͐̋̓̿̿̾ͦ͋͂̂͆ͥ̕̚͟͝͠͞_̢́́̽ͦ̓͜_̷̷̴̡̧̨̢̡̢̛̛̛̯̫͇̦̥̗͎̺͕̞̠̬̬͙͚̤͈̗̙̰̗̖̭̠̖̰͕̗̹͚͋̊͌ͮ̐ͫ̀̓ͭ̂ͤ̾ͭ̎̇͑ͧ̆ͬ̀̇ͯ̀̔̔̉ͨ̎ͩ̌̒̓͗ͩͩ̔̈ͦ͒̂̚͟͜͠_̵̥͕̪̺̟̦̭͈̩̠̤̯̖͍̞̙͋ͣ̃̏́̒ͣͮ͒ͥͣ̿ͩ̌͋̃́̆̀ͪ̕͘͘͟͟͠ͅ_̴̢̨̠̝̰̤̼͉͍͍̘͉̣̖ͩ̈́̄ͪ́ͪ̒̃́̏̇͐̍̈͂ͫͬͦ͡͝ͅ_̷̴̷̵̴̛̛̪̺̭̫̱͖̰͎͇̰͖̫͆̽̉̈́ͤ́͌ͥ͌̋ͬͩͨ͗̏́ͨ̑̋̿͆ͭ̔̒̈́͢͡ͅͅ_̸̴̷̸̷̴̵̸̵̵̵̷̴̨̨̢̢̡̨̛͍̻̗͔̜͍̗͕̯̦̗̠̪̬̻̪̳̝͔͇̰̣̘̥̦̖̬̳̰̫̹͎̞̝͍̬̗͍̗͓̦̣̮̼͎̺͓̲̞͓̠͉̞͉͖̙͍͖̞͚̬̯̬̻̳͉̥̺̗̞͔̪͕͖̮͑̔́̄ͪ̏̀͑̽̋ͪͬͫͪͥͤ̒͛̆̓ͯ̌͊́́̅ͦ̄ͭ̅͐͌͋ͨ̇̌͛̒̋̓̀̑̊̿̊̅ͧͫͭ̉́̂̒̄̈́͋̒̎̀͂͂ͪ͌ͬ́͛͑̔̉̈́͌ͦͫ̒ͮ̋̓̑̏͛̂ͮ̿͆ͨͯ̔̿ͬ̈̉ͣ̀ͣ̑ͤͨ̇ͬͨ̕̕̚̕͜͢͢͜͜͠͠͞͡͞͡͞͡ͅͅ_̴̸̵̶̶̷̴̶̡̧̨̨̡̡̢̧̢̢̧̛̛̪̜̟͍͇̥̩̹̮̪̼̰̰̺̳͖̲̹̺̣͓̘͉͓̖͈̠͔̞̮̺̖͕̬̬̭̹̗͉̙̬̜̯͔̪̻̘̘̭̤̥̩̫͖̳̻͚̺̘̜̩͈̺͎͚̖̗̖̣͔̦̯̳̯̖̌̓̅ͭͮ̒̈́̇ͫͦ͐̒̀ͤ̆̇ͥ̍ͥ̄̌̇̌̽̀̋̽͂ͧͯͦ̾͌ͨ̅͂ͭͩͮ̒̂́͐̎̒̊ͥͭ̊͐̄ͥ͌̂̃̐̀́̎͋̊͗̋ͮ͗̅͌̔̃̍̎̉̽ͩͦ̓̄ͪ̑̍̈ͬ̏ͧ̑̾̕̚̚̚͘̚̚͢͢͟͢͜͢͜͡͡͡͠͡͝͝͝ͅͅͅͅͅy̵̴̶̵͍̞̫̮̟͇͌̿̆̄ͤ͋ͩ͗̌͒_̷̴̡̛̛̠̜͇͕͉͚̺̫͔͕͍̣̱̓̽͐̏ͨ̃̂͛͆̄́̎ͥ͒ͨ͊́̄ͩ͗̒̓̒͟͟_̷̨͉̮͎ͯ͛͗̌͘͡_̵̷̴̷̡̨̛͎̹̼̣̻͈͇͔̹̼̘̜̤͓̲̰͇͈̣͙̞̳̝̘͕͍̭̜̆̓̾ͫ́̓͑͛̊̀̐̌̍̓̀̂̀͛ͯ̉̽̓ͦͯ͐̈͛̅̑͗̓̎̏ͩ̐͘ͅ_̸̧̨̝̻̻͙̠̞͖̩̟̰͇̠̮͇̝̹̖̪̼̭̻̼͎̬̙͇̑̀̋ͩ̈́͛́̉́̈́͛̾̾̀͆ͫ̽ͫͮ̉̑̂͒ͥ̓̇̋̍ͤͮ͘̚̚̕͢͝͠͡͡͞_̵̶̷̷̸̸̶̷̶̷̵̶̴̴̵̶̶̴̵̶̷̷̶̧̢̧̡̡̧̨̢̨̨̡̧̡̨̢̧̛̛̛̛̛̛̛̛̛̠͔̙͖̥̟͈͍̹̭̘̤̙̟͚̞̮͉̫͎͚͔̖̪̻̻͉̙̣͓̥̳̲̱̳̪̤̘̰̯͙̼͖̮̣̼̤͔͕͙͙̖̟͚̙͓͓͍̣͉̟̻̲̙̬̮̦͉͉̰͕̼̫̖̭̹̼̲̼̥̼͖̯̮̺̙̹̲̯̜̫̪̜̜̠̜̘̯͎̲̜͔͎̩̗̝̻͉̦̼̲͓̭͚̦̟̤̫͚͓͌̿͑́̋ͪ̎͐́ͤ̔̓̔̅̊̏ͨ̒̋̌͑͐ͫ̑̑̂͊͛̓ͦ̿̄̂ͪ͑̆̐̿̄̀̄̀̃̋̒̌ͧ͋̒̔̋ͩ̑͂ͪͫ́ͥ̈́ͪͮͮ̇̌̓͛͐̍̓ͦ̿͐̍̓̉ͥ̈̀̍̑ͧͪͣͨ͛̈́̇͊̓̋̒ͤ̅͒̒̽͂͑̐̔͒͒̋̅̀ͪͤ̍̇̒̌̔̽̋ͮ̇͛̋ͤͧͩ͋̋̀̀ͤ͐̉̔ͩͪ̂̔͌̀ͭ̒͂̌̍͗ͬ̾ͥ̽̇̒̋͑̆̀̒ͫͨͪ̌̃̀̌͆̑ͥ́̾͒ͨ̂̅̒ͬͤ͗͋ͮ͘͘̕̚̚̚̕̚̚̚͘͘̕͢͜͢͢͜͢͢͟͢͢͜͜͟͞͠͝͠͞͞͝͞͞͡ͅͅͅͅ_̸̷̴̷̵̷̷̸̴̷̡̧̡̡̧̡̧̨̨̡̛̛̰̲̟̲̣͎̘͇̘̦͔̙̬͍̭͓͍̩̱̩̮̣̣̹͙̣̣̪̠̰͍̩̲͈̦̼̖̭̘̫̬͔͖͍̻̳̟̬͕̻̖̞̗͎̙̠͎͎̝̩͚̜̗̩͈̘̥̯̙̬̤̗̥͕͎̻̮̹̖̤̮͔̘͓̰̠̫͔̻̙͖͍̼̲̰͎̼̦͕͕̩̖̘̭͍̭̫̝̱̦̯̲̣͕́͒̋͂̑̿̒̋̅ͣͪ̌̽̔̎̄̏ͯͮ͆̊̈́̒ͫ̈́͊̐͋ͦ̌̄ͯͤ̐̾͒̓ͭͭ̓̈́ͫͦ́͆̀̂̄̿̒ͣͭ̒̿ͭ͊̋ͮ̑̏̈͋ͤͪ͊ͪͨ͋̍ͫ͒ͪ̎ͬ͆͐͆̒͗̓̍͌͊̿́ͯͧͣ͆̍͂̇̓̑̔̽̂̀͂͛̿̅ͩ͑̓̍ͮ͆ͥͪ͗̿͌͑́ͥ̑̏ͬ͊̅ͯ̌ͦ̉̄̍̋̍ͧ̈ͣ̎͆ͨ͗ͮ̾̊̒͂̌̃ͫ̉̉͘͘͘̚̕͘͘͘̚͘͟͟͟͢͜͜͟͡͡͡͝͠͝͡͞͞͞͠ͅͅͅͅ_̶̷̷̴̢̧̨̛̛̹̯̤̝͕̤̪̘͈̯̣̘̹͈̜̻̣͓͙͓͔͓̜̺̠̱̺̭ͯ̓ͪͦ̒ͥ̎̏̐ͮ͋͛ͫ̌̄̊ͤ̀̊͆̅̽̉̀̓̅̔ͤͭ͑̕̕̚͟͟͟͟͢͡͝͝͝ͅ , I'm getting reports from the quarantine facility, its really bad. Worse than I thought. People are getting sick̷̶̢̛̘̙̟̦̞̤͕̲̻̍ͮ̇̅̿̿̏ͫ̐ͨ̋̋̈́̊͑ͨͭ̾ͨ͊͂̂̕̕͟͢͞. W̱̺_̟̲͇͍̟͍̝̘̳̪̪̥̱̓ͭͮ́̐ͧͭ͐͒̿̋̌̌ͯ̓̕͝͝͞͠h̸͖͒ͬ̍̽̈ͩ_̝͈͒͊͠ą̧̛̰̰͈̯̺̳̀̽͐͛̑͠_̧̭̆̿̐ͤ̿t̴̸͍̮̗̜̪̻̖͎̜̲̓̇͊́̏̓́ͮͦ́ͮ̂͌͌̂ͮ́̊͛͑ͪͤ͐͛͝͝ t̷̞̙̤̦̼̀́̅̍̏ͬ̿̀̿h̨͓̺̙̦̭͍̫̣͇͆̍̎ͪ̿̽͟͝ȩ̶̶̺̥̺̗̪̬̦̯̥͌̔̌̒̓̒̏̐̋ͥ̋͂̀̉̈́̃ͬͧ̎͂̈́ͥ̇̈̅ͣ͒͛̚͢͢͝ h̶̢̡̧̜͕̟̘̣̥̹̪̓̌ͣͬͯ̉̄ͧ̇ͮͬ͑ͬ̉͘͞e̢̢̛̤̮͓̘̱ͤ̃ͮ̈͠_̷͔̮̩̦̈́͌̾ͯ͑̀̂̇ͩ̌͡ḻ̸̵̱̠̭̥͕̰͎̦̮͉͗̿̅͊̋̔ͭ̓̅͜ļ̯͓̘̍́̓ i̷̛̬̪͙͖̹ͤ͐̿ͤͫ̃ͩ̒̈̊̀̈ͥ̈͘̚͟͟ͅs̴̷̴̡̧͙͚̺̯̭͍͉͇͈̮̔ͨͧ̇́ͨ̌ͩ̆̃ͥ́͗̚͠ h̴̶͇̺̤̳̭͙̙̮̝͈̉̌͊̈́̏̓ͬ̌̐͌̌ͤͬͫ̅͘a̰̤̣͓̼̩̻͉͒ͬ̀̉ͭ͆ͣͨ͛͛͞p̛̜͇͉̺̓̊̎ͅp̢͖͇̫̤̩͕͋ͯ̓͒ͮ̒ͣ̕͡ȩ̶̧̛̬̗̯̝̠̼̘͉̺̹͍ͧͨ̑͋̐ͦ̐̉ni̶̶̘ͮ͟͡n̴̛̺̣̜̈́ͧ̌̐g̶̸̨̧̢̬͔̯͈̲̖̯̦̼̠͈͕ͮ̑ͯ̒ͮ̾̎̏̓̏͌̃̉̀̿ͥ̽͐̚͜͜͝͠͞ͅ,̝̬̼̭̈͗ͨ̅͗̚͜͡ w̷͕͖̪̝̙̪ͮͧͦͨ̅̋ͣ̓ͬ͝h̷̭͔͎͍̭̝̬͙͓ͣ͑͗͋͒͌ͥ̄̀ͤͭͯͫͫ̐͢͜͝a̜ͅẗ̸̸̢̗͚̖̖̰̯͖͎̘͎͍̼̎̀ͮ̑ͧ̃̀ͩͯ̀̽̿̉͗ͨ̊́ͯ̕̕̚͘̕̚͟ ḣ̵̯̠̤͑̌͌̆͊ͭ͐̚͢a̷̷̧̜̝͔̳̼̰̩̺̙̣̪͚̜ͯ̒̾͐̆͑̕͡_̤͈͎̈̒ͯͥ͘͠v̵̡̢͈͙̞̳͔́̒ͫ͊̌̀̔ͭ͛ͮͯ͘͡ḙ̷̡̛͙̬̥̩̯̟̹͖͉͎ͥ͊̿ͯ̍ͫͩ̿ͬͨͯ̾͒̐̇͆͌ͦͫ͛ͣͤ́͢͢͠ w̴̶̵̨̨̬͉̯̬̝̫̬̙̤̥͙̬̮͂ͮ̍ͪ̐̔̐̒̍̎͑ͯ̓ͤ̐̅̎͛̚͘ẻ̶̸̗̠̱̮̪̺̦̦̞̝͉̮͔̹̰́͂ͨ͋̀̔͋ͪ̓̈͂͗̐ͯ̔ͧͦͧͧ͋̈ͮ̚̕͜͝ d̨̺͈̣͈̘̭͎̥̞͚͙͇͖̂ͦ̒̉ͤ̎̔̾̊̍ͦͩ́͜͡ő̳̫̠̂̐͊̐͐̎͝n̯͢_̡̣͉̤̖̻ͫ̽ẽ͙̱̪̭̔ͤͥ͢_̛̘̣̼̠̘̳͓̣̘͙͆ͨ̎ͩ̓̆̎ͯ̐͌ͪ͊͛̏̑̑͜͟?̚_̷!̴͍͙̜̻̣̼̖̥̟̲͗ͧ̄ͩ̅̿́ͯ̀̏</p>
+      </div>
+      
+
+      <div class="government" id="installing-hd" title="||SYSTEM DRIVE 7::">
+       <p>installing system drivers... 10%</p>
+      </div>
+      <div class="government" id="installing-hd-2" title="||SYSTEM DRIVE 7::">
+        <p>installing system drivers... 30%</p>
+       </div>
+      <div class="government" id="installing-hd-3" title="||SYSTEM DRIVE 7::">
+        <p>installing system drivers... 95%</p>
+      </div>
+      <div class="government" id="installing-hd-4" title="||SYSTEM DRIVE 7::">
+        <p>installing system drivers... 100%</p>
+      </div>
+      <div class="government" id="jbak-security-drive" title="|| JBAK - SYSTEM DRIVE 7::" data-pinned>
+        <ul>
+        <li>[Admin Files {CLASSIFIED}::|admin-no-code]
+          <p></p> </li>
+        
+        </li>
+        <li>[Piotr Drozdov Autopsy Report::|autopsy]
+          <p></p>
+        </li>
+        <li>[F̸̴̷̡̢̤͈̪̼̝͌̾̓ͭ̅ͬ̓͑ͪ̐ͤ̚͡ͅi̧̺̪̗͖̻̞̙͌̿̏̈́͂̃̉̚͟͢_̪̉l̴̢̡̧͙͉͔̱̭͚̩͎͔̾̿̀̒̾ͭ̈́ͦͪ̔ͨ̅͌ͤͧ̚͢͢͟e̴̮̮̣̙̙̪̩̪̩̓̍ͥ̅̃̿́ͧ͢ 2̧͎͚̪̮͍̖̤͎̬̣͓͓̥ͪ̋ͩͩ͊̾͊ͦ̾̅ͩ̌̏ͯ̈́̿͐͘̚͠͡ͅ0̵̴̨̲͚̞͓̞̭̔͗̃͆̐ͩͩͦ́͋̅ͮ̈́͋͑͂̍̚͢͢9̛̙̥͐̌͋́̚͜0̷͈͇̟̰̗͚̹̰̩͈̺̥̈͛̔̂̒̎ͫ͜͡͞3̳̤̣̺͙̺ͪ͑̇͢͡ͅ4̿̂4͉̺̗̈́̋_̛̘͎͂̎́̍ͧͯ͡f̧̡̢̛͔͍̱͙͓̙̼̩̪͖͇̖̝ͪ̐ͤ̌́ͩ̃̃̋̄̋ͥ̀̆̃͢͢͢͞͞::|missingfile]
+          <p></p>
+        </li>
+        <p></p>
+        <li>[Ë̵̙̱͕͈̼́̇͛̒x̵̹̜̩̪̖̔͒a̶͙͎̓̚m̵̧̤̥̖͊̈̍ͅi̶̗̮̮̼̗̎͊̈̐n̸͖͚̹̟̲͠a̶̙͓̍̇̿t̸̛͚̟͆̈̉͒i̸̠̣̖̎̓͌̎ȍ̶̝̟ń̸̹͑̿͘̚ ̸̛̯͓͆͛́̈0̸̤̻͇̀̈́̐0̵͚̱͍͛̊͘͝͝3̵̥̋͊̍ ̷̡̙̮͚͙̃͆ȋ̵̡̮̱̱̓n̸̥̱̘͑̾̂͂c̷̖̲̈́̈i̵̢͕̳͛̌͗͐d̴̡̺̾̑è̵̤̦̱̭̼̓̐̿n̷̮̭̹̒͑ẗ̵̛͙̘̹́̅̔ ̷̧̰̯̯̎̊͆r̵̦̮̗͖̀̇͗e̷͔͋̓̉͊̕p̵̥͈͕̩͐o̸̺͇͚̅̉́̽͘r̴̡̬̹̯̋͑̈́̚t̸̠̱̤͖̏͌́̌̃::|exam-3-findings]
+          <p></p>
+        </li>
+        <p></p>
+        <li>[Soviet examination proposal (003)::|exam-3-proposal]
+          <p></p>
+        </li>
+        <li>[Examination 002 Report on Findings::|post-exam-2]
+          <p></p>
+        </li>
+        <li>[US examination proposal (Examination 002)::|exam-2-proposal]
+          <p></p>
+        </li>
+        <li>[Science, not philosophy. - Dr. Eibbel::|philosophy]
+          <p></p>
+        </li>
+        <li>[F̸̴̷̡̢̤͈̪̼̝͌̾̓ͭ̅ͬ̓͑ͪ̐ͤ̚͡ͅi̧̺̪̗͖̻̞̙͌̿̏̈́͂̃̉̚͟͢_̪̉l̴̢̡̧͙͉͔̱̭͚̩͎͔̾̿̀̒̾ͭ̈́ͦͪ̔ͨ̅͌ͤͧ̚͢͢͟e̴̮̮̣̙̙̪̩̪̩̓̍ͥ̅̃̿́ͧ͢ 2̧͎͚̪̮͍̖̤͎̬̣͓͓̥ͪ̋ͩͩ͊̾͊ͦ̾̅ͩ̌̏ͯ̈́̿͐͘̚͠͡ͅ0̵̴̨̲͚̞͓̞̭̔͗̃͆̐ͩͩͦ́͋̅ͮ̈́͋͑͂̍̚͢͢9̛̙̥͐̌͋́̚͜0̷͈͇̟̰̗͚̹̰̩͈̺̥̈͛̔̂̒̎ͫ͜͡͞3̳̤̣̺͙̺ͪ͑̇͢͡ͅ4̿̂4͉̺̗̈́̋_̛̘͎͂̎́̍ͧͯ͡f̧̡̢̛͔͍̱͙͓̙̼̩̪͖͇̖̝ͪ̐ͤ̌́ͩ̃̃̋̄̋ͥ̀̆̃͢͢͢͞͞::|missingfile]
+          <p></p>
+        </li>
+        <li>[T̛̺̝͓̣̥̟̦͍ͫ̂̀̈́ͯ̾ͤ͐̓h̷̡͉͓̘̯̰̹͗̈́̔ͣͬ͘e͔̝̰͉̗͇͙͓̳ͩ̇̾̑͘͘͟͠͠͞ E̺͓͍̪ͦͫ͞s̵̫̜̖̰̲̋͆̈́̅̐̿c̨̡͕̗ͪ̊͊̋̏ͭ́͝r̵̭͍̉̂̒̉_̸̴̢̡̢͔̟̜͕̮̱͉͍͉̞̲̗̰̠ͧ̃̆́ͬͭ͗̔ͧ̎͜͟͢͝͠͞ͅͅì̷̷̧̙̪̬̝͉̭̘̉͌͌̈́ͥͫ̈ͭͯ̂ͭ̀͐ͯ̕͠͝͝t̡̖̜̪̹̼̜̑ͬͦ̈̃͟_̶̢̳̙̹̹̘͙̽̃̿͒̽͑̓̋͘͢o̶͖͎͎̳͙̬̗͈͛̌̍̆͗̇͛̃͌́̅̏̍͊͠͝͞ͅį̢̣͍̥̺̼͍͍̝̫ͭ͛̂̒̓̅ͣ͛ř̵̷̷̨̨̭̮̞̭͇̭̺̟͔͇͖ͤ͑ͬͩ̈́͐̊̍͛̽̏̉̌́̈́̀̌̒̋̒̀̋ͮ̚͘͢͢͞͞ͅḛ̿ͅ_̵̡̦͕̮͈͎͖͖̘̊ͤ̏͐ͮ̈́͜͡ -̴̴̛̠̦͚̳͙͇͚ͫ͂ͮ͌ͪͭ͋̑͑̃͗ P̑r͕̳̜̱͔̱͇̩̬̋͊ͣ͛́̀̂̆̽͘o̾ͭ̑͆͜_̴̸̡̢͚̠̖̣̬̝̞̖̞̘͗̈͆ͤͯ̋̂ͧ̓ͦ̈́̆̽̐͌̒̽͘̚͡ḟ̡̬͈̰̾͆͒̉ͪͬͣ̐͌̏́̇ͧ͞ͅ.̷̸̶̧̡̺̳̩̮͈͖̖͇̗͙̦ͧ̓̈́ͤ̅̿ͨͯ̓̑͛̔͌͡ M̶̷̜̲͚͇̗̹͔̹͚͔̜̾͛̀̈́̑ͣ̽ͦ͐̃͐̂̀͟͡͝͞ͅȁ̸̵̴̡͖̩̞̜̹̰̙̱̰̯͎̙̩̗͓̲͓͖̹͋͂̒̏̂̾̋ͬͧ̐̓͒̂̐ͫ̕͟͞͠ď̡̗͓̾͂ͧ͞͡_̵̨̨̧̨̳̖̼̞̲̗͓̟̇̈͆̑̑̒͆̀̈͐ͣ̕͢ͅę̶̵̤̗͇͉̘̜̹̠͇̙̥̉ͭ͒̎̂ͯ̈́̓͋̚͘̕͠l̸̷̞͈͙̻̦̮̭̮̗̹̮͖͌ͮ͗͌́̔͊̄̄́̀ͨ͊̎̌͆ͫͥ͟͠_̻::|escritoire]
+          <p></p>
+        </li>
+        <li>[S̷̻͖̤̩͓̹͎̬̝͈̳͉̳͚̀ͥ̀ͪ͋ͭ̿̔̊͛̇͘̚͝ͅ_̸̢̤̹̥͉͓͂ͬ̈́̋́a̳ͪ̿̑͒̎ͣ͡ṁ̴̛͍̥̙͉̮̝̪͖̺̤̗͎̣͕͒́̔͌͊̎̿̏̂̓͆̆̀̓ͧ̚͘͟͞͞͡͝ͅͅp̨̮͍̰̘̣̌͊̓̎̑̏ͣͩ̎̐_̶̧̯̜̪̠̽̋_̬̺́͛̿͒_ͬ̅͑ͧ̍͜ḷ̢̢͌ͧͤ͂ͫ̚ė̡̢̛̜͍͇̺̹͖͙͉̳̥̝̩͓̪͙̯̙̙͑̈ͫ͐̌̇͛̓̈́̅̇ͬ̀̚͘͘͞͡ Į͓̤̺͓͙̜̜͇͖ͬ̇̀ͬ́̍̉͒͛̃ͫ̀ͪ̋̕͘͜͢_̜͓̏̊͢-̵̗̮͙̤̖̗̥̼̠̠̪̪̟͈̗̠͉̣̤̩̼̓́̅ͨ̅ͥ̋̇ͣ̄͆̀͆͘͜͟͞͝0͍͈̳̟͖̖̳̫ͣ̂̂̍͋̈ͤ͢0̸̪̱̫̩̬͉͙́͂̌͛̾͂̽̏̈́͌́̀̌͡2̵̷̛̲͖̖̠͔̟̹̮̹̗̦̗͈̃̆̎́͗ͪ̍̽̌̐̔̀̊͌̂̈ͪ̽͝͡5̦̦̟̄ͣ͑̌̂͢͞͝_͜ f̶̴̡͙̭̥͓͙̣̱̹̮̙̹͕̺̔͋̂̍͆́̅ͧ͒̀̿͌̒̄ͩͣͣ͂͌̒̔͢į̶̨̲͔̩͉̜̻͕̬͉̜͇̥̜̗̜̞ͧͦ̂̔̊͐͌͐̋ͩ̉͑ͯͦ̀͐͆ͫ̌̔̈̃͞ņ̵̡͈͚̠͕̰̯̖̬̯͓̦̗̝̪͈͖ͫ͑̎̓͗ͭ̀̀͆̽d͕̝̜̖͇̥̣͗̈́͐ͬͬ̉ͯͭͬ̐̾̾̆̄͜͜͞i̸͖̰̬̱̖̲͚͎̼̮̗̙̦̜̪͋̀ͫͪ̇͒͘͢͢ņ̨̳̮̮͚̻͉̊̃̎̋ͬ͆͘ͅg̴̨͙̺͍̥̩͖̲͖͐͊̉͊̃ͤ̃̍ͫ̈́́̚͝͞s̶̢̢̥͖̺̰̥͖̐̓ͧͨͫ́̍̌̋̓́͘͟͡ͅ_̷̡͕̙̥̳̬͇̻̻̯ͪ̎̉͐́::|missingfile]
+          <p></p>
+        </li>
+        <li>[A Weapon - Dr. Coll::|weapon]
+          <p></p>
+        </li>
+        <li>[The “Watertight” Theory - Dr. Lambert::|watertight]
+          <p></p>
+        </li>
+        <li>[/̒ͮ̕/̴̴̩͍̭̤̞̯̬͖̐̈̒́ͦ̍͌_̶̖͈̰̟̈̾̓̏̂́̒̆̿ͦ͞_̙̾͞D̡_͙̾͐ͩ̐̽̏͛͜͜͟r̸̮̤̣͙̼̭̾ͭͭͬ̓̇̀̐͆͆̍ͤi̶̧͈͙̫̯̼̺̣̟̝͍͋͌ͧ̀ͧ̌̄͋̊̅ͯ̔̎͋ͫ̒ͮ͠͞v̴̵̛̱͎̙͍̦̠̬̟̤̲̖̟͎̍͌̈͆̓ͣ́ͣͪͦ̄̓̓́ͨ́̋̎̓̀ͯ̌̕͜͟͢͞͠ͅȩ̷̺̙̺̖̰̲̣̬̂ͩ̍̎ͭ̔ͨ̊ͫ̈́̚͢r̨̠̫̜͎̂̒̌ͥ̇_͎͍̣̘̮̳̐̃̃̇͒ͧ̊̔͊ͯ̾͐͘ Di̵̷̴̶̷̛̛͙̖̭̠͓̳͍͍̯̩̙̗̘ͧ̑̿̀͐̎̈ͤ̉͛͂̂̿̒͘ą̵̸̵̸̛̛̟͇͚̮̺̟͍̣̠̞͖̘̰͔ͫ̄̿̑̋̾̈́̒͒̿̎̄̀ͫ͋̽̚͟͢ͅġ̸̮͈͔͇͕̲͖̔̅̅́́̊ͣ̇̕̕n̴̨̫̄͑̀̓ͪ̃ͅo̐s̵̴̲͎͇̱͍̮̗̥̙͈̊ͪͩ̿̃̓̋́͌̾ͣ̿͂͋̑̓ͣ͗ͦ͊ͭ̕̚͟͢͡͠ṱ̴̡̫̩͈̇ͮͥ̔į̷̟̲̲̫̰͈͕̙̳͖͉̰̱̬̙̳ͪ̉͐͊̊̀̇̽ͯ́̅͐ͤ͐ͪ̂͢ͅ_̧͓̬ͧ́̓ͬ͘͘͞c_̸̜̭͚͇̠̝͇̞̠͂̋ͦ̅̂̈́͌̋̒́̌̽ͫ̒̀̋̔̾͡͡ͅs̢̠̱̼̠͗͂::|missingfile]
+          <p></p>
+        </li>
+        <li>[Examining Samples I-005-015::|dust]
+          <p></p>
+        </li>
+        <li>[Alternative research structure for faster turnaround::|alternatives]
+          <p></p>
+        </li>
+        <li>[H̷̡̢̧̛̭͉̣͚̥̱͚̝͔̔ͯ̀̇͂ͦ̀̆̌ͫ̆̽̀Ȅ̢͉͂͗_̶̴̢̧̠͉̩̥̳̮̟̮͍̞̠̘̫̤́ͮ͋͆́͂̉̂͐̈̽̊̽ͦͪ̇̌͜͟͟͝f̢̖̹͖͓ͥ̂̓̒͂́̓͢ǎ̵̵̸̛̯̗̳̻̗̳̟͕͔̜̼̫̏̑ͬͮ͛̾̇͐̀ͭ̇̊ͮͬ̈́ͧ͗͛̅͛̓̕̚͠͞͝ͅç̴̛̛̜͈͔͓̠̮̺̲͇ͧͫ̐͂ͦ̓̆̀ͮ̃̇ͨ̿̽̕͟͠ͅͅi̫̣̔̏͢l̶̡̳̦̻͕̼̖͍̬̪͇̰̝̤̩̘̯͒͑͆ͣ̔̄ͫ͋͊ͥ̑̅̀̆̇ͩ͗̓̏͋ͤ̓̎͛͘͜͠i̶̷̦͚̥̼̥̘͎̞͕̬̮͖̔̀̈ͤͪ́ͬͤ̃ͭ̆̕t̷̸̷͍͖̬̲̣̱͕̅͊ͪ̋̇ͫ̎ͬ̅͘y̡̝̦̲̤̘̟̟͒̿̅ͨ̀Ḻ̠̺̼̼̃̾̿̄̅ͧ͋̑͘͘ͅL̰̦͚̬̥̈ͪ̆ͅ_̛̙̮̪̥̫͉̹̠̝̾̑ͫ̌̀͒̋ͦ̄̀̾̌́̍͂ͬ̒͆̾͢ͅä̢̡̢͖̫̝̼͇̰̜̠̘̗̰̙̖̫͙̣͈̩͕̥̱̝̼́̆ͤ̈́ͭ̊ͫͩ̀̇̉͛̿͢͢͡͞m̨̛̬̺̱͕̪͎̳ͯ̈́̌͆͂̒͌̓̀̀͋̍̈ͮͮ̔ͭ͜͢͡t̨̧̞͙͍̠̺͎̟͕̖̗͙̜̼̎ͮ̀̉̊̊̿ͥͧ̐̎̊ͤ̿̑̉̎ͮͪͩ̀͂̑̄̍̕͝ơ̷̢̢̩͕̹͎̪̲̟̣̙̼͂ͫ̆̌ͯͫ̋̎͛ͭ͛̀̀̇̎͒̓̾̏͡Ḽ̴̡̡͓͚̤͓̩̜̼̠̺́ͤͨ̒̂̊̓͑͗̽ͥ̋̌̒̒͗ͨ͐͑̊̓͗̎̑̚͜͢͟͢͞͝c̼̠̪͓͚̯͆̂ͤ̈͐̀͠͞ͅơ̸̢̧̤̗̱̩͕̣̭̦͙̠̆̏͑̑ͭ̃̒̔̽̏̓̓̐͌̑̇͢͞͞͝_̖̈́̆͢n_̜ͤ̾ţ̰̀̀_̷͓͕͕̦̮̤͖͒̈́̓͊͛͐ͤ͘̚_̫̩͈͊̾̓̑r̵̸̵̡̻͈͎͕̣̯̬̻̠̟͈ͮͦͣ̓ͧ̓̃̌ͭ̈́̈ͥ͐ͫ̕͘͢ͅơ̭̼̖͓̰͎̬̺̜̙̦̘̲͉̽̉͂̍̀ͫ͌̀̂̌̊͒̏̀̓ͣ͒͗͜͝ļ̶̩͐̾ͮL̝̝͐̋ͬĻ̷̢̫̠̦̜͉͖̺̝̭̹͌̍̐̐͗̾́̂ͨͯͭ̅͢͝_̵̢̺̰͂ͣͭ͛0̣͉̯̼͒ͬ͋̀́͘͟ͅ Ç̗̞̺͈̬̠̦̟̱͎̱̼̩͍̫̯͍̈́͗͆̈ͮ͆̇́ͤ̇ͮ͌ͪ̂͛ͭ̅ͯ̎͜͢͢͢͢ͅĄ̡̛͇̪̯̖̘̱̬̣ͨͩͦ̋̇́͗͆̀̕ͅĮ̧̨̧̢͎̝̠͍͇̜̙̫̤̑ͤ́̓̎̍̑͛́ͦ̑͆͌̕͞Ň̡͉͙̠ͬ͌̂͜ Ů͚̝̩ͬ̀͢͝R̺̮͋ͫ̑͒̈́_̸̢̧̳̳̣̺̤̗̪͗̋̓̌̕͘ H̶̵͔̯͓̺ͯ̀ͣ͑̓̈̈́ͤ̚ͅÉ̢̮̜̹͖̦̘͇͎̪͎͓̙̫̌ͪͦͫͣ͆̐̎̋̍ͩ̄ͤͮ̊́̌͂̈́̎ͤͣͨͩͣ̍͘͠͞͞ŗ̸̧̡̣̖̱͉̞̣̳̗̟̻̭͖̟͈̻̪̖̓͒͋̈̓͑̎̋̔ͯ͋̅ͧ̇ͧ̚͟͝R̠̤͂̈́_̷̶̡̨̛͎͙̙͎̠̭̞̘̞̱̩̣̹͍̮̘̤̀̊̂͛́̄ͮ͋̽͒̍̒̄ͯ̀̓͑͢͡Å̷̙̪̖͉͉̰̀͑̀ͧ̿ͦ͛͞_Ŗ̪͛_̢̡̡̡͚̱̫̳̗̲͖̄́̃̐̓͐̽ͮͤ̃̇̉ͣ͟ ḿE̴̶̷̵̻͖̬̠̗̰͎̦̰̲̱͈̪͎͆ͯͨ̀̍̇̄̀ͤ͐ͣͬͬ͊͑ͦ͌͑̌͢?͎ͤ̽
+          ::|missingfile]
+          <p></p>
+        </li>
+      </li>
+      <li>[S̵̠̲͕̠̗̿ͭ͠_̶̤̝̼̯̝͓͉̖͚̪̭̝͙ͨ̍̀̏͆̋̎ͦ̍̓̉͌̓̀ͨ͆ͤ͢͟͜͞͠a̖̱͎̬͙̤͍ͥͣ̓͊̀͞m̸̛̥̭̮̻̲̥̻͇ͥ̑̾̃ͩ̊̾̐ͯ͒̄͘͡͠p̸̷̷̧̲̺̬̼̦̄́͆͒ͦ̅͗̄̓͒̄͜͢l̼̳͒_̨̪̻͍̤̩̙̇ͦ̀̚è̡̡͇̖̜͖̖̮̮̖͖͖͙ͣ͒̓͗̈ͪ̇̉̋́ͤ́ͦ͆ I͍͉̪̹͑̽̊-0̷̶̗̦̺͕̠̜͙̲̞̀ͩͤ́ͩ͂́̋̋̈̌̃ͨ̄̿̈̍̒̽͘͢͝͡͞͡0̷̶̹͉͖̯̫̥̳͕̘̄͊̍̒ͤ̉̇ͮ̂͑̂ͥ͂͌̅̋̆̔̍ͯ̎̏̕̕͟͟͡͠1̴̷̶̴̛̹̼͔̪̤͖̣̜͇͎͙̣͉̯̤̘ͧͥ̉́͑̀͊̊̀̍̾ͦͮ͐͛ͭ̃̅ͮ̀͘͟͟͡ P̡̡̛̯̝͕͈̥̓̃̈͛͋ͯ̏̎̉ͅͅ_̢̗̦͉̱̯͎ͬͨ̀͛ͤ̓ͥ͐ͨ͜͠ḥ̴̵̵̭͔̯͈̬̟̭̳͎̅̉̐́ͤͬ̀̾̾͑͐̒̓͘͜͜͞_̫̼͎̬̲̖̃̇̉ͤͦ̊̓̃ọ̧̘̳̝̙̬̭͌ͣͤ̋̈̂̇ͮ̑̅t͍̦̹͔̣̹͈͔̗̮̙̩̫͚́ͧͬ̄̊͗͊͌̏͂̿͆ͩ̐͆̃ͩͮ̀̉̑͊͘͘͜͠͞͡ó̞̖͎̩̯̩͙͈̠̱̪̅̅̓̈ͣ̔ͮ̆͡͞g̵̶̘͖̠̦̳̝͖̍ͦ̀ͯ̑̀̓͟͟͡͞r̘̹̹̳̜̜͔̭̤͈̤̟̱̘̤͔̩̮̘̯̆ͫ̓ͯ́ͤ̃̏̾ͯ̽ͧ̀̓̇̄͛͐ͧ̃̈ͬ̚͢͝ͅͅa̺̜͂̚͟p̷̶͓̊ͧ̕h̸̛͙͙͚̗̗̥̙͎̟̘̲̜̔̐̍ͨ͛̄́͒̀̃̽̎̔͜͝͝͝s͚̫̙ͨ͌ͩ̽̽͢͝_̧̱̤̩̪̪̪̫͖̙̹̣̣̘͕͉͋̅͂̂ͩ̎ͧ̆̅̾̾͛͟͡
+        ::|missingfile]
+        <p></p>
+      </li>
+        <li>[Post Examination 001 US incident report::|post-exam-1]
+          <p></p>
+        </li>
+        <li>[The Kraukov Sequence::|kraukov-sequence]
+          <p></p>
+        <li>[Initial Examination US and Soviet Union (001)::|exam-1]
+          <p></p>
+        </li>
+        <li>[Flagged Communication Logs {REVIEW PENDING}::|Flagged]
+          <p></p>
+        </li>
+        <li>[Assessment room and Sample Chamber::|assessment-room]
+          <p></p>
+        <li>[JBAK orientation guidelines::|orientation]
+          <p></p>
+        </li>
+        <li>[JBAK Mission Parameters::|mission]
+          <p></p>
+        </li>
+        <li>[Initial Discovery::|initial-discovery]
+          <p></p>
+        </li>
+      </ul>
+      </div>
+      <div class="government" id="jbak-security-drive-2" title="|| JBAK - SYSTEM DRIVE 7::" data-pinned>
+        <ul>
+          <li>[Admin Files {CLASSIFIED}::|admin-code]
+            <p></p> </li>
+          
+          </li>
+          <li>[Piotr Drozdov Autopsy Report|autopsy]
+            <p></p>
+          </li>
+          <li>[F̸̴̷̡̢̤͈̪̼̝͌̾̓ͭ̅ͬ̓͑ͪ̐ͤ̚͡ͅi̧̺̪̗͖̻̞̙͌̿̏̈́͂̃̉̚͟͢_̪̉l̴̢̡̧͙͉͔̱̭͚̩͎͔̾̿̀̒̾ͭ̈́ͦͪ̔ͨ̅͌ͤͧ̚͢͢͟e̴̮̮̣̙̙̪̩̪̩̓̍ͥ̅̃̿́ͧ͢ 2̧͎͚̪̮͍̖̤͎̬̣͓͓̥ͪ̋ͩͩ͊̾͊ͦ̾̅ͩ̌̏ͯ̈́̿͐͘̚͠͡ͅ0̵̴̨̲͚̞͓̞̭̔͗̃͆̐ͩͩͦ́͋̅ͮ̈́͋͑͂̍̚͢͢9̛̙̥͐̌͋́̚͜0̷͈͇̟̰̗͚̹̰̩͈̺̥̈͛̔̂̒̎ͫ͜͡͞3̳̤̣̺͙̺ͪ͑̇͢͡ͅ4̿̂4͉̺̗̈́̋_̛̘͎͂̎́̍ͧͯ͡f̧̡̢̛͔͍̱͙͓̙̼̩̪͖͇̖̝ͪ̐ͤ̌́ͩ̃̃̋̄̋ͥ̀̆̃͢͢͢͞͞|missingfile]
+            <p></p>
+          </li>
+          <p></p>
+          <li>[Ë̵̙̱͕͈̼́̇͛̒x̵̹̜̩̪̖̔͒a̶͙͎̓̚m̵̧̤̥̖͊̈̍ͅi̶̗̮̮̼̗̎͊̈̐n̸͖͚̹̟̲͠a̶̙͓̍̇̿t̸̛͚̟͆̈̉͒i̸̠̣̖̎̓͌̎ȍ̶̝̟ń̸̹͑̿͘̚ ̸̛̯͓͆͛́̈0̸̤̻͇̀̈́̐0̵͚̱͍͛̊͘͝͝3̵̥̋͊̍ ̷̡̙̮͚͙̃͆ȋ̵̡̮̱̱̓n̸̥̱̘͑̾̂͂c̷̖̲̈́̈i̵̢͕̳͛̌͗͐d̴̡̺̾̑è̵̤̦̱̭̼̓̐̿n̷̮̭̹̒͑ẗ̵̛͙̘̹́̅̔ ̷̧̰̯̯̎̊͆r̵̦̮̗͖̀̇͗e̷͔͋̓̉͊̕p̵̥͈͕̩͐o̸̺͇͚̅̉́̽͘r̴̡̬̹̯̋͑̈́̚t̸̠̱̤͖̏͌́̌̃|exam-3-findings]
+            <p></p>
+          </li>
+          <p></p>
+          <li>[Soviet examination proposal (003)|exam-3-proposal]
+            <p></p>
+          </li>
+          <li>[Examination 002 Report on Findings|post-exam-2]
+            <p></p>
+          </li>
+          <li>[US examination proposal (Examination 002)|exam-2-proposal]
+            <p></p>
+          </li>
+          <li>[Science, not philosophy. - Dr. Eibbel|philosophy]
+            <p></p>
+          </li>
+          <li>[F̸̴̷̡̢̤͈̪̼̝͌̾̓ͭ̅ͬ̓͑ͪ̐ͤ̚͡ͅi̧̺̪̗͖̻̞̙͌̿̏̈́͂̃̉̚͟͢_̪̉l̴̢̡̧͙͉͔̱̭͚̩͎͔̾̿̀̒̾ͭ̈́ͦͪ̔ͨ̅͌ͤͧ̚͢͢͟e̴̮̮̣̙̙̪̩̪̩̓̍ͥ̅̃̿́ͧ͢ 2̧͎͚̪̮͍̖̤͎̬̣͓͓̥ͪ̋ͩͩ͊̾͊ͦ̾̅ͩ̌̏ͯ̈́̿͐͘̚͠͡ͅ0̵̴̨̲͚̞͓̞̭̔͗̃͆̐ͩͩͦ́͋̅ͮ̈́͋͑͂̍̚͢͢9̛̙̥͐̌͋́̚͜0̷͈͇̟̰̗͚̹̰̩͈̺̥̈͛̔̂̒̎ͫ͜͡͞3̳̤̣̺͙̺ͪ͑̇͢͡ͅ4̿̂4͉̺̗̈́̋_̛̘͎͂̎́̍ͧͯ͡f̧̡̢̛͔͍̱͙͓̙̼̩̪͖͇̖̝ͪ̐ͤ̌́ͩ̃̃̋̄̋ͥ̀̆̃͢͢͢͞͞|missingfile]
+            <p></p>
+          </li>
+          <li>[T̛̺̝͓̣̥̟̦͍ͫ̂̀̈́ͯ̾ͤ͐̓h̷̡͉͓̘̯̰̹͗̈́̔ͣͬ͘e͔̝̰͉̗͇͙͓̳ͩ̇̾̑͘͘͟͠͠͞ E̺͓͍̪ͦͫ͞s̵̫̜̖̰̲̋͆̈́̅̐̿c̨̡͕̗ͪ̊͊̋̏ͭ́͝r̵̭͍̉̂̒̉_̸̴̢̡̢͔̟̜͕̮̱͉͍͉̞̲̗̰̠ͧ̃̆́ͬͭ͗̔ͧ̎͜͟͢͝͠͞ͅͅì̷̷̧̙̪̬̝͉̭̘̉͌͌̈́ͥͫ̈ͭͯ̂ͭ̀͐ͯ̕͠͝͝t̡̖̜̪̹̼̜̑ͬͦ̈̃͟_̶̢̳̙̹̹̘͙̽̃̿͒̽͑̓̋͘͢o̶͖͎͎̳͙̬̗͈͛̌̍̆͗̇͛̃͌́̅̏̍͊͠͝͞ͅį̢̣͍̥̺̼͍͍̝̫ͭ͛̂̒̓̅ͣ͛ř̵̷̷̨̨̭̮̞̭͇̭̺̟͔͇͖ͤ͑ͬͩ̈́͐̊̍͛̽̏̉̌́̈́̀̌̒̋̒̀̋ͮ̚͘͢͢͞͞ͅḛ̿ͅ_̵̡̦͕̮͈͎͖͖̘̊ͤ̏͐ͮ̈́͜͡ -̴̴̛̠̦͚̳͙͇͚ͫ͂ͮ͌ͪͭ͋̑͑̃͗ P̑r͕̳̜̱͔̱͇̩̬̋͊ͣ͛́̀̂̆̽͘o̾ͭ̑͆͜_̴̸̡̢͚̠̖̣̬̝̞̖̞̘͗̈͆ͤͯ̋̂ͧ̓ͦ̈́̆̽̐͌̒̽͘̚͡ḟ̡̬͈̰̾͆͒̉ͪͬͣ̐͌̏́̇ͧ͞ͅ.̷̸̶̧̡̺̳̩̮͈͖̖͇̗͙̦ͧ̓̈́ͤ̅̿ͨͯ̓̑͛̔͌͡ M̶̷̜̲͚͇̗̹͔̹͚͔̜̾͛̀̈́̑ͣ̽ͦ͐̃͐̂̀͟͡͝͞ͅȁ̸̵̴̡͖̩̞̜̹̰̙̱̰̯͎̙̩̗͓̲͓͖̹͋͂̒̏̂̾̋ͬͧ̐̓͒̂̐ͫ̕͟͞͠ď̡̗͓̾͂ͧ͞͡_̵̨̨̧̨̳̖̼̞̲̗͓̟̇̈͆̑̑̒͆̀̈͐ͣ̕͢ͅę̶̵̤̗͇͉̘̜̹̠͇̙̥̉ͭ͒̎̂ͯ̈́̓͋̚͘̕͠l̸̷̞͈͙̻̦̮̭̮̗̹̮͖͌ͮ͗͌́̔͊̄̄́̀ͨ͊̎̌͆ͫͥ͟͠_̻|escritoire]
+            <p></p>
+          </li>
+          <li>[S̷̻͖̤̩͓̹͎̬̝͈̳͉̳͚̀ͥ̀ͪ͋ͭ̿̔̊͛̇͘̚͝ͅ_̸̢̤̹̥͉͓͂ͬ̈́̋́a̳ͪ̿̑͒̎ͣ͡ṁ̴̛͍̥̙͉̮̝̪͖̺̤̗͎̣͕͒́̔͌͊̎̿̏̂̓͆̆̀̓ͧ̚͘͟͞͞͡͝ͅͅp̨̮͍̰̘̣̌͊̓̎̑̏ͣͩ̎̐_̶̧̯̜̪̠̽̋_̬̺́͛̿͒_ͬ̅͑ͧ̍͜ḷ̢̢͌ͧͤ͂ͫ̚ė̡̢̛̜͍͇̺̹͖͙͉̳̥̝̩͓̪͙̯̙̙͑̈ͫ͐̌̇͛̓̈́̅̇ͬ̀̚͘͘͞͡ Į͓̤̺͓͙̜̜͇͖ͬ̇̀ͬ́̍̉͒͛̃ͫ̀ͪ̋̕͘͜͢_̜͓̏̊͢-̵̗̮͙̤̖̗̥̼̠̠̪̪̟͈̗̠͉̣̤̩̼̓́̅ͨ̅ͥ̋̇ͣ̄͆̀͆͘͜͟͞͝0͍͈̳̟͖̖̳̫ͣ̂̂̍͋̈ͤ͢0̸̪̱̫̩̬͉͙́͂̌͛̾͂̽̏̈́͌́̀̌͡2̵̷̛̲͖̖̠͔̟̹̮̹̗̦̗͈̃̆̎́͗ͪ̍̽̌̐̔̀̊͌̂̈ͪ̽͝͡5̦̦̟̄ͣ͑̌̂͢͞͝_͜ f̶̴̡͙̭̥͓͙̣̱̹̮̙̹͕̺̔͋̂̍͆́̅ͧ͒̀̿͌̒̄ͩͣͣ͂͌̒̔͢į̶̨̲͔̩͉̜̻͕̬͉̜͇̥̜̗̜̞ͧͦ̂̔̊͐͌͐̋ͩ̉͑ͯͦ̀͐͆ͫ̌̔̈̃͞ņ̵̡͈͚̠͕̰̯̖̬̯͓̦̗̝̪͈͖ͫ͑̎̓͗ͭ̀̀͆̽d͕̝̜̖͇̥̣͗̈́͐ͬͬ̉ͯͭͬ̐̾̾̆̄͜͜͞i̸͖̰̬̱̖̲͚͎̼̮̗̙̦̜̪͋̀ͫͪ̇͒͘͢͢ņ̨̳̮̮͚̻͉̊̃̎̋ͬ͆͘ͅg̴̨͙̺͍̥̩͖̲͖͐͊̉͊̃ͤ̃̍ͫ̈́́̚͝͞s̶̢̢̥͖̺̰̥͖̐̓ͧͨͫ́̍̌̋̓́͘͟͡ͅ_̷̡͕̙̥̳̬͇̻̻̯ͪ̎̉͐́|missingfile]
+            <p></p>
+          </li>
+          <li>[A Weapon - Dr. Coll|weapon]
+            <p></p>
+          </li>
+          <li>[The “Watertight” Theory - Dr. Lambert|watertight]
+            <p></p>
+          </li>
+          <li>[/̒ͮ̕/̴̴̩͍̭̤̞̯̬͖̐̈̒́ͦ̍͌_̶̖͈̰̟̈̾̓̏̂́̒̆̿ͦ͞_̙̾͞D̡_͙̾͐ͩ̐̽̏͛͜͜͟r̸̮̤̣͙̼̭̾ͭͭͬ̓̇̀̐͆͆̍ͤi̶̧͈͙̫̯̼̺̣̟̝͍͋͌ͧ̀ͧ̌̄͋̊̅ͯ̔̎͋ͫ̒ͮ͠͞v̴̵̛̱͎̙͍̦̠̬̟̤̲̖̟͎̍͌̈͆̓ͣ́ͣͪͦ̄̓̓́ͨ́̋̎̓̀ͯ̌̕͜͟͢͞͠ͅȩ̷̺̙̺̖̰̲̣̬̂ͩ̍̎ͭ̔ͨ̊ͫ̈́̚͢r̨̠̫̜͎̂̒̌ͥ̇_͎͍̣̘̮̳̐̃̃̇͒ͧ̊̔͊ͯ̾͐͘ Di̵̷̴̶̷̛̛͙̖̭̠͓̳͍͍̯̩̙̗̘ͧ̑̿̀͐̎̈ͤ̉͛͂̂̿̒͘ą̵̸̵̸̛̛̟͇͚̮̺̟͍̣̠̞͖̘̰͔ͫ̄̿̑̋̾̈́̒͒̿̎̄̀ͫ͋̽̚͟͢ͅġ̸̮͈͔͇͕̲͖̔̅̅́́̊ͣ̇̕̕n̴̨̫̄͑̀̓ͪ̃ͅo̐s̵̴̲͎͇̱͍̮̗̥̙͈̊ͪͩ̿̃̓̋́͌̾ͣ̿͂͋̑̓ͣ͗ͦ͊ͭ̕̚͟͢͡͠ṱ̴̡̫̩͈̇ͮͥ̔į̷̟̲̲̫̰͈͕̙̳͖͉̰̱̬̙̳ͪ̉͐͊̊̀̇̽ͯ́̅͐ͤ͐ͪ̂͢ͅ_̧͓̬ͧ́̓ͬ͘͘͞c_̸̜̭͚͇̠̝͇̞̠͂̋ͦ̅̂̈́͌̋̒́̌̽ͫ̒̀̋̔̾͡͡ͅs̢̠̱̼̠͗͂|missingfile]
+            <p></p>
+          </li>
+          <li>[Examining Samples I-005-015|dust]
+            <p></p>
+          </li>
+          <li>[Alternative research structure for faster turnaround|alternatives]
+            <p></p>
+          </li>
+          <li>[H̷̡̢̧̛̭͉̣͚̥̱͚̝͔̔ͯ̀̇͂ͦ̀̆̌ͫ̆̽̀Ȅ̢͉͂͗_̶̴̢̧̠͉̩̥̳̮̟̮͍̞̠̘̫̤́ͮ͋͆́͂̉̂͐̈̽̊̽ͦͪ̇̌͜͟͟͝f̢̖̹͖͓ͥ̂̓̒͂́̓͢ǎ̵̵̸̛̯̗̳̻̗̳̟͕͔̜̼̫̏̑ͬͮ͛̾̇͐̀ͭ̇̊ͮͬ̈́ͧ͗͛̅͛̓̕̚͠͞͝ͅç̴̛̛̜͈͔͓̠̮̺̲͇ͧͫ̐͂ͦ̓̆̀ͮ̃̇ͨ̿̽̕͟͠ͅͅi̫̣̔̏͢l̶̡̳̦̻͕̼̖͍̬̪͇̰̝̤̩̘̯͒͑͆ͣ̔̄ͫ͋͊ͥ̑̅̀̆̇ͩ͗̓̏͋ͤ̓̎͛͘͜͠i̶̷̦͚̥̼̥̘͎̞͕̬̮͖̔̀̈ͤͪ́ͬͤ̃ͭ̆̕t̷̸̷͍͖̬̲̣̱͕̅͊ͪ̋̇ͫ̎ͬ̅͘y̡̝̦̲̤̘̟̟͒̿̅ͨ̀Ḻ̠̺̼̼̃̾̿̄̅ͧ͋̑͘͘ͅL̰̦͚̬̥̈ͪ̆ͅ_̛̙̮̪̥̫͉̹̠̝̾̑ͫ̌̀͒̋ͦ̄̀̾̌́̍͂ͬ̒͆̾͢ͅä̢̡̢͖̫̝̼͇̰̜̠̘̗̰̙̖̫͙̣͈̩͕̥̱̝̼́̆ͤ̈́ͭ̊ͫͩ̀̇̉͛̿͢͢͡͞m̨̛̬̺̱͕̪͎̳ͯ̈́̌͆͂̒͌̓̀̀͋̍̈ͮͮ̔ͭ͜͢͡t̨̧̞͙͍̠̺͎̟͕̖̗͙̜̼̎ͮ̀̉̊̊̿ͥͧ̐̎̊ͤ̿̑̉̎ͮͪͩ̀͂̑̄̍̕͝ơ̷̢̢̩͕̹͎̪̲̟̣̙̼͂ͫ̆̌ͯͫ̋̎͛ͭ͛̀̀̇̎͒̓̾̏͡Ḽ̴̡̡͓͚̤͓̩̜̼̠̺́ͤͨ̒̂̊̓͑͗̽ͥ̋̌̒̒͗ͨ͐͑̊̓͗̎̑̚͜͢͟͢͞͝c̼̠̪͓͚̯͆̂ͤ̈͐̀͠͞ͅơ̸̢̧̤̗̱̩͕̣̭̦͙̠̆̏͑̑ͭ̃̒̔̽̏̓̓̐͌̑̇͢͞͞͝_̖̈́̆͢n_̜ͤ̾ţ̰̀̀_̷͓͕͕̦̮̤͖͒̈́̓͊͛͐ͤ͘̚_̫̩͈͊̾̓̑r̵̸̵̡̻͈͎͕̣̯̬̻̠̟͈ͮͦͣ̓ͧ̓̃̌ͭ̈́̈ͥ͐ͫ̕͘͢ͅơ̭̼̖͓̰͎̬̺̜̙̦̘̲͉̽̉͂̍̀ͫ͌̀̂̌̊͒̏̀̓ͣ͒͗͜͝ļ̶̩͐̾ͮL̝̝͐̋ͬĻ̷̢̫̠̦̜͉͖̺̝̭̹͌̍̐̐͗̾́̂ͨͯͭ̅͢͝_̵̢̺̰͂ͣͭ͛0̣͉̯̼͒ͬ͋̀́͘͟ͅ Ç̗̞̺͈̬̠̦̟̱͎̱̼̩͍̫̯͍̈́͗͆̈ͮ͆̇́ͤ̇ͮ͌ͪ̂͛ͭ̅ͯ̎͜͢͢͢͢ͅĄ̡̛͇̪̯̖̘̱̬̣ͨͩͦ̋̇́͗͆̀̕ͅĮ̧̨̧̢͎̝̠͍͇̜̙̫̤̑ͤ́̓̎̍̑͛́ͦ̑͆͌̕͞Ň̡͉͙̠ͬ͌̂͜ Ů͚̝̩ͬ̀͢͝R̺̮͋ͫ̑͒̈́_̸̢̧̳̳̣̺̤̗̪͗̋̓̌̕͘ H̶̵͔̯͓̺ͯ̀ͣ͑̓̈̈́ͤ̚ͅÉ̢̮̜̹͖̦̘͇͎̪͎͓̙̫̌ͪͦͫͣ͆̐̎̋̍ͩ̄ͤͮ̊́̌͂̈́̎ͤͣͨͩͣ̍͘͠͞͞ŗ̸̧̡̣̖̱͉̞̣̳̗̟̻̭͖̟͈̻̪̖̓͒͋̈̓͑̎̋̔ͯ͋̅ͧ̇ͧ̚͟͝R̠̤͂̈́_̷̶̡̨̛͎͙̙͎̠̭̞̘̞̱̩̣̹͍̮̘̤̀̊̂͛́̄ͮ͋̽͒̍̒̄ͯ̀̓͑͢͡Å̷̙̪̖͉͉̰̀͑̀ͧ̿ͦ͛͞_Ŗ̪͛_̢̡̡̡͚̱̫̳̗̲͖̄́̃̐̓͐̽ͮͤ̃̇̉ͣ͟ ḿE̴̶̷̵̻͖̬̠̗̰͎̦̰̲̱͈̪͎͆ͯͨ̀̍̇̄̀ͤ͐ͣͬͬ͊͑ͦ͌͑̌͢?͎ͤ̽
+            |missingfile]
+            <p></p>
+          </li>
+        </li>
+        <li>[S̵̠̲͕̠̗̿ͭ͠_̶̤̝̼̯̝͓͉̖͚̪̭̝͙ͨ̍̀̏͆̋̎ͦ̍̓̉͌̓̀ͨ͆ͤ͢͟͜͞͠a̖̱͎̬͙̤͍ͥͣ̓͊̀͞m̸̛̥̭̮̻̲̥̻͇ͥ̑̾̃ͩ̊̾̐ͯ͒̄͘͡͠p̸̷̷̧̲̺̬̼̦̄́͆͒ͦ̅͗̄̓͒̄͜͢l̼̳͒_̨̪̻͍̤̩̙̇ͦ̀̚è̡̡͇̖̜͖̖̮̮̖͖͖͙ͣ͒̓͗̈ͪ̇̉̋́ͤ́ͦ͆ I͍͉̪̹͑̽̊-0̷̶̗̦̺͕̠̜͙̲̞̀ͩͤ́ͩ͂́̋̋̈̌̃ͨ̄̿̈̍̒̽͘͢͝͡͞͡0̷̶̹͉͖̯̫̥̳͕̘̄͊̍̒ͤ̉̇ͮ̂͑̂ͥ͂͌̅̋̆̔̍ͯ̎̏̕̕͟͟͡͠1̴̷̶̴̛̹̼͔̪̤͖̣̜͇͎͙̣͉̯̤̘ͧͥ̉́͑̀͊̊̀̍̾ͦͮ͐͛ͭ̃̅ͮ̀͘͟͟͡ P̡̡̛̯̝͕͈̥̓̃̈͛͋ͯ̏̎̉ͅͅ_̢̗̦͉̱̯͎ͬͨ̀͛ͤ̓ͥ͐ͨ͜͠ḥ̴̵̵̭͔̯͈̬̟̭̳͎̅̉̐́ͤͬ̀̾̾͑͐̒̓͘͜͜͞_̫̼͎̬̲̖̃̇̉ͤͦ̊̓̃ọ̧̘̳̝̙̬̭͌ͣͤ̋̈̂̇ͮ̑̅t͍̦̹͔̣̹͈͔̗̮̙̩̫͚́ͧͬ̄̊͗͊͌̏͂̿͆ͩ̐͆̃ͩͮ̀̉̑͊͘͘͜͠͞͡ó̞̖͎̩̯̩͙͈̠̱̪̅̅̓̈ͣ̔ͮ̆͡͞g̵̶̘͖̠̦̳̝͖̍ͦ̀ͯ̑̀̓͟͟͡͞r̘̹̹̳̜̜͔̭̤͈̤̟̱̘̤͔̩̮̘̯̆ͫ̓ͯ́ͤ̃̏̾ͯ̽ͧ̀̓̇̄͛͐ͧ̃̈ͬ̚͢͝ͅͅa̺̜͂̚͟p̷̶͓̊ͧ̕h̸̛͙͙͚̗̗̥̙͎̟̘̲̜̔̐̍ͨ͛̄́͒̀̃̽̎̔͜͝͝͝s͚̫̙ͨ͌ͩ̽̽͢͝_̧̱̤̩̪̪̪̫͖̙̹̣̣̘͕͉͋̅͂̂ͩ̎ͧ̆̅̾̾͛͟͡
+          |missingfile]
+          <p></p>
+        </li>
+          <li>[Post Examination 001 US incident report|post-exam-1]
+            <p></p>
+          </li>
+          <li>[The Kraukov Sequence|kraukov-sequence]
+            <p></p>
+          <li>[Initial Examination US and Soviet Union (001)|exam-1]
+            <p></p>
+          </li>
+          <li>[Flagged Communication Logs {REVIEW PENDING}|Flagged]
+            <p></p>
+          </li>
+          <li>[Assessment room and Sample Chamber|assessment-room]
+            <p></p>
+          <li>[JBAK orientation guidelines::|orientation]
+            <p></p>
+          </li>
+          <li>[JBAK Mission Parameters::|mission]
+            <p></p>
+          </li>
+          <li>[Initial Discovery|initial-discovery]
+            <p></p>
+          </li>
+        </ul>
+      </div>
+      <div class="inbox" id="email-2" title="New info">
+       
+        <p>Apparently, the entire base was scuttled. Some of the remaining pieces of intel are in a quarantine facility in New Mexico. What the hell is going on? I got a list of some of the intel. Optical Lenses? “Unknown Organic Material”? And I’m dying to know what’s on the hard drive. Maybe I can pull some strings and sneak it out for you.</p>
+        
+      </div>
+      <div class="inbox" id="email-3" title="Leaked Incident Report at Joint Base Anderson-Keeg">
+       
+        <p>If this report is real, it confirms the existence of a secret military base. What’s even stranger is that there are mentions of Soviet casualties in the report. If there was an attack, why would the US want to keep it hidden? I’ll keep digging.</p>
+      </div>
+      <div class="emergency" id="code-black" title=":: CODE BLACK ALERT ::">
+        <h1>CODE BLACK ALERT - EMERGENCY PROCEDURES INITIATED</h1>
+        <p>Timecode: 04:13 August 3 1989</p>
+        <p>Positive sample matching [Kraukov Sequence|kraukov-sequence] detected at multiple sites across the facility. </p> 
+        <p>Positive presence of sample outside biosafety environment after 6 hours post deployment of chlorine dioxide requires a Code Black Alert.</p>
+        <p>Emergency Protocol: Deactivating safety mechanisms on Radio-Decontaminant Devices 1-12... Remote Detonation initiated...</p>
+        <p>Detonation Confirmed. JBAK has been destroyed. Godspeed.</p>
+      </div>
+      <div class="emergency" id="code-red" title=":: CODE RED ALERT ::">
+        <h1>CODE RED ALERT - EMERGENCY PROCEDURES INITIATED</h1>
+        <p>Timecode: 22:13 August 2 1989</p>
+        <p>Sample Matching [Kraukov Sequence|kraukov-sequence] detected in Maintenance Air Duct US.22.North</p>
+        <p>Positive presence of sample outside biosafety environment requires an immediate Code Red Alert. </p>
+        <P>Emergency Protocol: sealing exits…  cutting power to primary and backup generators…  flooding facility with chlorine dioxide.</p>
+      </div>
+      <div class="government credits" id="assessment-room" title="Assessment room and Sample Chamber">
+        <h1>Assessment room configuration</h1>
+        <p>The Sample Assessment room is the central hub of JBAK. A square configuration bisected in half via vacuum sealed glass windows. Each half is owned and operated by the United States and Soviet Union respectively. In the center of the room, built within the glass, is a cylindrical chamber containing Sample I-001.</p>
+        <h1>Sample Chamber configuration</h1>
+        <p>The chamber has 2 exterior doors that lead to compact air-locks, where the air is cycled away and a variety of chemical and radiological disinfectants are applied to its interior. Each airlock contains allows access to the interior of the Sample chamber, however the interior doors will only open if opposite party interacts with the [Opposing Chamber Release Valve|valve-schematic].</p>
+        <p>Inside the sample chamber are some atmospheric and pressure regulators, they can be configured from outside the chamber by either side, though not much is known about the sample's preferred environment.</p>
+        <h1>OCR valves beneath sample chamber</h1>
+        <img src="assets/under-chamber_01.jpg" alt="do you think you can save them?"/>
+      </div>
+      <div class="government credits" id="kraukov-sequence" title="The Kraukov Sequence">
+        
+        <p>The Kraukov Sequence is the term created by researchers at JBAK to describe the artifacts of the spectra observed when attempting to analyze mass from Sample I-001. Instead of the expected parabolas, the result depicts ovoid artifacts suggesting that there are unknown elements or a unique type of mass or atomic structure. One of the researchers theorized this could be an example of [lateral entropic mass|lateral-entropy] a theoretical state of mass hypothesized by Hymel Kraukov, further research would disprove this theory, but the name remained.</p>
+
+        <img src="assets/Discovery-of-neon-isotopes.jpg" alt="ĐØ ɎØɄ ₮Ⱨł₦₭ ɎØɄ ₵₳₦ ₴₳VɆ ₮ⱧɆ₥?"/>
+        
+        <img src="assets/Lateral-Entropy-Spectra.jpg" alt="I̵̵̶̵̷̢̯͕̲̖̙̪̜̣͎̲̜̪̳̊ͥ͒͐ͣͬ͑͛͑̏̃̀͗̎ͬ͒͑̐͟͜͜͝͡ͅ d̢̨̦̲̰̙̐̔̋̾ͤ͘̕͜͟o̢̹̜͕̙͆͒́̂̅͜͢u̶̢̲̪͇̤̠̲̱͚̣͍̟̗̯͓͙ͦ͗ͭ̓̀̋̽̐͋ͪ̄ͧͨͫ͗̀̎ͯ̓̋ͦ́ͥ͟b̶̧̧̢͇͍̠͇̖̘͔̫͆͆ͧ̓ͪ̽ţ̸̵̢̨͍͇̬̤̖̣̜̹͛͗͛̊ͫ̔̄̔̔ͭ y̢̛̛̗̠͖̘ͥͣ͟͠o͔͈̒ͥ͗͌̉͞͡ụ̷̹̖̱͍̰͔ͩ̂ c̫̱͓͐͌̂ͥ͝á̶̷̴̟̟̤͚̱̞̜̠̲̰̺̖̪̩̲̊͋̓̀̃͌͌̆͌ͮ̆͐ͩ̌ͬ̚̕͢ͅn̢͍̥͕̗͌͗͗ͧ́͂͊͢͠"/>
+        <p>Our current physical model has no explanation as to how these artifacts are being generated. It should be physically impossible to produce artifacts like this. Furthermore, the mass-to-charge ratio graph is completely empty. Multiple mass spectrometers of different makes and models were tested and the results confirm that the artifacts are not due to user error or equipment malfunction.</p>
+        <h1>Using the Kraukov Sequence as a security feature</h1>
+        <p>Normally it would take human input to read the results of a mass spectrometer, however, since the resulting mass-to-charge ratio is zero, engineers at JBAK have managed to create an automated sample detection system to immediately alert the facility in case of a containment breach. The devices are specifically designed to analyze single atoms of mass at a time. Any mass-to-charge reading above zero results in a negative result. A reading of zero means the positive identification of mass matching the Kraukov Sequence.</p>
+        <p>These devices were shared with the soviets, as expected they were viewed with suspicion, it is unknown if the devices were ever installed on the soviet side of the facility.</p>
+      </div>
+      <div class="government" id="lateral-entropy" title="Lateral Entropy">
+        <h1>Lateral Entropy</h1>
+        <p>Lateral Entropy is the coined phrase to describe the added entropy required to meet the expected probabilities we observe in isolated physical systems.</p>
+        <p>The term originated from a theoretical model of entropy described in the [Two Rivers h̾͋͢y̎̓̓p̱̃o̽͋̒t̂h̡ͯ̿eͪs̱̦is̟̔͑|two-rivers] posed by Hymel Kraukov.</p>
+      </div>
+      <div class="government" id="two-rivers" title="The Two Rivers h̾͋͢y̎̓̓p̱̃o̽͋̒t̂h̡ͯ̿eͪs̱̦is̟̔͑">
+        
+        <p> n̨̫͕͎̎̇̓ͣ́ͫͬ͋̈́̐ͣ͞d̴̡̯̜͙̳̭͖͉͈͎̺͙̓ͫ͋̓̈́ͨ͆ͮ̾̂̽͊͌͆̊̾ͨ̀ͤ͊͜͟͞w̸̴̡̡̠̹̳̹̭͍̭̹̲̘̤̞̲͖̤ͪͧͩͮ͐͛̊ͦͧ̇ͥ̊͆̎̔ͧ͋̚͘͘͢͡ͅĭ̶̧̤̖̗̟̮̳͂͆͂ͥ͗ͬ̚͟͡ͅb̧̯͈̣̭̤̞ͫ̒̿ͤͤ͐͐͌͌̚͡ḑ̢̛̝̟͙̹͎͕͓̖͋̀ͭ̔̃̋̿̒̏͌ͯͭ͛̇͜͢͟͜͜͢͡ ơ̫̺̙̜̎̒ͯ̀̾͆ͪ̒͢͜͞_̲w̶̵̧̦̼̼ͮ̔̑̆̏ͩ̚͢_̗͇̩̘_̍i͖̪̯͍̖̻͚͍̤̹͔̺͊ͣͨͯͬ̔ͯ̀̿̽ͯͫͧͮ̕͜͢͝͡͞ ņ̸̴̵̨̠̤̠̲͓͎̙̗͙͎̫̗̣̰̘͓̺ͧ́̏̋͆́́̌ͨ̊̀̓̈ͬ͐ͤ͘͟ͅͅḏ̢̛͈̮̳̙̝̘̲͈̦̖̦̬͐̊̈̑͐̏ͭ̈͡ w̶̡̺͇̦͎ͯ̀͆̇̿ͨ͘͞o̷̰̗͓̅ͭ̋͌ͫͮͩ̉͋̈ĩ̶̡̧̳̯͉̖̥̤̻̭̍̈́̿ͫ̅̂́ͨͬ̔̍̅̕̕̕͘͟j̶̨̢̢̛̹̲̞͉͎̟̘͍͓̫̟̃̔ͨ͊̓͐͒ͤͤ̀ͥ̉̐ͫ̃ͪͪ̿ͥͣ̈́͘͜͟͞ė̷̦̺̪̺͗͛͡k̻̓͛͞_̴̶̵̧̰͙̪̯̫̹̙̤͇̗̅͒̍̑ͣͮ͛ͫ̔̿̉̊̾ͮ̒̇̕͟͢͟͠ͅm͕̦̬͇̗̑͋̀̑͗̆̿ͫ͠_̸̨̯̥̺̰͌̑ͅf̵̧̨̗̺̼ͥͨͣ͂͋ͣ̇̐ͤͪ́͞͝_̵̡̻̫̝̼͋̈͑̂̄̾͒ p͠q̡̙͙͑̽̏̿͢ẃ̷̴̢̛̝̯̮̭̫̯̭̜̜͈̋̎̈̏̾͋̓ͮ͒̌ͣ͜ͅi͉_̷̨̞̜͚̥̭̟͍̙͔̇ͯͫ́̿̎̆ͬ́̾̐̔͌́̅͋̃͘̚͜h̗̕ͅd̶̡̝̳ͤͩ̉́̀̂͒̇͟͝_̧̛͉̤̘͇̀̈͌͋͆ͩ̑ͣͨͨ̍̃̒͢͝͠q̵̶̛͍̻̤͎͎̼ͭ̉ͪ̈́͐̌ͥͤw̸̰̞̣̠̬̳̯̤͙̏ͨ͆͘ư̶̶̢̡̧̻͚̠͕̪͇̩͎͎̠͉̑̑ͧ̽ͯͧ̍̊̋͊̅ͦ̿͊ͨ̽̽̔ͮ̆͆͡͡ẖ̷̵̩̺̮͕̝̥̭̺̲͇ͫ͑ͥ́̾̒͆̈́̾̀̽̿̌ͯ̓͝͠d̷̮͉͋ͫ͛͟p͚͚ͣ̎.̵̴͕̗̣͓̦̫̟̽ͨ͗͑̓̉͢͡͠ q̶̷̴̢̣͚̮̗̱̹̭̠̖̳̙̖̹͍͔̻͙̌ͧ͗̍ͫ̓ͥͥ̈̇̃ͥ͐͂̈́͛ͨ̚͜͟w̢̧̛̬͎̜̗̝̺͕̮̳̱̜̠̻̖̳̜̩̏ͥ̿ͦ́̉͗̄̉̊ͪ̈͆ͧ̋͘͜͡͞ḑ̶̼̟̺̓̑ͨ͐̐̀̑̓͘j̷͈̻̙̩͈̖̎̈́͊̂̈ͧ̄́͝_͍̘̼̗̜̥̲͈̻̰̎̈̿̕͠n̨̥͎̺̖̣͎͕͕͈̟ͩ̋̀̊ͭͩ͌̚͜͝͠͠͞q̩̘ͨͭ̅̅̔̓̀p̖̪̦̥̍̌̍͂̅ͥ͋͟͜ͅ_̷̬͕̻̑͆̍ͧ̒̕͟͞͠_̗̞̈́̓͑ͮͦ͘̕͜w͔̺͕̠͚̓̌ͤ̍̈́̽͗ͣ͢_̷̼̬̤̖̟̤͉̬͔̰̞̦̏̾̓̊͒̿͗̍ͬͩͪ̕̕͢͡ĭ̢̢̭̠̣̺͖̙ͩ͗̍͛h̴_̢͉͈̱̜ͦ̿_̷̨̙͍̼́́͑̌̆̿̒̚͘ͅb͖͇͕͔̭͕̩͕̪̹̥̗̣͕ͩ͐̒ͧ͛͐̀ͧͤͯͭͮ̎̾̉͂ͯ̔ͪ̉͘̚̕͝ͅͅd͍o̷̼̭̝͚̪͎̫̭͇͖̜͛̔̓̐͊ͬ̆ͣ̕͢ q̶̵̷̢̢̨̛̛͖͙̞̬̺͚̻̀ͮ̽͌̈́ͪ̃̇ͦ̃ͣ͒͜͟͝w̶̷̥̺̬̘͎̺̉_̸̸̴̢̛̘̰̩̱̗̻͊̾ͮ̈́͂̓̾ͫ̎͋ͭ̿͘̚͠ụ̴̴̧̢̦͇̭̮̠̙̪̰̺̖̦̫͔̹̥͎̹̓ͪ͊̅ͩ͛̉̒ͤ̀ͧ̊ͨ̐̆ͦ͘͢h̷̵̡̭̝̬̟̬͙̜̥̏ͦ̈̔ͣͤ͒̀͗͊ͭ̄̃̽̔͢͟͠͝d͖͚̮̘ȯ̷̧̢̳͍͎̤̋ͧ͗̃ͤͨ͊ͥ̈̚.̴̷̵̶̶̨͈̖̠͔̤̩̣̰̳͍̠̔͋ͮ̉͗ͯ̈̃̓̀ͧ́̐̃̇̇̏̽͆̅̊̓̚͜w̶̵͚̥̟̣̠̆̆͛̋̓ͧ̉͑̆̍̚_͓̥͖͚̙͔̞͕̯ͯͭ͋ͥͤ͌͑q̶̥̗͙̫̓́̿̕͝i͕̿d̞͎̻ͬͤͥ̎ͣ̍̊͂̚͡_̧̡̺̬̭̼̮͓̿̌̾͊͊́ͪͫ͑ͤ̕j̷̶̡̨̣̘̙̲̹̑̓ͩͦͦ̀ͥ̃̋́͋̈́ͬͅoͬ̕͠ẉ̱͔͔̆̉̀̽ͫq̧͉̱̩̭̯̯̐̑̇ͯ̄_̧͔͉͚̭̙̦͙͂̄̊ͦ͗ͬ̃̅ͨͬ͐ͮ͗͒̚͘̕̕ i̷͚̭̱̱͓͔͈̼̘͓̽̏ͧ̋̉̊̉ͤͦ͒͛ͫ̓̇̾͘͠͡ͅd̴̬͓͔̫̰̝̫͓͍̗̮̙̽̔̾̋͛̿̃̇̅̇́̈͆͘͜͟͡͞h̨͒̏q̡̢̛̪̼͕̺͕͚̭̪̗̦̬̜̘ͭͥ͒̈́ͦ́̃́ͭ̓̆̓͆̏̎̀͊̿ͯ͛̕̕̚͢͞͠ǫ̴̸̼̥̰͔͕̻̥̌ͬ̐̾̉͗̀̓̈́̍̽̎̉͜͡.̡̹̥͓̙̥̋͑͋̽ͮ̉ͯ̚wͤḑ̛͔͙̭̘͉̅̀͗́͐ͯ͗̆̓͐̆ͫ͋͟͢͠ͅh̶̡͙̗̦̰̪͍̱̣̥͉̾ͩ̂͋̉̽̀ͩ͛ͮ͜͡͡o͉ͩ͆q̸̪͖̥̼̘̘͎̗̰̥̗̖͆̓̓̈̈ͭ̍̃ͤ́̒͑ͣͮͯ̇̕̚͢͟_͙ͨ̽ w͓ī͕͈͉̗̻̲̠͚̠͎̻̯̹͆̏͂̀ͫ̋̾ͥ̀ͫ̐́͘͠ͅo̵͇͇̝̜͛͋̀͡w̡̹̓̽_̨̛̙̫͇̦̫̥̖̪͍̟͈̩̅̆̃ͦ͗̽͊͛̅̐̌̚  q̫̳̭̻̎ͣͮ͠ͅi̸̡͓̻̗̜̞̳̯͓̔̍ͮ̈́ͩ͠ͅḑ̴̞͇̬̮̼̳̙͓͉̗ͣ͆̍̉͒̋̈̚o̗͇͍͕͇̤̿̎̑̏̊͘͢͢ͅw͎͙̗̼̏ͫ_̀̒į͕̟ͥ̊͐̅ͩd̞q̱̮̩ͫ͌ẅ̸̶̵̡̙̝͚͍͈̤͉͛ͥ̏̋̓ͤ͒̕ͅ  d̤̝̪̬ͫͭ̐ͭi̔̐̔̓̀̊̀h̦͚ͪ̀̄́̇͟͠q̞͎͉ͫͩͪo̴̩͂w̧̢̛̛̭̱͔͕̲̫̖̐͑̾͂̃ͣ͌ͤ̀̍̍ͨ̀͝_͉̩̯͉̄ͭ̑ͯ̀ͭ͛̾̾d̢̛͍̭̦͚̫̝͎̪̺͕̤̣̏ͨͬ̊ͤ̏͊̉̈ͦͬ̏̍ͣ̇̈̀͘͘͟͟ͅb̸̢̯̩̌ͧ̅ͦq̸̧ͧ̑͗́̆̿͌ͣ̍_̸͇̺͓̹̤͍͕͕̯̯͓͋ͥ̊ͣ̂̀̊̏ͩ̿͋ͧͮ͆͆̒͘̚͟w̱̟̝̹͑͒ͦ̊_̸͖̭͇̝͎̰̻̳̯͍̣̺̌͛͐̔̇̂͌ͯ̽ͩ͐͒͠͞d̤̳͔͓̼̬̻̗̲͉͉͉̗̖̳̹̜̄̅̆̀ͤ͐ͤͥͧ̑ͯ̀̈̈̒ͪ́͆ͩ̚h_̴̴̴̢̥͍̣̬͍̝̖̹̞̘̏̇̅́̂͂͋̏̚͢͢͝͠ỏ̬͍̓_ͫw̷̨̳̬̩̣̝̗̦̳̱͍͉̪̗͆ͨ̈́̂̈́ͯ̊͑ͮ̊ͫ́̉̿̐͢͝ͅq̵̸̢̣͚̝̱̟̰̻̪͇͖̪̹̼̏̈́̄ͮ̈́̑ͧ͋͐͐ͬͣ̐̐̂͋̕͜͜͟͜͝d̵̗̣̘͚̥̣͙̪͎̟̻͍̱͍̍̈́́ͦͩ͒̉̎̈́̄̓̀̀̉ͣ̏͂̐̋̔b̶̧̡̤̫̯̺͈̜͍̦͖̰̯̫̠̉̿ͨ̿͛ͣͥͦͭ̊ͧ́͛̽͘͜͞ŵ̖̖͚̲̻̑ͫ̀q̶̡̫͖̯͈̩̼̞̞̮̝̈́ͨ͑ͫ͂̌͒l̴̜͍̻̜͓̃́̉̚í̛̹̼͚̩̰͇̈ͤ͜͢_̸̦̮͉̦͓̰̓̊͐̎͞ḏ̷̳͉̬̹ͧ͊̆͒͠_̵̩͚̼̞̏ͪ̅͆̓̔̉́͝ͅq̸̨͖̥̞̺͈̩́ͧͦ̈́ͣͩ͠w̵̛̮̪̰̻̰̜̠̞̣̠͔̠̪̻͙͙̪̬͊ͥ͐ͤͣͤ̂̓͗͐̕͢͢͠͠ṵ̴̶̬̝̺̜̱̱̩̤̠̭̜͕͉͖̠͆͐͐͊̈͂̓̾̿́̐ͭͫ̒̽̓̒̽͜b̶̡̠͚̘͉̦͎͍́̆̉ͤ͋̈ͭ̄ͥ͌̇͐̕d̶̷̴̶̵͎̼̖̫̖͙̦̱̜͎̙ͥ̇ͪ̈́ͫ̏̾̄̓͊̅ͯ̿͛̓ͭ̕͘͜͜͜͠i̝̿q̶̶̢̨͓͔̯͎̟͙̈́̃̔_̸̪͔w̴̨̥̞̖̥͍̝͉̼̘̯̰͗̌ͬ̍̄̒̔ͥ̅̒̀̈ͧ͂͒̚͢d̸̢̮͕̖̙̦̫̤̳̥̲̥̅̍̀̎ͤ͗̒̇͐̐̋ͤ̑ͧ͘͜ͅ_u̵̧͔͕̲͉̳̘̩̗̯̹͍͙ͣ̀̄ͯͩ̍ͫ̍ͧ̉̀ͣͩ͐͛ͪ̀͛͘͜͢͞b̦̾́̈́̑̏͝͞q͉̯͍̱̬̠̰̐̍ͣ̊͘͠͡͞w̴̢̲̱̓ͣ́i̶̢̡̜̳͕̘͈͖̯̯̝̩͍̒̓̆ͮ̎̋ͣ͌͒͜͡͠͝͝_̗̟̥̆͑͐̑̅̚d̵̷͙͖̪͓̜̞͔̥ͫͥ͋͌ͪ̎̆̾̆̅͘͘͘̕_̜̺̙̙̖̈͛̔͊͑̆͜͞ử̶͇̱̩̗͎̙͈͇̘̯̱̜̟͉ͩ̐͂͆ͨ̌ͯ̕͘͡ͅq̶͍͇͖̪̝̔̑̓ͥ͡w̧̢͉̗͉̮̜̳͊̐̇͒̉̊̅͐̊̓̓̚͜͡b̷̶̢̛͖̦̭̜̞͗̽̊̓ͭ̅ͪ̏̓͟͢͝d̬̰i̷̡̢̙̙̪̫̳͔͖̯ͦ͂̎̀ͪ̑́̓́̽̀ͪ̾͛̉͐͡q̴̡̛̜̭͕̫̲̼̤̼̙͉̦̘̣̰͓̱̼͍ͪͣ̾̔̑̇͛ͫ͗ͭͯ͂̄́̈́̕͟ͅp̶̴͔̘̺͖̀͌͌̔̿͑̿ͫ̅͂ͦͧ͞oi͉̳̻̱̼̼͍͈̯̤̎͌͑ͧ̎̈ͥ͗̀͛̑̂̍h͒ư̵̴̢̱̭̘̬͔̲̞̳̪̭̠̞̽͐ͨͫ̇̌͗͗̓̄ͣ̄̏̚̕͢͡ͅë̡̯͉̩͕̰́̂͊̅̔͑̍̌͜͞͠ủ͕̪̮͈̟̝̟̍̾ͨ͆̀̒͛͌̀͜w̸̧̗̼͎̪̄ͦ̔̑̍́̐̒͊ͩͬ̿͡h̸̵̸̢̩̰͓̝̝̙̜̞ͩ̄̇́ͬ̏͢͟e̞̬͗͊ͧ͒ͧ͑w̴̶̸͚̼̰̯̲͍̺̜͛͂̑ͦ͢͢͞ǫ̵̤͕͚̰̘̳̤̪̺͇͈̠̽͆̎̿ͧ̄̐͛̋̓͐͆́͟͞͝y̷̠̘̻̤ͤͧT̷̡͉͕͔̻̩̪͕̘͙̯̘͇̓ͥ̐̈ͯ̆̀̓͂̓́̐͌̕͜͢͞_̢̢̣̤̈̿̔̆e̴̢̨̧͉̮̮͍͚̩̩͉̫͕̲̯̞̿̈̌ͬͫ͆̽͑ͭ̓ͯ̂̈́͊̿̓͘͘͜͜ͅ T̵̷̗̼̰̪̞̖͉̰̑̍ͮ̊͂ͦ̚͝͠ͅḣ̛̗̹̤̎̒e̷̶̜̳͓̳̗̜ͧͣ̽͆ͤͥ͜_̶͎̙̮͉͎̥͓͕̥̻̎̑ͤ͌̋̎ͤͮ́̚͞͝ų̷̡̤̣̼̱̱̮̤̘̩̥͕̘͖͐̉̔̑̀̒̄̊ͣ́̓͜͜͞ͅr̨̢̬͖̳̯̜̙̝̖̍̾̓͑̃̍͐̉͑ͭͤ͂ͨ̕̚̚͠͝ę̸̷̨̡̙̭̘̼̥̲̦̙̻̐̒ͭ̀̒̀ͭ̈̅̔͜͝ ǫ̶͓͈̯̥̗̫͖͚̹͉̲ͤ̋͑̈ͬ͂̄ͥį͖͍̜̙̩̭̜͎̞̰̩̰͕̙͎͛̈̈̔̒͑̏ͬͮͥ̽͌̿̇͐͝͠ͅh̵͍͓̗̳̳̞̭̮̹ͪͦ̓ͭͫ́̀͊̽̂ͣ͂͡͠ė̴̷̟̯̥̞͚͗͛͊̓̏͞ỏ̵̡̞͕̙͈͔̫̳͔͆͒̕͠͞e_̶̧̤̰͙͖͈̯̠̠̤͖͖͗͌ͯ͋ͯ̈́͜</p>
+      </div>
+      <div class="government" id="orientation" title="JBAK orientation guidelines">
+        <h1>JBAK orientation guidelines</h1>
+        <p>Context: Facility-wide mandates now require new recruits to undergo 48 hours of isolation in BSL-4 quarantine cells upon arrival. They must also complete a series of cognitive tests at the beginning and end of their quarantine. New recruits will likely not be accustomed to the climate or time zone of Antarctica, and being left in the dark about the nature of the facility and their role may cause irritation.</p>
+        <p>Some important topics to discuss:</p>
+          <ul><li>Joint Base Anderson-Kotova is shared and jointly managed by the US and Soviet Union.</li>
+          <li>Engaging with or interacting with members of the opposing faction is strictly prohibited.</li>
+          <li>The facility is separate by a glass partition that allows observation but limits interaction.</li>
+          <li> As a measure of diplomacy, each side of the facility prepares and delivers food to the opposite side. You will not be eating your standard “american fair” while deployed here.</li>
+        </ul>
+        <p>Reminder: It is important to slowly dole out the description of the sample as many tend to outright reject the information otherwise. Recommendation: Begin by describing its discovery and the investigation of the crash site. Mention that the sample is difficult to believe before revealing any specific details.</p>
+      </div>
+      <div class="government" id="mission" title="JBAK Mission Parameters">
+        <h1>JBAK Mission Parameters</h1>
+        <p>The primary role of JBAK is to determine the nature of SampleI-001 and assess whether it poses a threat to US or Soviet interests. Additionally, initial observations suggest that the sample may be of extraordinary scientific and industrial interest. Finally, it is possible the sample is a message or messenger of an interstellar origin, making this first contact with an extraterrestrial intelligence.</p>
+        <p>To avoid escalations between the United States and the Soviet Union, both parties have agreed to engage in a joint research operation regarding the sample. Neither party is obligated to share or release their findings to the other, but throughout the facility, observation windows allow personnel from both sides to observe the other side.</p>
+        <p>The facility is designed with many specialized “diplomatic” functions. The main functions are the [Opposing Chamber Release Valves|valve-schematic] which only allows entrance to the [sample chamber|assessment-room] when the opposing party concedes. Each party must submit examination proposals to the other side of the facility in order to enter the chamber, the proposal is considered and either accepted or rejected based on its research merit or other risk assessments.</p>
+      </div>
+      <div class="government credits" id="initial-discovery" title="Initial Discovery of Sample I-001">
+        <h1>Discovery of first confirmed interstellar object</h1>
+        <p>In 1988 both US and Soviet radio telescope systems identified a fast moving object in our solar system. Due to its speed, it is speculated to be of an interstellar origin. </p>
+        <p>Both agencies plotted its trajectory and discovered that it was on a collision course for earth. Later measurements and more advanced estimates would correctly anticipate the object would land somewhere in the Antarctic circle.</p>
+        <p>The United States and the Soviet Union both tasked teams to find and claim the object.</p>
+        <h1>On January 6th 1989, 3 weeks after it was discovered. The object (Sample I-001) made contact with the earth at Martin Peninsula (74°20′S 114°30′W) at location marked ߜ</h1>
+        <img src="assets/map_peninsula.jpg" alt="HELLO?"/>
+        <p>Ultimately both teams found the crash site at the same time and while both teams were initially puzzled, they eventually took the opportunity to make a step towards diplomacy by sharing ownership of the object (Sample I-001).</p>
+        <p>6 months later JBAK was fully built on-site and operational, minor tests were done remotely but more thorough examinations would only start when the assessment room and sample chamber were fully operational.</p>
+        <img src="assets/Expedition.jpg" alt="HELLO?"/>
+        
+      </div>
+      <div class="government credits" id="exam-1" title="Initial Examination US and Soviet Union (001)">
+        <h1>Initial Examination US and Soviet Union (001)</h1>
+        <p>July 11th 1989 - First formal examination of Sample I-001</p>
+        <p>Certified transcript of live communications during initial examination by David Pernill</p>
+        <p><q>Radio check, over</q></p>
+        <p><q>We hear you, over</q></p>
+        <p><q>Airlock is giving me the green light, over</q></p>
+        <p><q>We’re giving the Soviets the signal, looks like their guy is also waiting for us, over</q></p>
+        <p><q>…</q></p>
+        <p><q>I see the sample, it’s between me and the russian. The sample hasn’t moved. Over. This room looks a lot smaller than the diagram.</q></p>
+        <p><q>He’s kneeling near the side of the sample. He’s measuring the dimensions.</q></p>
+        <p><q>Is he touching the sample? Over.</q></p>
+        <p><q>Yes, no reaction. It’s behaving exactly like you’d expect. I’ll be honest with y’all, it’s really convincing, My gut tells me this is some kind of elaborate prank.</q></p>
+        <p><q>Fight that impulse, Jackson. This is not a prank.</q></p>
+        <p><q>Understood. I’m going to open it. Got that russian's attention now. Let’s see.</q></p>
+        <p><q>Be careful. Tell us everything you see and feel.</q></p>
+        <p><q>The l̶̸̴̶̴̸̨̟̰̜̭͍̳̙̮̭͖̹ͪ́͆̋͋͂ͦ̾͒ͪ̄̂̐ͭ̔ͦ̎̑̕͜͝ͅǎ̴̢̘͉͔̃̉t̵̶̡̡̨̟̘̪̤͎͛ͩ̋ͧ́ͭ́͘͟͞͝c̴̶̴̡͇̪̙͓̪͔̦̖̰ͧ͂̂ͭ̅ͦ́̈̒ͭ̇͝h̵̢̡͔̥͉̲̦̻̮͔̣͕̝̟̺̥̱̼̥ͪͧ̌̅̾͑̒ͭ̓̈́͋̓̎̀̌͘͠͞ w̨̡̖͎̤̳̙͇̭̟̟̺̘͚̆͐̑͑̉̈́͊ͤͣ̓ͨ̽͐̇́̈ͯ͘o̦̙̦̗ͯͨ̀̆̅̐̃̃ͧ͑̾̕͡rks, the hinge works as you expect. sliders seem to work. It opens, inside there seems to be a ẉ̀ͧ͢͡_̵̢͚͚̱̬͖̮̮͎̱̙͔͙͊̈ͥ̄͛ͬ̀̐ͧ̈͊ͯͬͯ̚̚ŗ̛͉͕̬̞̹̝̬͈ͫ̒̎ͣ͛͑̄̊̏́̚͢͟͝i̶̷͍͓̼͔̟̪̳̟͙͔̙̓̽̃̒ͯͬ͗͋̿̊͒ͥ̅ͭ̽ͨͬͭ̽̄ͨ͂͘͞͞͝͝͞ͅt̨̢̧̳͕̫̺̹͚̭̲̰ͨ̀̏̈́̀ͩ̊̋̄ͫ̆̒̈̅̚̚͝͠į̸̳͍͓̮͚̺̝̽̒ͣ͆̑͞n̷̢̹͈̞ͤ̈̇̐̓͋̕g̸̵̨̨̨̯̦̫̰͉̞͕̘͍͕̼̤͍̫ͭͪ̌̊̊ͯ͐̓̍͆̄̇̈́̐̓̑͌͒͟͟͝͠͞ͅ s̵͖̻̭͖̦̖̥ͯ̒̑ͥͤ̌̚ͅu̸̺̥͉̫̍̃̑̅̆̽ͨ͆͋̿̅͗̊̕͞ŗ̴̨͚̲͓̱̳̤̤̟̘̠̺ͤͥ̎̄̄͛ͭ̊ͅͅf̢̘̹̝̻̗̙̩͉̠̫̩̯͙͉̀̑̀̀̆͂ͣ̽̈́ͪ͌̓͛̆̐̈́ͤ͗̒̔ͦ͐̔̚͘͢͡͞͠͞a̱ͦ̈̒̊ͬ̔͢͝ͅ_̧̯͓̹͕̥̱̒͗ͣ͛̃̔͟ͅc_̨͚̯̤̼͙̱̥̲͇ͦ̆̓͋͋ͦ̑̊ͣ́̏͂̓ͭ̈́̊͘̚͢͟͟͠͞ͅȩ̶̴̷̡̧̳͙̻͕͓͕̬͚̖͕̹͈̬ͨ̊̑͆̈̍̈̄̐̈́̔̈̊ͣ̈̕͜͢͠͞,̸̷̶̴̨̧̧̛̭̦͖͍͕̹̻͖̼̠͈̙̣̝̥͚̱ͨ̌ͬ̂́̀̎̇̓̍͂̆̿̇ͧ̽̚̕͢͢͡ a̴̴̡̮͖̗̥̣̘͇̮̳̟͕̝̣̩̰̦̺̦̞͇̺̞̠̖̒̂̐̊͐ͫ̀ͫ̈̉̓ͪͬ̽̿̍͘͢͜͜ c̜̣͛o̭͎ͩ_̶̸̴̡̡͚̥̱̺̲͙͇͎͔̞̜̝̟̭͍͂̂̇́ͭ̽̄͋ͩ̑̅̏͛̇̔ͯ̓̚͘͡ͅu̴͕͙̳̖͈̹̙͙ͧ̊̈́ͭ͊͒͐̈́̍͋́̚_̶̷̥̫͕̦̙̋ͩ̇ͦͯ͑̔̕͝͡ͅp̛̗͇͔ͣ͛͐̇̋̈̅̏_̵̡̡̺̗̳̹̳̈ͨ͑̓ͬ͘l̵̵̢̛͔͖̻̮͎̘̬̻̍ͧ͂̑̀͋̏̂͋̄͗̾̿̋̕͡ȅ̡̨̢̟̺͚̗͉͕̠̥ͯ͒̐̂͐̇͂̐̎͐́̉̕͘͢͡͝ o̘̞̝ͧ̆͛̇͟_̸̢̰̠ͬ̓̇ͣf̵̡̭͖̠̬̘̣̻͚̠̮̙̫̙̭ͨ͋̏̊̓̆̌͒̉ͪ̂̀̓̎̊̂̐͗̓̓ͩ͐̈́̽͛̆̀͋̚͘̚ s̴̬̪͈̲̮͙̬̪͙͆̌ͨ̓́̆̊̔̽ͭ͟͢ṃ̴̸̢̧͔̜͓͉̝̰̖͕̟̠̦͗ͫͩ̽ͧ̄̀̂͂̒͆̌̀̄̓̈́̅̆͗ͬ̋ͫ͗ͬͫ͟͞a̮ͭ̒_̡̡͍̮̭̫̣̘̣̤̘ͯͪ́́͂̾͊̍̂́̌͌̐̽͘͜͡͡͡ļ̷̞̪̻ͧͪ̉́ͥͭ̿͋ͬ͡_͇̫̗̦͎̂̅̍̈̇l̨̘̝̤̣̳̭̥̙̙̑̔̀͋ͦ͆ͯ͒ͧ̋̕͡ȩ̶̶̴̛̱̫̼̠̖̤͍̲̼̳̝̙͔̣̝͉̟̳͚̦͓͕̘͈ͮ̓͆̇̀͌͊̒̌͗̽̽̅͋̚͢͜ŗ̦̤̮̄͑ͦͫ̍́ d̢̢̧̯̪̱͇͈̭͍̝̤̖̼͎̳̤͋̿̍̒́̆̋̔ͯ̌ͪͩͬ̉ͪͫͨ̕͢͜͜͝ͅr̠̻̾̎ͥ͘aẉ̾͜é̦̱̼̱͕͕͔̥̞̭̬͖́͐̄̂́̅ͣ͋̋̄͒͘͢͠_̸̋̊̃̇̈ͨͦ̑͡r̬̜͉̰͙̆̄̈́̉͆̽̀͠s̸̼̩͔̼̫̊ͫ̉͒ͣ͗̚̕͜͝, a̵̢͐_̷̡̬͈͕͚͚́̋̅͂͢͠ ļ̻̙̞̏ͤ_̵̨̧̳̤̰̤͉̬̠͕̬̖͎̜͕̊̃͗̔̓͂ͩ̾͌̆̉̋͞i̶̛̤̰̲̗̟ͪͭͣͮ̃ͯͤ̀͜͢__̵̢̠͓̱͍͎͚̥͈̞͚͍̯̊̓̌̇̈͂ͫ͐̀ͧ̇͒̀ͧṫṭ̸̸̝̰̟̖̓̾̋̌ͤ̎ͨ͆͋̽͠ͅͅl̨ͧ̀̽͘ẹ̶̥̳̯͕̝̐͊ͯͮͬͩ̃̇ͯ̿ͥ̂̒ͫͫ̽ͥͯͯ̋ͦ c̶̟̆̀̏ͫ̉̅̾ͦ̂a̧͈̯̗̰̖͐ͣ͆ͭ̌ͤ̔ͭ̓͐͘͜ͅb̵̷̴̴̷̡̧̪̠̲̺̺̙̦̮̜̟͉̒ͯ̆ͥ̀̈ͫ͂̎̔͊ͭͯ̌ͣ̒ͮͭ͑̃ͭͨ̕̚̚͟͟i̸̴̢̨͕̣̫͙̜̰̬̮͓͔̲̤͎̞̾̀̓͂ͩ̔̏̋͗̑ͫ̏ͫ̓̔͜n̨e̢̲̻̤͈t̮͚̪͉̯̳͛̌ͦ̌ b̨̥̰̫͍͉̮̜̺͍͙͍̋̏ͨͧ̎ͣ̽͗̀̈́̆̂ͣ̂̾͒͑ͣͣ̚͟͝͠͡͡ͅṵ̵̧̙ͯ̆ͭ͘͠͞i̢͍̪͈͙̠̲̰ͪ̌̋̉ͮ̈ͩ̑͐͋̾ͣ̾̋͜l̥̙̜̄͊t̵̶͉̺̬̥̼͚̻̱̭͓͙̠̲͚̹͖̼͕͔́́͂͐̊̀̅ͨ́ͫ͌͜͟͢͢͞ i̶̷̢̛̪̫͚͓̗͕̬̭̙̪͔͎͓̫̯̦͑͌ͥ͊ͫ́̓̃̀̍̈́͂́̆͐̽̔͐̾̕͡͡͞ͅn̨̧̥̹̦͓̗̻̯̦̘̓̅̓ͩ͂ͥ̐ͣͪͮͥͬ̌̕ͅt̵̴̡̡̡̧̗͇̥̬̯͈̆ͮ̋̍̑ͮ̈́͗͗̔͋͛̆̇ͨ̐ͤ̇̏̾͘͟͡͝ͅo̸̟̮̩͖̥͈̙͉͊̈̉̇ͤͤ͒͂͛͑̀̅̕͢͝͡͡_̨̹̘̄ ṫ͖̰ͯ͘ͅh̠ͮ͜e̢̥̼̦̠̫͈̱̜̩̭̙̙͈͇̥̲ͧ͛̏͌͛ͮͭ̏̅ͧͤ͊͑̎̂ͯ͐̀͘͟͞ b̛̹̼̏́͌̚á̵̵̷̧̨̛̛͓͈͍̰̻͍͙̠̭̖͈̗̻̦͎́́́͑ͧ̂̌͛͌͗̇̅̑͋̇̑̓̕͘͜͢͡͞ͅck̸̵̨̡͈͙̯͙͔̩̬̯̝̟̦̲̟͐ͦ̿̄̅͒̀ͩ͛̽͑̒̑ͨ̊͑͊͐̕͝,̸̶̡̜̲̖̝̪̬ͨ̎͊͂ͨ̒ͨ́̇ͥ̕_̶̮͈̖͍̬̣̋ͮ there’s dust on the surface.</q></p>
+        <p><q>Did you say dust?</q></p>
+        <p><q>Yeah, there’s dust on all of it, actually, like it’s been sitting here for years. Opening tĥ̴̸̴̨̨̡͚̺͈̜̙̱̥͇̙̫̗̻̭̪̺̪͚̝͓̓ͧ̎͊̔͒͗͆̏̓̾́̌̒́ͧ͑̕ͅe͙̍ t͉͙͉̝͈͙̲͕͍̩̭͉ͯͯ̀́̔̏ͨͬ͘͢ọ̶̵̷̧̝̪̳̥̰̻̿ͥͨ̈́͋ͥͮ̎͗͘̕͝ṕ̖͔̋͟ d̸̞̫͓̰̺͚̥̭̃̎ͣͪ̾̅̉͋͢ŕ̴̛̛͖̦̬͍̗͔̘̘̦̠͈̞͇̋ͧͦͣ́͛̅̑ͧ͆̇ͯ́̽̐̕͟͟ǎ̻ͨ̍̏̒̓͞w̞̉͆̋͢ȩ̸̢̳̤̮̦̹̜̠̰̦͑̍ͥ̌ͩ̂͋͗̾͘͢r̸̡̠͕̭̣̜̪̞͖͕͖̗̲̹̤ͬ͂̃̔͛̿̃́͐̐͛̈́͒̄̎̍̊͗̏̆́̾͌ͥ͟͝ n̵̴̵̘̞̗͚̳̥̻̼͈͔̘̞̞̳̪ͩ͊̽ͦ̌̌ͯͪ̂ͧ̾̓ͫ̏ͬ͊̍͘͘͟͟͟͠ǫ̡̡̛̙́ͯ́ͣw̙͎̙̠̲̲̠̯ͬ̃̋ͬ̍ͯ̊̈͒͘͟͟͢͝ͅ.̷̨̦̹̫͍͍͈͈̩͎̳̓́̄̐ͮͣ̂͋͋ͪ͒̋̔_̺̬͚͉ͬ</q></p>
+        <p><q>(Sharp Ç̶̨̨̟̱̲̰̘̩̳͈̺̞̖̬̖̳̝̀ͬͩ͒ͩͮͭͯ͊̽̆ͥ́͂̚͢͝ͅr̷̩̺̯̥̬͖͎̐ͤ̈́̎ͪ̈́̿ͮ͘_̢̖̃͂á̶̸̸̵̢̨̧̟̳͇̥̩̲͕̰̤̠̯̙̘͕̈̌ͭ͌ͪ͆ͤ̇̏ͥ̕͢͢ͅͅc̶̡̻͔͈̣͎͎̫͓͊͒̎̇ͫ̔ͨ͆͌́̏͢͝͠k̸̷̡͚̗͙̝̘ͥ̀̆͊̂̔́̑́̏̐ͪ̉ͥ͘͟)̸̧̡̨͉͍̼͆̉̐̀̊ͭͪ͘͡*̴̶͔̙̝̩͓̯̗̲̟̻ͤ̊͌ͫ̊̌́̀̑̂͋ͥ̄ͯͯ͟͝_̷̏ͥ̅̀U̶̱̿̿ͦ̈ͮ͜n̬̥i̴̛͕̙̭͚̱͔̻ͧ̓̾̌͌ͦ̌̉̅̎ͤ̄̄̚͠͡͝ͅn̴̡̧̫͎͇̣̝̹̰̤͍͓̙͕̰͔̭̩͑̑̉ͬ̇̐͑̌͐͊̊̔̏ͮ̅̌̚͘̕̚̕͞ͅͅt̪̹͇̬̃̓̓͞e͕̗̙̫̼̙̟ͯͮͫ͆̋̈̚͟͢l̢̨̛̗͓̳̮̖̹͓̯͚̗̮̜̩͙̓ͯ̾̃̒̐̃ͤ̋͊͊̎͒ͯ̽̍̽͑̚͘͟͡͞͝l̛̼͉̮̆ͭͭ̃ͥͫ̄̏̓͝͠î̴̴̺͉͙͙̤͖̏̊̈́͒̈̎̃͊͞g̖͔̮̐̀ͧ͒̈́̎î͖̤͓̮͓̳̮͗͊́́ͨ̏ͬ͐ͫ̓ͬ̋ͩͥ̕͘b̶̛̼͙̠͎͎̪͛ͥͦͦ̔̍́ͫͫ̂͋̀ͦ̍͛͌́͐̊ͭ̎̆̍͢͝͞͡͠ḷ̯̮̣ͯ̎́ͪe̸̶̢̛̥̱̩̣̞̹̱̮̯̟̠̯̅ͣ̒͒̋͌ͯͨ̀̍̉ͣ̊̚*̶̶̨̢̙̜̺̺͉̠͉͍̦͖̗͓̽͌̊ͯ̾̓̉̄̉ͯͯ̏̾̒͋̚͘͘͜͟͞͡͠ͅ -̷̨͔̟̦͚̬͓̹͇͕̜͂̾ͪ̏̈́̍̔ͬ͑̀̑ͨ̓͘ ‘̶̷̢̛̛͙̩͔̦̜͒͂͋̍̀͌̀͐̒̏̀̋̚͟͟͠ơ̖̱͇̭̺͉͓̣͂͌ͨͧ̓̿͂ͫ͛̑m̧͕̩̱͎͖̑ͥ̊̾ȩ̴̶̗̮̫͇͕̭̩̭͇̠̻̊̈̓́̋̄͗̚͘̕ p̵̧̭̼̗̭͌ͫ́̚̕ͅl̜̮̜̼͍̫̀̊͗̅̌͢͡ā̶̡̨̦͔̘̝͈̲͓̻͔͎̜͗̀̇ͯ̎̓̎͗ͨ̓̽ͥ͋͢͟y̶̡͖̖̜̋̍͌̈́i̢̺̜̇̐͘n̽g̡̳̺̦̗͉ͨͤ͑̿ͧ c͉̹̤̫̃͆̀́̓̊ͨ̚͜͢a̴̵̸̢̛̰͎̭͍̪̜̫̤̖̯͔͓̥̲ͪͭ̐̑͆̐͑ͪͤ̅̀͒̓ͦͯͯ͋͑̈́̍ͧ̆ͯ̊̐̚͞r̷͖̫̥͙̱͇̫͚͍̘̮̜̤̆͑̉̅ͥͦ̓ͦ̂͑̇̈́͗̈́ͥ͒ͪͪ̎͘̚͟͞͠ds here. Looks like a stan- *Unintelligible*</q></p>
+        <p><q>Jackson, we’re having trouble hearing you, please repeat. Over.</q></p>
+        <p><q>Hold on, the russian is trying to tell me something, he’s pulling the cord, wants out. Shit, he’s really calling quits. Calling it. No idea why.</q></p>
+        <p><q>Dammit. Alright, we don’t want to make a mess of things with the Soviet̺͖̪̆͒ͧ́̾ͦ͗̅̄̽̊s̢̹̩͖̻͖̱͋̊̄̒͛̐ͩͩͪ̏̇͒̍͘ o̴͔ͮ͝n our first foray here, head back to the airlock Jackson.</q></p>
+        <p><q>Should I close it?</q></p>
+        <p><q>No. Leave everything exactly the way it is.</q></p>
+        <p><q>Understood.</q></p>
+        <p>Eye-witness testimony observed the russian scientist having what appeared to be a panic attack or psychotic break, armed guards took the individual away. </p>
+        <p>J̷̷̢͔̲̼̥̙͉̗͕̍͌ͧ̈́̇̇͆̉̀̊́͆̾̒͋͠å̸̸̬̝̺̙͖̞̻ͪ͋ͧ̄ͫ̅̀̌ͪ̚͠c̨̨̖̥͙̟̜̬̠̉̊ͦ̔ͨ͗͒ͨͧ̀̚͜͞k̸̲̬̦͓̜͚̼̦̼ͪͧ̂̏ͯ̃̓ͦ̀ͣ̌ͤ̋̂ͦ́ͭͫͪ͜͝s̰̙͕͚̤͒̚_̶̷̷̶̨̤̭̜̪̞̞͉̺̩̺̞ͥͭ̃̉ͭ̒ͬ̅ͫͯ̈̈́̈́ͯ̐̅͊ͯ̒̕ǫ̸̺̮͕̱͙̝̪͙͖̯̼̰͉̼̮͒̋̅̈́ͭ̑ͨ̿ͥ̉̀ͩͪ͛͆͌͐̍͊̐͒̕͜͜͜͠͡ͅņ̴̴̵̵̢̬̼͙̣͕̞̗͇̳̪̭͗̈ͬ̓̍͊̿̽̓́͆̂̂ͣ̈́̂̓͋̕͢͟͠͡ w̲̩͍̘͇͗̿͊ͧ̂̑̿̏ͭ͒͞_̪̕o͎͙ṷ̡̢̰ͭ̃̄̿͊͐̀̇̾̌̽ͥ̌l͔ͥ̌̑d̨̡̬̮̹͖̱̂̔͝_̧̨̙̘̣̤̞̩̐ͩ̀ͩ̄̑̐ͫ̒̚ à̵̢̧͚̬̠͈͍͚͇̿͆̎̄̇ͤͤ̌͆͜͟͜l̴̷̴̢̨̛͕͉̝͚̠̘̳̩̬̲̹͓ͣ̌̊̈́̿͌̍̌̅ͬ̂ͫ̒͌̉̉̽͌̿̅͘͟͢͢͠͡s̯̙̫͆͞_͗ő̸̲̙̠̥̳̬͕̙͓̙̿̏̀̌̈̆͛̀̆ͨ̚͟͡ c̐_̵̷̡̮͇͉̝̼̙ͥ͛ͪ̐́̃̀ḽ̛̮̳̱̲͕̗͗͛̄̐̋̅̀͆̽̎͑͆̈͜ͅa̴̛̺͕͎̝̤̯̝͕̞̫̪̩̟̤̩͍̺͉͖͑ͩ́͐̇̌ͧ̈̊ͤ͊̓͐ͪ͛͘͝͞ͅȓ̷̸̢̮̞̘̘͉̺͙̦̙̩͉̝̺̺̞̺ͨͮ͗̄ͮ̾̀̌̒̀ͮͥ̏̇͆̏͂̀̈́͘į̶̶̢̛̼̯̻̣̦̤̮͎͇̲̟̙̮̫͙̱͒̋͋͗ͫ̋̾ͥ̃ͣ̃̕̕͢͠f̵̧̛̛͍͙̺̹̼̬͍̰̪̯̱͚̫͙̱̀̈́̓̽̈̿ͥ̾ͧ̅̑̎̋ͩ͂ͭ̀͌̓ͪ͘̕̚͢͢͞y̢̥͍ͨ͐͆̾̒͋̔̊̔̚͢͠͠͞ ẗ̘́_̸̙͈͌̐ͯ̇ͦ̍ͥ͢h͓̖͎͙̱̱̹̠̲̆̒ͬ̒ͦ̋̍̋ͫ̀ͣ͗̈̊̈́̾̎͌́̊͗͘a̞̙͖̒̈́̓ͣ̀̅t̪̭̱͔͓̯̣̖̫͚̬͓̬ͦ̍͗ͦ̄̍ͭ͊̋ͬ̈́ͨ̂̈́̚͠͞͡ t̛̻̠͎̍́h̟̻̽ͩ͆͐ͬ͞ȩ̶̶̡̢̛͙̬͖̘͙͔̝̜̝͍̪̯͓͈̳̼̖̹͔̍͂̓ͥ͒ͮ̃̄̍ͬ͒ͥ̆̀̎̾͜͠͡ͅͅ o̸̷̡̗̣͉̤̻͍̣̖̲̥̪̗͈͇̺̥̪͌͛̈͑̍̎̌̏͆͌̔ͩͬͭͣ̇̈̅͋̎͗̐ͬ͘͠͡b̶̸̢̹͓̞̭̫͔͖͙ͧͧ̾ͭ̄̀̅̉͡j̨̅́͑ͯ͟ĕ̠̫̇͗c̴̶̛̛̙̙͍̟̙̳͇̜͍͔͍͎̣͎̘̜͌̉̎͐̏͒̽ͫͮ̍͗ͭͧ̿ͦ͋̂͘͜ͅt͕̼̘ͩ̅ͦ̄͒̿_͒(̸̵̴̨̡̡̻̹̣̳̦͇̣̳̳̫̗͍̦̻̓̀̔͌̀͊ͧ̒̒̎̈ͮ̐̏ͤ͒ͩ̓͒ͪͩ́̕͠ͅͅs)̶̧̛͎͓̠̳͖̤̲͖͔̅̐ͫ̉ͮ̈́̅ͭͫ͛ͬ f̶̴͇͉̠͇̝̫͈̣͉̼͎̟̒̈́͂ͨ̈ͯͯͧ͑́̄͆ͬ̕̕ͅọ̡̱̼̜̻̘̮͌̆͑ͧ͒ͥ͡ͅứ̸̷̻̮̖͈̻ͬ͒̍ͪ̆̕͢n̷̡̧̬̠̲͎̭͛̆ͣ̆͗ͭ̌͋ͨ͒͝d̩̼̤͈̯̗̪̱̤̻̑ͥͦ͆̒ͧͤ̕̕͢ ỉ̡̛̙͚̠̲̙̜̟̪̞̤̩̪͍̥̬̖̂̇̉̋́̊̾̂ͧͭ͑̈̇̕̚̕̕͜͜͜͡ͅṇ̵̶̷̡̯̬̬̲̭̺͓̱̤̗̥̂̍̂͋͑̈́̊̀̆̒͊̋̽͌ͬͬ̀̈́̎̍̿̄̕̚͜͡͠ t̴̶̝̞̫̯̠͎̖ͤ̽͂̏̒̔ͧ͞ͅh̴̟̘̝̐̌̆̎̍̽͡e̷̴̴̢̢̥̠͙̰̟̰̬ͩͧ̿ͥ̋̔ͭ͌̓ͩ̚͜͠ ḏ̶͇͚̳̣͉͑ͮ̈ͪ͛ŗ̵̷̷̊͗͠ͅa̧̢̢̟͙̻̱̰̳̞̺̱ͯ̓̏̉͐̇̔̽ͬͫ̓͛͒ͨ̓̓ͣ͊̉ͮ͑͐͂̚̚͟͞͝͞w̥̃_̢̢̖̗͗̊̾_̨̢̧̹̭̜͓͔̂͒̔̇ͫ́͗̌̆̕͜e̟ͯͥr̴̯̈́̏ͣͨ̉_̸̷̧̛̲̗̝̠̬͔͙̘̫̖̲̤̣͍̜̠͛ͥ͐͑̋ͫ̆ͭ͒̐͛̚͞ͅ w̷̸̵̨͖͔̰̯̬͚̭̝̙̮̅̀͊͊̀̂̈́̓̈́̀̊̉ͥͧ͗͘͢͟͠ͅ_͓̳̠͒a̸̫͕͇ͬͤ̽͊͛ͯ́ś̢̝̭͔̟̙̫̳̠̫̖͐̽̌̌̈͑̍̕͘̕͞ a̢̛͖̝̗̹͚̪̟̫ͪ́̋̄̂͆̂͋ͦ͛͆͞ d̷̢̯͖͖̖̟̀ͯ̑̽̽̍ë̴̡̳͈̟̟͈̮̮̻̟̯̋̆͌ͦ̾̀̃̓̏͌͊̚͝ͅc̡̱̣̫͕̠͇͆́ͤ̆̿ͨ͛̋̅ͮ̔̕͡k̶̷̸̶̶̨̤͚͉̥̝̭̦̗̪ͦͦ̈̆̑̄ͩ̈̿͑͗̑̏ͭ͆̐̐͊͒̊̎̔ͤ͑ͪ͟͠͝͝ o̴̸̢̧̜̠̝͓̻̳͕͕̥̤͈̓̏͛̊ͧ̏̾̓͗͛͗̌̀͢͟͞f̢̹͎̗̑̒̏ͪ͐ p̶̷̶̢̻̞̬̣̫̟̠͍̖͇̮̺̌̔ͪ̽͟_̸̲͉̘̮̠̌ͩ̓͘ļ̴̴̴̨̬̹̯͕͉͎̺͎̹̩͕̖̗̲̤̳̀̓ͪ̂́͆͒ͪ̎ͧ̒ͦ̃̑̅̒̈́̏̓́͗̄́ͫ̿a̷̴̸͚̣̰̮̖̣̬̣̩̘̰̭̐̒̉̊͗̇͒̅ͮ̑͛̈́ͤ̑̚̕͟͜͝͝y̨̢̮̠͍̻̤̟̳̗̰̦͊̎͋̓ͣ̐̊̓̎ͫ̈ͨ̅̀͟i̸̷̴̧̧̛̝͓̭̭͙̫̖͈̬̼̜̦̯̭̥̱͚̳͐̐ͧ͑ͪ̏̀͊́̐̉̒́ͯ̀ͫ̔̕͢͝n̢̡̛̝͍̩̪̭̞̯̱̝̫͒ͭ̀ͩ̓̀͐ͭ̂̊̂̓̌͌̏͘͠g͓_̤̻ͬ ç̵̢̨̠̪̳̜̳̻̖̟͔͎̘̓͑͑̍̍̂̒̊̅ͦ̽̃ͦ̈ͭ̇̕͠͠͝a̧̨̨͇̦̍́́̈́͆̌ͪͥͯ̋͡͡͝r̸̢̙̥͎̹̰͎͐́ͫ̋́̈͌̎d̰̭̞̣̳ͦs̴̸̨̺͙̪̗̬̤̱͍̯̘̰͖̻̭͔͌̄̊̂̃̏̀̀ͨ͆̅̀̓̒ͫͯ́ͅ_̵̡͔̍̇́ͩ́̏,͓͎̣̬̣̍̊̎͘_̢̹̼̙̭̞̣̲̫̦͂̐̔͑͒ͪ̍͘͜_̼̖͈̫̐̈̎̎ͦ̏̊͋̓ b̷̹̕͡ų̞͍͔̤͍̼̱͕̜̱̪ͪ̓̈̒̉͊̋ͧ̃̎̂ͨt͕̩̠͈͕̠̤̫̰͖̅͊͑͑̏́ͫ̏̊̏͗͘͢͢͞ b̋͌l̷̷̺̞̫̉̀̂̈́̋͢͠ͅͅa̧̫̻̜̪ͧͭͤͥ̋ͭ̎̂͘͘͘͜͜ͅč̸̝̯̹̎̆̒͗̅̏͟͝ͅ_͙̝͆̈͊͒k̵̶͍̺̻̜͉͓̙̘͔̪̼̲͇̗̽̽̊ͤ̄̃ͧ̽̉̐̑ͩ̉ͥ͜͠ b̭̪͎̰͎͓̦̗̹̥̦̯̬͇̭͊̉ͪ̍ͩ͗ͧ̈́̽ͤ͋̈̌ͭ̄ͬͬ̃͗̽͡ļ̶̡̢̖̼̹̪̩͙̆̑̄̄̓̏͛̿̾ͭͭ͆ͦ͒͛̊͜͟͡͡ͅơ̢̢̩̮͍̼̺̬̺͉͈̖̜͎̲̹͂ͣ́̂̒͛͐͛̆̎́̀ͧ̈ͪ͐ͤ̌̂̄̅̎ͣ̽ͅt̢͓̜̠̳̩̘̮͓͊͊̾ͬͨ̐̑ͥ̏̉̆ͪ͡ͅcͦh̪̰̳͚͔̓̕͘ͅ_̨̛̠̫̯͖̦̩̍ͯ͊͒ͯ͜_̄ͩy̳͇͎̐ͧ̊̍́͟͡_̴̵̷͍͙̭̘̱͇̝̗̫͔͈̙͑́̏́͑ͫ́ ś̭̺̠̲͇͕̽ͩ̍̉̐͌ͥͬ͛͘͞h̴̵̪̜͖͖̫̱̓̏ͨ̃̈̆͑̀̐͗̑̓͐̽ͬ͋͟ḁ̶̴̢͔͈̺̖͎̤̮̟̫̞̉́̈ͮͤ̀̏ͫͤ̃̎̕͜͜͜͠p̵̵̠̒̿͊͛ͭe̴̡̤̮̱̙͓͈̱͍͑́͗̒̅ͦ̎̋̾͊̄̓ͩ̅͛̄̚̚͢͠͞ͅs̸̨̫͙̻̘͉̬̞͛̒͆́͆ͤ̃̑̽̏ͭ͗̎ͯ̂͊͗ͯ̕͡ͅ į̵͂n̠̾s̨̢̠͈̝̫̳̞̳̼͉̣̣̬̟͔̹͎̪ͩͥ͌͐̄͌́̉̄ͫ̎̐̀̓͊̍̐̀̾͟ͅt̴̴̶̪̜̝͕̖͖́̄ͮ͊̀ͩ͌͑̈́ͨ̿̀͆̑͠e̴̥̳̫̐̏̈́ͩ̏͘͢a̴̴̶̟̳̰͍̰͈̙͎͍͌ͨͬͥͭ̀̎ͣd̵̶̨̨͚̙̳̙̜̝̱͕̯̰̠̺̟͍̞͔̃ͤ̆̀̐̾̔̿̍ͤ̔͋ͬͦͫͬ̓́ͤ̿͘̚͢͜͡͞͞ ǫ̴̷̦͈͇͗̂ͫ́̋f̷̛͔̤͉̺̺͖̣̫̦̯͍̻̟̏̒ͦ̇̇̇̑̓ͯͩ̾̂̑̉̚͢͢͞ͅ p̢̬̦̭̣̦͓̜̖̘̻̼̱̲͔̝ͫ́̿̃͂ͩͦ͋ͩͮ͑̈́̊͆ͨ͂ͮ̈̇̓̈́ͩ͡͝_̝͋ř̶̵̴̶̢̧̧̧̛̭̺͍̯̬̩͈̲̮̼̘͂ͤͤ̓̒̓ͫ͐̿ͤ̒ͯ͗̅̀ͨ̀ͧͮͥ͘͟͟͜iͩ͒ń̶̰̥͙͇̲ͣ͋͒̃̒̕tȩ̷̸͕̤̞͕̳̗͎̫ͭ͊ͩ̈́̑͛ͦ͆ͨ͋̔̈̀̇̈́͛͢͟ͅd̵̷̨̧̢̨̲̘͔͓̜̤̣͙͙̝̊͑̑̃̑́͊̍ͭͮ͛̾͘͠ c̣̎̈́͞_̶̢̡̜̝͈̲̘̯̺̬̬̺͔͖͖̣̞̥̱̋͌ͩͧͯ̓͂̓̿͑ͦͮͧ̅̀̉͂ͬ͟͟͞͡ȧ̢̭̹̲̺͇̿ͫͣͣ͒̌ͬͪ̄͛́̆͗ͦ́̕r̢̡̡̛̛̥͍͉̭̺͍͓̠̲͉̪̭͙͉ͩ͋͑́ͩ̽͌̋̇̋ͩͣͣ́d̹̝̝̩̗ͮ͐̈́ͣ̀̑͑̅͘ f̴̖̯̦̙̹ͯ́́̓̍̀̆͑͑͌ͮ_̴̞͖ͯ̓̓̒̄͗ͅā̧̛̬̗͖̪̺͍̝̣ͨ̅̍̐͐͐̽̓͛̎͗ͫ̂́͢͞͝c̸̶̸̢̧̬̦̻̗̖̼̪̑͛ͬͫ͊ͦ̈ͪͥ̍̄ͤ̍̾̉͐͝e̸̶̢̢̧͉̯̺̦̘͉̤̻̲̝̅͆̉̐ͭ͐̀̐ͫ̓̄ͦ͂̒͊̆̍͜s͖̻̼̪̯̼ͮ̍ͩ̅ͯ̕_ͩͭ.̴̵̨͖̻̝̺̩̙̦̦͓͕̦͔̻ͩ̀̓̒́̂̃ͯ̽ͫ͂̉ͨͥͧ͘͠ͅ</p>
+        <p>[Photograph isolatį̴̴̤͚̳͂̏ͧ̂ͯ̌̀̐̓̈́n̜̹͎ͥ̒g̴̶̠̫͕̟̠̦̦̤̙̫̳̠̯͕͕̮͙̝̅ͤͪͣ̓̓͆̌͂ͩ́ͬ͂̇̆̽̿͛͘̚̚͜͠͝ o̵̸̡̦͉̙̗̼͔͔̖̬͈ͬ̀̎̎ͫ̇̉ͯ̽̐̃̚͝͠n̷̡̢̛̖̥̖̫͕̘̺̱͓̭̭̗̝̒ͦͨ̈͂̿ͬ̂̍͐̒̋̑ͪ̄̄̇̂́̂̍̆̈́͞͝͝͡͞e̶̵̷̡̢̢̛̛̫̝̖͎̩̻͖͎̩͖͑̽̈̉́̋ͧ̂̽ͣ͒̅ͫͤ̀̕͜͜ o̷̲̞͓̓̃̍̉ͯͥ̍̀ͨͤͯ̕͠ͅf̺̘̲ͪ̾͜ t̸̢̢̨̗̘̜ͬ̃͋̐͡h̶̫̘̟̥ͮ͢ë̅́͟_̶̷̴̶̹̬̗̥͈̱̉̓̐ͪ̍̓̎̐͌͒͘͟͝_̨͔̻̯͈̲̬̠̙͐͑͆̑̿̂͑͘͟ p̴̶̛̖̞̞̳̲̥̫̝̗ͮ̇ͪ͛́͂́̈͒͛͛̂ͭ̽̑̊̈́̕̕͠͠͠͝ͅl̻̰͙̮̞͙̗̯̥ͫ̈͗͊̂̓̔ͥ͐ͦͭͮ͋̓̾͌̈́́͋ͦ̉̋̽ͧ̂͑̒͜͠͠a̛͇͙ͫ͛̏̓̚͟_̴̢͕͎͔̼̩͕̱̟ͪͫ̊̀ͨ̍́ͭͩͧͭ̇̿͒ͣ͘̚͡ͅỳ̸̵̼̳̳͇̮̰̯̄̋ͫ̅̒ͯ͐̓̀ͥͦ͂ͩ̂͟i̸̸̶̢͙̮̝̼̯̞͙̭̱̝͈̱̞͙ͦ̓͐ͮ̈̀ͥ͑̓ͫ̏̌̿́̚͜͜͡ͅn̴̶̯̦̳̺͖ͦ͑ͨ̑ͥͫ̓̆ͭ̒͑͠g̷̡̪̗͚̟̽͑ͨ̉́͟ c̵̛͔̘̦̣͓̖͐̒ͣͨͮ͆̎͘̚͢͢å̬̥̚_͇̎͜͢͠_̅ͣ͝ṙ̶̢̜̟̗͈̻̤͈̱̗͓ͧ͂͑̑͋̀̀ͮ͆̊̄͢͟͠d̴͖̅̆̇ͭ͑s̺̼̖̯ͥͪ̿̓͗ͯ͝ͅ|card-face]</p>
+        <p>The soviets would provide their official explanation for cutting the examination short:</p>
+        <ul>
+          <p><q>Радиостанция в герметичн̵̧̧̧̩̜̺͙͕͍͇͉͈̰̹̱͉̅ͣ̄̄̾ͤͩ̆̓̔ͩ̆̚͝͠ͅо̴̨͇͙̭̺͎̩̯̲͇̻̖̣̟͔͚͈̥̳̞̟̬̐̄ͮͦ͒̿̀̀̊͌̀͗̽ͭ͑̊̓̀̽̉̀͢м скафандре нашего ученого вышла из строя, и связь прервалась.</q></p>
+          <p><q>The radio in our scientist’s positive pressure personnel suit died and communications were halted.</q></p>
+          
+        </ul>
+          
+          
+        
+      </div>
+
+      <div class="news credits" id="autopsy-full" title="Piotr Drozdov Autopsy Report">
+        <h1>Piotr Drozdov Autopsy Report</h1>
+        <p>On August 29th, Jackson Venders and Soviet Scientist Piotr Drozdov were in the Assessment room sample chamber during examination 003, when Piotr inexplicably collapsed to the ground inside the chamber. Jackson quickly assisted the scientist and carried them to the US airlock. After ensuring the positive pressure barrier was still active and both scientists were fully decontaminated, medical personnel were allowed to remove Piotr from his suit.</p>
+        <p>Piotr was pronounced dead moments later.</p>
+        <img src="assets/Autopsy.jpg" alt="HELLO?"/>
+        <p>Despite protests from Soviet leaders, the United States opted to perform an Autopsy on Piotr before returning the body. The cause of death remained inconclusive though medical examiner Dr. Clifford Schofield described the extent of the injury. Like a grenade wormed its way into his skull and detonated itself.</p>
+      </div>
+
+      <div class="government credits" id="autopsy" title="Piotr Drozdov Autopsy Report">
+        <h1>Piotr Drozdov Autopsy Report</h1>
+        <p>On August 29th, Jackson Venders and Soviet Scientist Piotr Drozdov were in the Assessment room sample chamber during examination 003, when Piotr inexplicably collapsed to the ground inside the chamber. Jackson quickly assisted the scientist and carried them to the US airlock. After ensuring the positive pressure barrier was still active and both scientists were fully decontaminated, medical personnel were allowed to remove Piotr from his suit.</p>
+        <p>Piotr was pronounced dead moments later.</p>
+        <img src="assets/Autopsy.jpg" alt="HELLO?"/>
+        <p>Despite protests from Soviet leaders, the United States opted to perform an Autopsy on Piotr before returning the body. The cause of death remained ████████████ ██████ ███████ ████████ ██. ████████ █████████ █████████ ███ ██████ ██ ███ ██████. ████ █ ███████ ██████ ███ ███ ████ ███ █████ ███ █████████ ██████.</p>
+      </div>
+
+      <div class="government credits" id="post-exam-1" title="Post Examination 001 US incident report">
+        
+        <p>On July 11th, four hours after the initial sample examination abruptly ended, Jackson Torres collapsed and fell unconscious for several minutes. After waking, Jackson would later be admitted to the medical center for uncontrolled anxiety attacks. He was placed in BSL-4 Quarantine and his name added to the [█████████ █████████████ ███████|quar-list] list.
+          Samples of blood were tested and multiple cognitive tests were administered, but nothing measured showed anything beyond an extreme anxiety attack.</p>
+          <h1>The following are notes of Dr. Lave, JBAK facility psychiatrist</h1>
+          <p>Torres is unusually quiet during sessions and often only answers when asked a direct question.</p>
+          <p>He seems to have trouble regulating the volume of his voice and often starts speaking nearer to a yell, it often only takes a moment for him to correct this.</p>
+          <p>I am prescribing a regimen of Benzodiazepine for the next week.</p>
+          <p>After a week, Mr. Torres is showing improvement. He is able to hold small conversations and seems to have no issue maintaining a normal speaking volume.</p>
+          <p>Mr. Torres has mentioned a voice in his head. When I pressed him for details about the voice his anxiety symptoms resurfaced. He described the voice as a malicious one, though it says nothing mean or harmful.</p>
+          <p>He likens it to talking to someone you view as an enemy, someone who hates you, there is an instinctual quality to their voice that you can feel. I asked him what the voice said.</p>
+          <ul><p> “███ █████ ██ ██████ █████ ██ ██. ███ ████ █████, █████, █████, ████ ████, ███ █████, ████ █████ █████ ██ ███, █ █████ ████ ██ █████ ███.”</p></ul>
+          
+          <p>I’ve recommended Mr. Torres be granted leave of duty to receive a more thorough medical evaluation than what I can provide here at JBAK</p>
+          <p></p>
+        
+      </div>
+      <div class="news credits" id="post-exam-1-open" title="Post Examination 001 US incident report">
+        
+        <p>On July 11th, four hours after the initial sample examination abruptly ended, Jackson Torres collapsed and fell unconscious for several minutes. After waking, Jackson would later be admitted to the medical center for uncontrolled anxiety attacks. He was placed in BSL-4 Quarantine and his name added to the [potential contamination vectors|quar-list-full] list.
+          Samples of blood were tested and multiple cognitive tests were administered, but nothing measured showed anything beyond an extreme anxiety attack.</p>
+          <h1>The following are notes of Dr. Lave, JBAK facility psychiatrist</h1>
+          <p>Torres is unusually quiet during sessions and often only answers when asked a direct question.</p>
+          <p>He seems to have trouble regulating the volume of his voice and often starts speaking nearer to a yell, it often only takes a moment for him to correct this.</p>
+          <p>I am prescribing a regimen of Benzodiazepine for the next week.</p>
+          <p>After a week, Mr. Torres is showing improvement. He is able to hold small conversations and seems to have no issue maintaining a normal speaking volume.</p>
+          <p>Mr. Torres has mentioned a voice in his head. When I pressed him for details about the voice his anxiety symptoms resurfaced. He described the voice as a malicious one, though it says nothing mean or harmful.</p>
+          <p>He likens it to talking to someone you view as an enemy, someone who hates you, there is an instinctual quality to their voice that you can feel. I asked him what the voice said.</p>
+          <ul><p> “The voice is saying hello to me. Not like hello, hello, hello, more like, one hello, that never seems to end, I still hear it right now.”</p></ul>
+          
+          <p>I’ve recommended Mr. Torres be granted leave of duty to receive a more thorough medical evaluation than what I can provide here at JBAK</p>
+          <p></p>
+        
+      </div>
+
+      <div class="government credits" id="exam-2-proposal" title="US examination proposal (Examination 002)">
+        <h1>Examination Proposal Synopsis</h1>
+        <p>US researchers want to have a full understanding regarding the physical structure and extents of Sample I-001. They argue that it would be unproductive to speculate further without a complete picture and definition of the Sample.</p>
+        <p>Proposal consists of various methods and means that will lead to this outcome, including, opening each ď̵̵̷̡̡̛̳͍̬̺̩̙̜̩͚̩͂̃̍̊̉ͨ̀̅̀ͪ́͊̔ͤ͊͂́̿̚͟͞͞r̝̣͒ͤ͝͠_̵̨̨̼̭̳̗̤̖̠̲̲̹̇́ͥ͐͂ͧ̔ͥͬ̉̕a̧̤̹̓̚w̧̩͔̬̲ͮ̊̋̑̇̚͠ȩ̧̤̙̩̙̪̼̯͈̽ͫ̃͋͗ͦ̃ͥ͡r̶̨͓̙̬̖͔͕̽́̀̑ͣ̈́ͥͣ̇̆̑͂ͯͬ̊̕͢͟ ḁ̢̣̯̮̜̱̳̜͇̿ͨ̀͗̊̐͂ͥ͞͡ͅ_̸̸̛̠̟̪̤̮̍̏̿̓͆̑̒ͣ̓͂̚͟n̪̟ͥ̐͢͢_̴̶̵̴̧̢̫̱̰̱̯̭̰͒̌͗̐ͥ͂ͭͦ̽͐ͪ̽ͤ͂́̚͟͡͠͞d̸̴̢̲̬̪̯̣̱̰̼̲̘̠̹ͫ̿ͫͪ͌̎̈́̓ͬ͐̎͟͟͡͠͡ ć̥̟̖͚̭͇̖͓̙̆̒̐̈́͆̏̽̊̌͒͘ͅà̞̖͚̼̜̟̫̼̤̪͈̙̖ͧ̋̏̅͛͜ͅb͎̖̞̅ͯͬ̿́̚i̧̢̡̨͚̖͔̣̗̟͕͖̤̟̻̍̍̎̔̈̀͛̈́ͫ̀̌ͤ̌ͥͯ̃͝͠͞n̶̯̤̔̍ͤȩ̨̺̗̖̀̍͊ͧ̅͜_̥_̷̵̨͎͙͚̭̙͗̓ͧ͌ͭͪ͋͊͂t̠ͬ_̸̡̛̛̪̻̟̺̖̟̲̯̬̦̭͇͖̜͔ͯ̾̈́̽͌̐̈̓̑̆͘̕͢͜͡͞,̰̭̖͚͆ͭͣ̆̀͊̇́͡ r̶̨̻̱ͨ̇̒̃͢é̸̷̡̛̛̛̦͎̻͈̤̯̠̜̖̩̯̹̹͈ͫ͋͊̋̒͆ͪ́ͨ̊͋̌̎ͮͭ̊ͧ͂̓́̇̀̕̚͢m̸̶̴̨̨̨̖̟̟̹͓͔͖͕̮̤ͬͦ̽ͬ̑ͣ̓̇̃̌́ͩ̈́ͬ̈́ͫ̑͋̕̚͡͠ơ̶̢̢̜̥̟͍͓͇͍̑͛ͤ̒̏͂̍̈͡v͕͗͑͗i̩̪ͧ̚n̷͕̯̟̘̝͓̼̣̥̬͙̱̈́̾ͨ̐̓̄̉͌͝͠͠͠g t̢̮̻͐͒̓͟_̴̵̨̢͚̤̱̠͓͔̩̼͎̺̍ͭ̍̇͛͊̏̑ͦ̋ͫ̇̄͜͟͞h̨͍̟̟̬͖̞̤͉͌̀͒͒ͣ̄̄̃͐̆_̵͚̟̻͓͋͒ͣͤ̀̾͘ę̸̵̶̛͕̯͉͍̺̭̣̟̼͇̱̠̣̜͓̲̣̈̆͊̍̿̇̆̾̉̈͌ͨ́ͬ̃͌ͥ̇͗͘͢͟͡͝ d̴̶̢̩̗̲̲̹͎̱̫͖̬͈̲̮̙̣́̒ͣ́̂̈̂͆̽ͪ͆̃͒̾ͭ͂ͫ͑͂̌̌ͪ͋͘͟͜͢r̵̶̷̦̩̘̭̮͖͕͙̘̗͙͂̔̔ͧ̽͌ͫ̊ͭ͌̇̓̈́̓ͤ͂͒̌̚̕͘͜͜͠ͅa̢̯̠̩ͤͧ̒̍͋͌̔_̸͙͎͎̭̲͚̏͐̂̐̉̓͌͘͞w̨̼̯̣͚̖̞̮͇ͣ̀̀ͪ̑͊ͭͥ̓̕͟͢e̠̹̙͔͖͆̓͊͌̇͗͛̒̀ͣ̄ͣͮr̷̟̪͕̤̯͈̜ͤ̆͗ͪ́ͫ͡͞s̷̵̷̺̝̩͚̳͙̩̗̩̎̌̆ͧ́͑ͭͩ̿̑̈ͥ͟͢͟͠͝,̸̷̛̤̬͕̻͓̰̾̊͐̀͂̊͆̊̂̌͛̓ ḍ̷͔̫̣ͩͩͩ̀ͨ̓e̵̵̙͉͍̝͛͒̍͌̍͑̕͠_̵̨̝̥̩̯̤̓̌ͯ̋ͮ̔ͥ̕͟͠͞͠ͅţ̵̷̶̷̜̣̩̜͈͇̖͉̖̺̗̟̿̿͒͐̒̿̂̉ͬ̃ͩ̉ͯ͟͜͞͡ạ̴̶̵̵̗͎̠̦̾̇̈̃͒ͫ͌͘͡͡͝͡i_̢̼͋l̸̴̴̴̶̷̷̛͖̟̲͉̦͎̜̗̩͚̦͓͉̾̾̿̎̈́ͨͬ̏̊̀̓̾̇̅͒͌̓̕̚͜͝͡ͅė̡͖̮͎̯͚̝͂̆̔̄̾̽̓d̫̹̯͐̒̊͂̅͠_̢̧͓̖͙̞̭͙̳̐ͦ̎ͨͫ̍͊̋͋͑̏ͣ͛͗̀ͅ p̷̴̵̡̧̨̗̳̣̗̲̪̗̤̞̖̠͇̟̻ͫ̓ͩͫͯ͒̈͆͆̂ͭ̚̚̚̚͜͢͡ͅḥ̛̹͂_̶̛̭̟̣̙͖͔͍͙̱ͩ͑ͯ͒̒̐̇̔ͩ̅̃̀̚̚͜ǫ̛̠̼͈͎̲͕͍͈̋̅́ͬ͑̾ͯ͗͗̎ͣ͊͆̏ͬ̂ͣ͊̚̚͢͡t͖̹̞͇̣͉̊̋̊́̊ͬ̈́́̂̌ͩ̾͑ͩ͋ͪ̀͠͞ǫ̸̨̛̛̥̪̳͇̳̣̆̽̉̈́̌ͤ̿ͬ͘͝͝g̟̉̆r̸̵̛̺̮̣̰̺̫̥̞̜ͭ̃͗ͣ͂̎͜͢ͅạ̵̡ͬ̉͑ͯ̿̎͋ͨ͛ͧ̏͜p̴̛͢͠_̴̨͈̫̝̜͉̥͚̞̣̾͛̾ͭ̈͌ͬͥͮ̊͌̕͟͟͟͡h̻̘̤̣͙͓̜̓ͫͮ̄́̋̕͡s̸̸̛͓̞̼̣̼̝͕͙̳̤̼̝͊̑͗ͩͮͯ̂͗ͩ̓̾ͤͧ̆ͬ̐̓̿͌̄͘͜͢͜͠_̘ o̡͓̥͔̥͖̙̯̙̘̱ͥ͗͋̆̋̾ͥ͋͠͞͞f͓̮̲͔͓̀͋͌̚_̶̷͈͍̰͉͈ͦ̏ͬͮ̌͗ ḛ̵͔̩͈͍͙͕̭͙͂͑͛̾̆̽͒̋͗̈́̔̽͟a͍͑͊ͬ̇c̵̥̠̰̺̘̤̟̻͐͂̉́͊͡h̠̣̺̤̥̱̳̗̬̽͑̓̊ͫͨͧ̎ͤ͘͜͠͠ f͎̎͑á̵͓͎ͪ͂͐ͦͫ͜͞c̷͕̰̘̱̰̞̝̈̆̇ͮͧ͐̔ͩ̃͛̇̍͆̈ͅe_̡̫͓̦̜̊̒͑ͥ̆͘͜,̶̢̢̡̪͚̹̻̫͙͙̩̦̼̰̜ͧͤ͂́ͩ̀̂ͩ͂ͭ̿͗͢ c̸̢̻͓̬͎̭̞͙̍͐̽̍͗̓̑ͧ͘͢͞ļ͇̠̖̣̀̃͛̓̔_̒o̶̵̥̬͖̳͔̯͍ͬ͊͒ͩ̇̏̓̍͌̀͠͠s̶̷̛̠̞̙̜̟͋̀̌ͨ̓̓ͫ̇ͬ̑̚_̴̴͍͎̠̳͛̎̎͛̉̚͟͠ͅe̵̘̘̣̳͉̓͌̏̽̒̊̉̄̽̒ͧ͟ up̴̸̶̶̶̸̨̫̙͖̖̠̝̮̤̫̩̼͙͓̘̠̖̖͇ͣ̐̿̑ͫ̒̐͆̌͌̄͛̑̌̏̋̃̊̿ͅ m̵̵̷͚̰͈͇͈̘̻̯̟̣̭̅͆ͤ̆̇̌̄̍_̬̣̲̗̞̻̯͈͎̽̊͗́͑ͫͦ͌̽ȩ̷̨̛͇͍̼̜̩͚̭̙̝̲̹̩͇͆́ͮ̎ͬ̅̽͊̒ͬ̅̕_̯̪̩̄a_̶͇̅s̨̨̛̟͎̻̲̦̖͖̏̍͑̑̊ͣ̈̀ͪ̓ͭͣͯ̃ͧ͋̚͜͜͢͠u̧͙̺̽̽̏̈͛͘͡͞ͅŕ̸̸̺̜͖̟̖̬͖͉͚̮̫̳̼̪̯̍̓͌̐̇̌ͮ̌ͨ̿̒ͪͦ̉ͨ͛ͣ̽ͩ͝͡e̷̗̪͖̦͓̖͚͎ͯ̀ͣͭͤ̈́̋̌̀̈́́̐͘͢͟͝͞m̨̮̰̮̜̀̎̒͊͌̑̀̈́ͪ̆͟͢ě̛͍͉͖̮̝̘̤͉́͊ͫ̇̅͌̓͘͘̚͜͝͞ͅǹ̴̨̡̘̩̞̼̝̰̓̄̂ͩ́ͨ̀̒̚͟͡͡t̟͖͊̇̐̈̑͋̎̈́͆͢͟͟s̵̭̩̻͖̤̜̲͓̠̽ͣͧ̍̂̌͑͆ͬ̏͢,̧̡̛͚̟͈̞̝͎͓͇̝͇̘̰̞̅̓̀̅͛̂͗́͊̍͢ a̸̵̱̪͕̬̳̟͈͎̥̲̍͑͂ͤ̾̄̇ͭ̌ͮ̎̇ͯ͝ ŗ̷̗͂̔ͪͨ͠e̢̥̙͇̘̙̜͕̜̓̃͛͌̀͌̀ͮͅq̻̞͇̫̞̑͛̒ͦ̔́͟u̜̿̏͘̚͜i̴̸̫̜̤̣̣͕̟ͪ͊̈ͬ̇ͧ͒̍̅ͯ̾ͩ̀̕͘͟s̳͖̙̲̗̞͔̍̽̅ͫ͋̌í̸̧̧̛̝̼̦͕̣̝̹̪͎̝͆͌͛́͋̍̏̂̎̀ͧͩt͓͎ͭ̃iͫ̿̆͑͑_̤͇̲̦̃̏ͬ̉̕o͢_̷̺̥̺͔͈̱̫͙͌ͧͨ̔̿̿͐͋̅͘̕͠n̵̷̵̵̴̨͍̻̹̺̩͕͈͍̠͊̓́͋̏̍̏͌̍͘͜͡͠ f̣̩͕̞̬̭̮̰̠ͫ̑̋̏͒̎ͪ̃ͥͬͦ̄͂ͪͮ͛̅͟͟ͅͅo̵̢̢̝͕̺̤̾͑̔ͮͨ͌̇̍̌͟͟͠_̴̞̱͕̲͙̹͕̠̀͑̑͠r̶̢̼̝̃̊̉̏̋̾ͅm̴͚̘̭̝̒ͥ ȁ̶̸̪͍̗̲̹̜̲̼̤̬͈͔̭͆ͨ̂̾ͭ̆͑ͪ̊͌͌͗̊̐ͮ̒̌̈́͒͗̒͒͜͞͡ͅl̤̬͕̥͓̠̃͆̈́̋ͧ̚l̵̸̡͓̬͈͇͚̞͓̖̼̝͈͚̟̝ͧ͋ͮ͒̑͒̌ͩ̀͋͆́ͩ̓͜͞ǫ̶̛͚͍̳͔̙̀̀͆ͫ͌͌ͧ̏͡_̭̌̎̌͐̿̒w̷̤̥̘̦͓͇̭͎̥̾̇́̀ͦ̐ͫͯ̔̂ͪ̾ͫ͒ͭͪ͘͢͠͡i̢̨͇̬̹͙͖͎̜͎ͥ͋͑̿̐̇̾̎ͪ̽̀ͬ̕͜͝n̵͚̭̟͋̓̊ͪ̔ͨ̀ͤͫ͢_͕͘g̸͓̣̑̂̚_̼͉̔ͣ̌͋̄̚͜͟͡ b̷̶̢̫͇̹̮̞̩̻̙̪̦̲̭ͯ̊ͬ́͌̓̆́ͦ͛̃̾ͤ̊̐̀ͪ̋ͧ̈́͜͞͞͡_̑̐ͤ̍o̹̙͍̹̤̺̹̩̗̿͆̊́͒̐̾̃ͨ͘͜t̷ͩh̢̧̹͍̞͔̭̻ͭ͗̆͐̍̈ͣ͗̽̑ͤ̐ͩ̋͟͢ͅ a̴̢̛͓̱̲̖͉͉̖̞̓́̐ͨͯͨ̓͛̓̆̅͌͟_̸̢̼͚͍͍͓͇͎̣ͣͭͩ̐͊ͨ̾̅͋̎g̶̨̪͙̝͎̐́̑͞e̷̗̓͐ͅn̲̲͓̯͚̘̝͕̍͐̍ͮ̆͌͠͠ͅ_̵̵̸̳̠̹̲ͤ̓ͣ̿̍̀̍͐̐̔c̵̨̨̢͚̫̘̯̳̦̗̥̘͓͆ͨͥ͆͑͆ͧ̍̋̿̀ͮ͢͠͞͝͝͞͡_̛i̡̳̘̓ͮͤ̋̉̎̋ḝ̢̜̈́̅ͬ͘s̩̣̜ͫ́ͬ͜ ṱ̴̴̦̤̟̰̹̎̉ͦ͝ơ͈̼͕̊̈̈́̅̎̒ͨ̓ͤ́͜ t͍̀ā̷̹͇̫̠̝̞̹̹͇̭̤̟̔̀͋ͮ̍͋̏̂ͬ̿́̇̿̅̀͆̓͘̕ͅk̴̮̪͇͔͔̖̞͓̜͓̣̮̠͋̇͊ͫ̋̇͛̇̔̐ͪ͘̕̕͢͡͠e̷̡̛͎̬̟̼̠̖̪̫͎͓͇̭̮̦̪̩͖̟̥̾́ͧ̽̈́̿ͥ̅́́̂ͩ͋ͮ̒͌͂͟͝͞ s̸̨̖̼̙͈̤̟̻̰͍̲͙͙̲̹̎ͥ́͛̌ͣ̽̒̏͐̾͋̋ͫ̚̚͜m̶̡͙̰͕̣ͨͯ̽ͮ́̕̚̚ͅả͔̎͊ͭͫ͟l̗͡l̴̢̢͍̝̳͇̫̥̱̝͕͈͙͈̮͕̞͌͒̓̐̈̅̃͘͢ s̢̭̼̯̺͇̟͈̲͛̅̎̇͋̓̎̔ͦ͟a̸̴̶͍̯͇̗̜̖̣͈͓̽̆́ͣͧͩ̍̽́ͫ̀̇̔ͮ̀͛̏ͦ̚ṃ͔͒ͨ͌ͭ̇͟͟pͫ̐̓͋ͥl̵̛͎͖̜̪̹̲̹͈̣̪̯̙̥̤̼̘̩ͯ͗̓͑̿̾̀ͩ̃͗̓͆́̉̄͐ͥ̊̇͑ͪͭ̚͢͠͝e̴̴̵̦̦̝̻͇ͪ̃̊͟͡s̴̺̹͓ͬͩͯ̈͡ ȯ͎͉̺ͭͦ̀f̴̶̨̩̘̩̞̳̫͔̙̫͉̪̲̾́́͌͋ͧ̑̎ͭ͌͠͞ͅ t̴̫̞͉͛́ḩ̵̡͖̩͓̭̝̱̲̲̮̲̖ͭ̆͑̾ͯ̂ͯ̃ͭ̂̆̌̈́͛͗̈́ͪͬ̍̕͘͘͡͝͠͡͡͠é̶̗̟͍̹̓͗̆͂̿̇̐͡ d̘͖͗̿e̢̦̲_̱̮̠̱̗̏̌ͪ̈́͐̽̓̄ͧ͒͢sķ̶̧̙͚͖͖͎̪̟͈͓̜͇̙͙̰̘͓͇ͮ͐͊͛̔̉̈̈ͮ͛̾̑ͫ̿ͥ̈̋ͨ͗ͮ̄͑̿͘͟͞͝ m̪͙͈̣͇̼̻̣̦͎̅̃̍̑̄̎͋̿͂͊͛a̴̵̛̗̬̬͉̘͙̪̬͈̗͓̖͎ͭͤ̀ͧ͒̽̋̅ͦ̆͐̈́̊̃̊̀̍ͯ͌̿̌̋̾̕͘͘͟͜͟͢͡t͇ͯͦ͛͞erial and dust.</p>
+        <p>The proposal also allows the presence of one USSR (paired with one US Researcher) that may also take an equal amount of samples.</p>
+        <img src="assets/exam-2-proposal.jpg" alt="HELLO?"/>
+      </div>
+    
+      
+      <div class="news" id="quar-list-full" title="Possible contamination vectors">
+        <h1>List of possible contamination vectors</h1>
+        <p>This list includes individuals present at initial crash site as well as anyone who directly interacted with Sample I-001 before it was properly contained. Extensive interviews were conducted to determine if any of the individuals interacted with others before they were contained but it was concluded (albeit with some disagreements) that there was no meaningful contact that could act as an additional contamination vector.</p>
+        <ul>
+          <ul>
+            <ul>
+              <ul>
+                
+                  
+                    <li>Victoria Tamwin</li>
+                    <li>Valeriy Dolgov</li>
+                    <li>Yurik Volkov</li>
+                    <li>Anton “Phillip” Smith</li>
+                    <li>Roman Borisov</li>
+                    <li>Timothy Green</li>
+                    <li>Arnold Moody</li>
+                    <li>Oleg Alexeev</li>
+                    <li>Jackson Torres</li>
+                  
+                
+              </ul>
+            </ul>
+          </ul>
+          
+        </ul>
+
+      </div>
+
+      <div class="government" id="quar-list" title="████████ █████████████ ███████">
+        <h1>List of ████████ █████████████ ███████</h1>
+        <p>██████ ██ ███ ████████ █████████. █████████ ██████████ ████ █████████ ██ █████████ ██ ███ ██ ███ ███████████ ██████████ ████ ██████ ██████ ████ ████ █████████ ███ ██ ███ █████████ (██████ ████ ████ █████████████) ████ █████ ███ ██ ██████████ ███████ ████ █████ ███ ██ ██ ██████████ █████████████ ██████.</p>
+        <ul>
+          <ul>
+            <ul>
+              <ul>
+                
+                  
+                    <li>Victoria Tamwin</li>
+                    <li>Valeriy Dolgov</li>
+                    <li>Yurik Volkov</li>
+                    <li>Anton “Phillip” Smith</li>
+                    <li>Roman Borisov</li>
+                    <li>Timothy Green</li>
+                    <li>Arnold Moody</li>
+                    <li>Oleg Alexeev</li>
+                    <li>Jackson Torres</li>
+                  
+                
+              </ul>
+            </ul>
+          </ul>
+          
+        </ul>
+
+      </div>
+      <div class="government credits" id="valve-schematic" title="Opposing Chamber Release Valve Schematic">
+        <h1>Opposing Chamber Release Valve</h1>
+        <p>Developed in tandem with Soviet engineers, the Opposing Chamber Release Valve is simultaneously a check and balance, a diplomatic tool and a key structural element in containing Samp̵̷̢̯̞̣̟̺̬̙͔͎̊̓͗͊̈́̃̓̈͝l̃ę̷͇͈͓͚͍̿̐͟ Í͇͚̘̝̘̝͓̲ͩ͂̉̓̿̓̌͘̕-̸̴̨̨̺̼͚͇͍͖͍̮̪̻̫ͮͧ̀̾ͬ̑͗̂̈́͂ͤ̈̓͘͘̚͢͢͜͢͝͡0̸̨̳̖̮̬̰̗̤̯̮̺̫̽̈́̅̎͌̐̅̑ͮͯ̉̎̕͟͜_̱̰̕̕͠_̙͚͚ͦ͗͋ͩ̓ͭ͜0̡̧̼̮̙͓̭̍͛̄̔͋̔̽ͭͤ͋́ͤ̔͂̏͠ͅ1̷̡̺͍̘̰͂̒̏̈́͗ͪ̈́̚͘.</p>
+        <h1>OCR Valve Schematic</h1>
+        <img src="assets/Valve-Schematic.jpg" alt="do you think you can save them?"/>
+        
+        <p>Valves on either side of the glass room divider can be manipulated to adjust a series of pneumatic pistons locking the opposing side’s inner airlock door in the closed position.</p>
+          
+        <p>This system used air-pressure instead electromagnetic methods to lock the pistons in place as a fail-safe in the event of a facility-wide power outage.</p>
+          
+          <p>In essence the OCR Valves ensures that either side isn’t allowed to tamper with, or conduct examinations with the Sample without the other side’s direct intervention.</p>
+        
+      
+      </div>
+      <div class="government credits" id="card-face" title="Photograph of Sample I-004">
+        <h1>"Sample I-004"</h1>
+        <img src="assets/PlayingCard.jpg" alt="HELLO?"/>
+      </div>
+
+      <div class="government" id="missingfile" title="ERROR">
+        <p> Error opening file. The file is missing or corrupted.</p>
+        
+      </div>
+
+      
+      <div class="government credits" id="post-exam-2" title="Examination 002 Report on Findings">
+        <h1>Examination 002 Report on Findings</h1>
+        <p>During the two hour examination, 2 dozen samples (Samples I-002-0025) were collected and 630 photographs were taken. Samples include chips of wood, yet to be identified. Various layers of dust, one_ o̧̨̢̨̨̫̦̠͈̭̯̘̼͍̯̮͕͚̦̬̟̹̅̊̅ͣͪ̓͒̄̇ͯ̓͊̾́ͨ͑̄ͨ̑̾͟͡f̛͔̹͈͍̪̺̭̜̥̪̦̝̿̓̀̀͊̌̂͋̋͘̚͟͞͠͠͡͠ ţ̨̙͖͔̞̫͍̣̳̠̰̭̣̤̦͇̮͇̯̯̣͕̫̻ͥ̈̾͆͌͂̌ͥ̋ͧ̉ͤ͒̉̃̽͋̀̑̚͟h̴̨̧̭̥̺̗̻̘͖̹͇̼̦̯̤̲̖̽ͬ̃̑ͭ̽̇̃͆͑̍̄͛̾ͭ͐ͥ͐̋ͪͮͣ̃̊̋͘͟ͅ_e̵̢̧̩̻͉̲̫̖͈̻̘̻̼͇̰͎͇ͥͪͮ̔̈́̿̽͊̉́̌ͩ̆̊́̒͛͆̌ͥͧ͐͑̅̚̚͞ͅ p̸̢̰̠̞͖̰̟̟̬̬͓̜̄̉͒̂ͯ̆́̚ḷ̴̵̡̢̨̩̮͖̩͕̥͈̜̣̥̦̒̌̓̇̀̋̾ͯ̋̒̔͋͂̍͂̌͒͛͒̕͜͝͠͡͞a̷̶̘̜̘̼̬̹̤͔̗̖̤̪͕͓̼̭͎ͨ͛ͫ͋̄ͯͫ̓̔̎̊ͯ̅͛͆̈́́̚͜͠y̴̶̶̡̧͙̺̻̝̱͚͉̲̝͕̠̆̉ͧͨ͂̉́͆̅͑ͫ̓̏̋́̿́̀̕͜͢͜͟_̫̎ì̵̲͕̅͝_̶̷̴̷̨̨̡̮̯͖͔̲̝̜̯̩̩̤̻̰̘̒̀̒̓́̎ͭͤ̆̌ͬͦ́͆ͤ̏͘͞n̴̷̡̧̢̙̠͚͍̣̙̖̮̞̻̥͗ͣͮ̐̇̋́ͤ̏͌͌̽ͥͤ̽͛͡͞g̡̢̛̛̹̩̺̠̲̩̱̜̫͐̑͊̓ͥ̽̒ͭ̾̓͞ ç̸̶̱̝̥̜̮̮̥̯̤̤͚̙͍̹̪̣̒́ͭ̈͊̊ͦ̀͗̐̔ͦ̿ͦ̋̃͘͝ͅ_̝͚a͂r̸̨̢̧͖͈͕̬̻͙̤̱̻̺̩̙̣̹̝̗͈͕̟͗ͨ̂̋̔ͮ̍͌̇̓̅̽ͥͦ͐̽̂͘͝͠d̷̢̛̠͙̼̯̻̱̺͉̑̐̔ş̷̵̘̤͎̭̌̂̿̓̑̌̐̚. Due to time restraints, no additional drawers were opened.</p>
+
+        <p>The findings from additional sample tests have fueled numerous speculations. Mainly Many researchers now believe there is ample evidence to assume the parent sample (I-001) is s̶h̵o̵w̴i̵n̶g̷ ̷s̴i̴g̴n̸s̵ ̴o̴f̷ ̸n̴o̸m̸i̷n̶a̵l̴ ̶i̵n̴t̵e̷l̶l̵i̶g̴e̸n̸̷̶c̷e̵.̵ ̸A̸n̶d̸ ̷t̸h̷a̸t̸ ̵t̵h̷i̵s̷ ̸m̸a̸y̶ ̵b̴e̴ ̷a̶ ̶s̸e̴n̶t̸i̶e̷n̸t̵ ̵f̴o̴r̷c̸e̵ ̴a̷t̷t̶e̸m̴p̶t̸i̸n̶g̷ ̶t̷o̶ ̵c̷o̵m̸m̸u̶n̶i̵c̴a̵t̷e̷.̷
+        </p>
+        <P>D̴r̸.̵ ̸R̸o̷m̶t̵ ̴s̴u̴g̴g̵e̵s̷t̸s̷ ̸a̷ ̵v̶a̴r̵i̷e̷t̴y̵ ̴o̶f̷ ̷a̶t̷t̷e̴m̶p̴t̴s̵ ̷t̵o̵ ̶d̴i̴r̸e̶c̵t̵l̷y̸ ̴c̸o̴m̴m̶u̸n̸i̵c̷a̷t̷e̶ ̸w̸i̴t̶h̴ ̸t̴h̷e̴ ̸S̴a̴m̷p̸l̷e̷,̷ ̸i̵n̸c̸l̶u̵d̸i̸n̸g̶,̴ ̸t̷a̶l̵k̵i̵n̵g̸ ̴d̷i̵r̴e̶c̴t̸l̶y̷ ̷t̶o̴ ̷i̸t̸.̸<P>
+          <p>“̵O̶n̷e̸ ̴o̷f̷ ̵t̶h̴e̴ ̵b̸i̵g̵g̸e̵s̸t̴ ̶c̸o̶n̷c̵e̷r̶n̴s̶ ̷s̵c̷i̶e̸n̴t̸i̶s̷t̴s̸ ̴h̷a̷d̷ ̵a̴b̶o̸u̵t̸ ̴i̵n̸t̴e̶r̸a̴c̴t̶i̴n̸g̴ ̸w̸i̴t̴h̶ ̶e̸x̸t̵r̷a̴t̴e̵r̷r̶e̸s̵t̵r̵i̴a̸l̶ ̸i̷n̶t̴e̴l̷l̴i̷g̶e̵n̷t̶ ̸l̸i̴f̴e̸ ̷w̷a̶s̷ ̷t̸h̴e̵ ̵c̷o̵n̶c̶e̵p̶t̷ ̵o̸f̸ ̷a̵n̷t̷h̵r̷o̷p̸o̸m̸o̶r̷p̴h̷i̶s̶m̶,̵ ̵h̵o̶w̷ ̴w̸e̵ ̴w̴o̴u̴l̶d̵ ̸i̶n̸e̵v̵i̸t̷a̵b̷l̶y̸ ̷i̵n̷t̸e̴r̷p̴r̸e̵t̷ ̷a̵n̷ ̴u̷n̴k̵n̵o̸w̶n̵ ̷i̷n̷t̶e̶l̶l̷i̴g̴e̴n̴c̵e̵ ̸t̷h̸r̵o̷u̵g̵h̶ ̷t̷h̶e̵ ̸h̸u̵m̴a̷n̴ ̸p̵o̷i̶n̵t̷ ̸o̴f̵ ̴v̴i̴e̶w̸.̷ ̸B̵u̴t̵ ̶i̶t̵ ̷s̵e̸e̶m̵s̸ ̸t̷h̸e̷ ̴s̷t̶r̷u̶g̷g̸l̸e̵ ̶w̷e̷ ̴a̵r̸e̵ ̵f̷a̵c̸i̶n̷g̴ ̵i̷s̶ ̴t̵h̶e̴ ̵e̷x̵a̸c̷t̷ ̵o̷p̵p̷o̷s̶i̵t̸e̷.̶ ̶W̴e̵ ̸s̸t̶r̵u̶g̸g̵l̴e̵ ̷t̴o̸ ̶e̸v̵e̴n̴ ̶r̵a̸t̷i̵o̴n̵a̴l̸i̷z̴e̶ ̶t̶h̷e̶ ̷f̴a̵c̴t̶ ̷t̸h̶a̴t̴ ̶a̷ ̶s̷o̸l̶i̸t̶a̷r̷y̷,̶ ̷ự̸͚͂ň̸̵̵̨̨̙̪̟̣͍͙̤̲̹̹͍ͬ̏̍̐̍ͤͥ̈ͨ̽ͩ̚͢͞͠ͅm̸̶̶̬̙͇͎͇͎̘̞̔͛͒ͬ̀ͬ̌͗͋ͣͬ̂͆̒͗̌ͥ̇ͨ̎̕͟͢͜͡͝͠͞_̶̵̨̛͉͖̮̖̥̩̤̈ͯ̃́͋͂̓͛̄͜͟͜o̷̵̧̢̼̰͓̼͎̳̗̤͕͚̯ͩ̏̄͗̋ͩ̀͌͂́͊͌́̈́ͅv̶̻̫̥͌̊͠_̷̛̱͖̏ͣ͛̉̀̃_̸̨͖̮̬͕͕͍̳̈͑͒ͪͪ̿̌̍i̶̴̷̡̡͕̞͓̭̯̯̪̠͉̝̣̥̭̞͔͇͕̤̳̥̻͖͓͍̮̦̜̅̐̑̂̑͊̒̅́̿ͤ́͊ͪ͒͒ͤ͑̊̏͂̉ͤͨ́ͪ̈͗̐̌͋̈ͪ̉́͘͢͠͞͡n̸̵̡̢̢̢͙̫͕̠̝̤͕̲̲͉̪̻̱̖̰̗̣̹̰͕͉̜̤̫̤̣͗͊ͭ͌̍͗ͭͮ̀̏ͯ̽̂̈́̂̌̃̆́̒̽̾̌ͬͤ̋̿ͤͮͩ̌ͭ́̿ͧͪ̊ͥ͗̉͛̂ͬ̔́̕͘͜͞͞͡͡g̵̸̴̴̵̡̢̧̝͍̤̦̲͚̝̞̙ͭ͊̉̇̍̃͑̑̀̀̀ͩ̏ͤ̎ͧ̚͜͟͟͝_̴̩͉ ̸̋̓̒͘̚_̢̡̧̛̻̮̼̪̯͇̭̲̭͖̲͎͙ͨͣ̄̆̍̓̀ͨ̈̂͑̋ͭ͐ͣ̒̕͜͢͜͡͞w̸̷̵̶̶̧̨̛͓͎͚̳͔͖̰̗̙͇̩̬͇̲͚̜͚͇̪̱̦̭̝͇̼̲̼͌͂̒̂ͯ̂̋̈́ͭ̔͑ͬͭͮͭͪͬ̽͛͆ͦ̍̍́̀͜͜͡r̷̡̬̞͔̲̬͙͈̘̜͈͓͆̾͊͒ͪͫ̌ͦ̍̈ͬ͊̇͐ͥ̕̚͘̚̚͜͜͞͡i̴̶̷̸̸̷̡̨̡̪̟̮͙̖̮͇̜̣̘̼̣̲̥̞͉͚͎̳̬̱͈͎ͭ͗̈ͥ͑̈́̏̇̋̽̃̑ͯ̓̈́͒̊̐̍ͭͯ͑̀̎ͣ͛̃͜͟͜͟͝͡͞t̸̴̵̸̜̮̼̞͔̗̰̫̪͖̦̩̳̥̟̲̭̬ͭ͂ͣͯͬ̂ͫ̍ͣ͋̉ͥ̅ͫ͋ͬ̐̀͊̑ͭͨ̈́͛̎͊͒͢͞ͅ_̵͙̙̦̰̯̺͖͗̆̑̑̌͑̊̆͐́̈́̕͟͝͝i̶̶̴̵̬̺̟̩͕͕̭̩͎̪͈̪͍͉̹̳ͬͩ̀ͨͭͣ̐ͫ̌̐ͤͥ̑͆̎̊̕͜ň̸̷̴̵̻͖͎̼̤͔̯̝͚̯͔͎͓̮̭̜̝ͧ̎ͦ̔͒̋̉͋͐͂ͤ̃́̏̅͊ͥ͂̿ͣ̍ͪ̄ͥ̄̇ͩ̐ͨ̊́͢͜͠͠͞͞͝͠͡͠ģ̵̵̶̸̢̧͎͖̤̭̥̻͉̹̻͖̲̮̻̪̗̳̣̺̞̭̯̬͕̰̬̜ͨͫ̐ͬ́̊̊̅̓́̈ͤ̑̏ͧ͘͢͢͠͠͞ ̴̶̸̧̳̥̹͓̣̞͌͑̀̓̈ͭ_̷̢̛͉͖̱͔̰͎͉ͪͬͫ̓͊̿͂ͨͪ̕̕͘d̸̷̸̶̷̡̤̻̟̫̖͙̫͖̩̟͉̜͎͈̘̠̏ͪ̓ͭ̓̈͋͌́́ͩͣ̓̀̑̍̾͆͗̄͛̀̈́̔͌̇̐̃̔̍̀́̕͘̕͟e̴̶̸̲͙̭͔̤͔̤̮̽͋ͥ̿̐̋ͬͬͩ͑͜s̴̵̡̧̤̫̝̖̩̠͕͉̜̙͇̲̤̞̖͎͉͓̯̫͔͔ͣ̄̏ͦ̎̋͗͊̀̑̿̑͂͆́̈́̈́ͩ͐ͩ̓̆̒̑ͦͪ̅̾̐͌̐͘͘̕͘̕͜͢͢͞͠k̶̨̝̪͔̳̮̞̙̻̟̀́͆͌̊͑̀͊͐ͧ_̡͖͎͔̜ͩ̋̽ͨͦ̈́́̕_̵̈̒̑͝͞_̸͈̲̫̠̐ͦ̇ͥ̾̾̇͒̈̎̌̚͟͝͠ ̵i̵s̷–̸i̵n̸ ̶f̸a̸c̵t̵–̸ ̴a̵n̸ ̸i̵n̸t̸e̵l̴l̸i̵g̴e̴n̷t̷ ̵b̷e̷i̶n̴g̴.̶ ̷I̸t̷ ̷r̷e̷a̴c̷t̶s̸ ̶w̸i̶t̷h̵ ̸u̷s̸,̵ ̸a̷n̴d̶ ̶f̸r̶o̴m̴ ̵t̷h̸e̸ ̵p̸h̴o̵t̷o̸s̵,̴ ̸i̶t̴ ̷n̴o̷t̴ ̵o̶n̸l̵y̸ ̶a̷n̷t̷i̷c̷i̵p̸a̵t̷e̸s̵ ̴o̶u̷r̶ ̷m̴o̸v̴e̴m̶e̶n̸t̵s̸,̷ ̶b̷u̸t̷ ̸i̶s̴ ̸a̷c̸t̷i̷v̴e̶l̴y̸ ̴e̶n̷g̷a̴g̴e̸d̶ ̵i̷n̷ ̶t̷r̸y̷i̶n̴g̵ ̵t̸o̶ ̵d̷e̸l̷i̶v̷e̴r̴ ̶w̵h̴a̷t̴ ̵i̸s̶ ̶e̷x̶p̵e̶c̶t̶e̴d̷ ̸o̷f̷ ̵i̸t̷ ̸i̵n̶ ̶t̶h̸e̸ ̵s̶t̸a̶t̴e̶ ̶i̶t̷ ̷i̵s̷ ̸i̷n̵.̷”̴</p>
+
+          <p>O̵t̷h̷e̵r̴ ̸r̶e̴s̸e̴a̵r̴c̴h̶e̸r̸s̴ ̷h̴a̸v̶e̶ ̶c̷a̷l̶l̵e̶d̷ ̴t̶h̵e̷ ̵n̶o̶t̶i̴o̸n̴ ̴p̴r̶e̶p̶o̴s̶t̴e̸r̶o̴u̶s̴ ̶s̷a̸y̷i̴n̵g̶ ̸t̶h̷e̴r̴e̸ ̴i̴s̷ ̴l̴i̶t̷t̴l̶e̷ ̴t̸o̸ ̵g̶a̵i̷n̴ ̵f̷r̵o̷m̷ ̴s̶u̷c̶h̷ ̶a̷ ̷m̸e̷s̴s̸a̵g̵e̴ ̷i̷f̴ ̸t̵h̶i̵s̵ ̵i̵s̶ ̸i̸n̶d̴e̵e̴d̷ ̶a̸ ̶m̷e̵s̴s̷a̶g̴e̶.̷ ̴I̸t̸ ̴i̶s̵ ̶m̸o̸r̷e̴ ̷o̷f̷ ̵a̷ ̸m̴i̸r̵r̷o̸r̴,̸ ̵r̶e̶f̶l̵e̵c̶t̷i̴n̶g̸ ̷o̵u̴r̴ ̵o̴w̸n̶ ̵w̴o̵r̴l̸d̵ ̴b̷a̴c̵k̴ ̷a̶t̸ ̵u̸s̶ ̷r̸a̵t̵h̴e̶r̶ ̴t̵h̸a̶n̸ ̸a̸ ̴d̶e̶l̶i̷v̴e̵r̷y̷ ̸s̶y̴s̷t̴e̷m̵ ̵f̷o̸r̷ ̸n̸e̵w̵ ̶i̷n̶f̴o̵r̸m̷a̵t̸i̷o̸n̶.̸</p>
+
+          <p>The counterargument pose̸d̵,̵ ̸u̶s̸i̴n̴g̵ ̸t̶h̵e̶ ̸r̷i̸s̸e̷ ̷o̷f̸ ̵a̵n̴x̷i̸e̷t̶y̷ ̸a̶t̶t̷a̷c̴k̵s̵ ̴a̸s̷ ̵a̸ ̵p̴r̷i̶m̴a̷r̵y̶ ̸p̶i̷e̵c̶e̸ ̷o̸f̷ ̴e̸v̷i̵d̶e̵n̵c̷e̸,̸ ̶i̴s̵ ̷t̷h̷a̵t̵ ̶t̷h̴i̵s̷ ̸o̴b̸j̷e̴c̸t̵ ̵i̶s̶ ̴n̷o̵t̸ ̷a̶ ̴s̴e̴n̵tient messenger, but rather some form of automated ██████. The likelihood that the first interstellar object we’ve ever discovered landed on earth, and on a scalable piece of land, this object was aimed at us, we should be considering this fact more."</p>
+          <img src="assets/Corrupt-research.jpg" alt="HELLO?"/>
+      </div>
+
+      <div class="government credits" id="exam-3-proposal" title="Soviet examination proposal (003)">
+        <h1>"Краткое описание отчета"</h1>
+        <p>Исследователи Советского Союза предлагают провести исследование номер три.</p>
+        <p>ящиков. В частности, ящик 2, ящик 3 и ящик 4, включая оставшуюся колоду карт. В духе сотрудничества Советский Союз позволяет американским ученым решить оставить себе карты и 1 ящик по своему выбору или два ящика по выбору, а Россия оставляет себе оставшиеся карты и ящик.</p>
+        <p>Это предложение имеет модульную предпосылку: если вышеуказанное мнение не приветствуется, дайте знать, что дополнительное испытание может быть проведено без оговорки, вместо этого направление испытания 2 может быть полностью завершено, а оставшиеся ящики теперь могут быть полностью открыли обе команды.</p>
+        <img src="assets/exam-3-proposal.jpg" alt="HELLO?"/>
+      </div>
+
+      <div class="government credits" id="exam-3-findings" title="Ë̵̙̱͕͈̼́̇͛̒x̵̹̜̩̪̖̔͒a̶͙͎̓̚m̵̧̤̥̖͊̈̍ͅi̶̗̮̮̼̗̎͊̈̐n̸͖͚̹̟̲͠a̶̙͓̍̇̿t̸̛͚̟͆̈̉͒i̸̠̣̖̎̓͌̎ȍ̶̝̟ń̸̹͑̿͘̚ ̸̛̯͓͆͛́̈0̸̤̻͇̀̈́̐0̵͚̱͍͛̊͘͝͝3̵̥̋͊̍ ̷̡̙̮͚͙̃͆ȋ̵̡̮̱̱̓n̸̥̱̘͑̾̂͂c̷̖̲̈́̈i̵̢͕̳͛̌͗͐d̴̡̺̾̑è̵̤̦̱̭̼̓̐̿n̷̮̭̹̒͑ẗ̵̛͙̘̹́̅̔ ̷̧̰̯̯̎̊͆r̵̦̮̗͖̀̇͗e̷͔͋̓̉͊̕p̵̥͈͕̩͐o̸̺͇͚̅̉́̽͘r̴̡̬̹̯̋͑̈́̚t̸̠̱̤͖̏͌́̌̃">
+        <p>Ò̪̲̗̭̻̠ͪ̊͆̌͐̏͂̾̆̿̓ͩ͟͢ͅn_̸̫̠̠̥͂͗̅ͬ_̶̬͕̪͚͕͉̬̘̮͚̐̃͋͛̓͌͗̀̋ͣͣ́́̎̇̃ͭ̔̕͟ͅ j̩̠͙͚̬̘͇̩ͦͦ́ͥ͛ͨ͂͘̚ͅu̡͈̻̖͔͙̭̼͕̜̻̹͖ͩͯ̅̀ͥ́͛ͦ͜͟͝l̟̣̹͗͡y̗͂̍͘ 2̴̷̶̪̳̲̠͔̟̫̖̪͈́̽̄̉̈́͑ͭ̆ͥ͂ͥ9̸̶̧̧̙͍͔̺̘̯̯͈̞̱̟̻̥̘͈͋̿̾́͆̍͋̋̓̉̌͊̏͒ͪ̑ͪ͘͟͢͡͞t̷̶͍̣̮͖̖̜͈͙̹̋́͐̉ͦͫ̀̈̈͊̏̀͒ͣ͘͘ȟ̸̛̛͚̣̳̼̭̭̼̦͍ͫͯͯͩ̊̃ͨ̀̓̊̒̊̀ͣ̓ͮ̅͠ 1̤͚̞͙͓̫̦͉̮͍̪̩̝͒̉̔ͤ͑ͮ̉̃ͭ͒ͣ͞͡9̨̨͓͚͇͌́8̸̡̫̝̿ͩ̓ͯ͠9̪̻̣́̓ S̴̻̞̺̖̰͓͉̀̈́ͨ́̍́̈́̓̆͢͢͝͠ḭ̶̛̲̗̠̙̖̗̺̼͈̹͛̿͐ͥͧͪ̀ͫͫ̽̓͂̆̚͜͝m̡̢̢̜̪͇͓ͬͭ̂̑̒̐o̴̴̢͉̥̣̬͉̩̬̯̲̗ͯ̍̽͑͒̚͜͢͡n̫̞͓̺̪̺̠̱͓̣̹̆̓̈́̆͐͐̈́̋̿͂ͤ͘͞͞͞͡ Ṙ͚͎̼͉ͭo̶̷̬̣͇ͩ͞d̶̩͓̯̜̣̿̔ͥ͂ͩ̈́͘n̸̡̢̡̪̖͖̥͙͙̖͔̞̮̟͑ͣͧ̐̑ͤ̐̓̿͑̋́̎ͩ̔ͅe̷̵̡̨̨̯̱̥̦̝̭̠̝̘̱̗̺ͣͭ̋́ͬ͑̽̉ͥ́͆́̈ͫ̈̕͟͝͠ͅẏ̡͖ͯͩͪ̉͋ a̷̢̨͍̠̥͇̦̲̮̝̬̼ͩ̀ͤ̅̽̊̈ͮ͒̊ͮͫͯ̃̓͘̕͠ṋ̵̴̢̛̤͔̥̺̺͉̟̭̓ͤͧ̀͋̅̒͗̎̿͆͛ͫͪ̈͐̃͘͢͡d̢̞̱̩͎͈͇͙̙̯̟̟̈́̓ͣ̆́̋ͬͣ͊̋͋̃͟͜͝͠ P̸̷̵̧̡̘̘̘̙͈͕̫̩̖̥͉̠̫̱ͣ̉̒͐̑́ͥ̀ͤͭ̂͘͠͠í̸̢̮̭̩̖̼̗̗̺̾̉͂ͣ̉̽ͦǒ̦̂t̷̵̡̡̺̠̱̙̭̙̺͔̦̥̲̭̏̎̀ͫ̔̍̃̓ͪ́ͮ̄̕͟͜͝ͅŕ̷͇͇̪̭̹̫ͦ̑̚͞ Ḑ̸̨͖͙̗̫̣͈͊̿̊ͮṟ̵̵͖̞͎͕̟̗͊ͤ͋ͤͦͭ̓̉̈́̆̔͑͜͡ǫ͙̭̳͔͋̅͜z̵̲͕̥̯͓̱̼͔͗̐̐ͨ̽͘͢d̷̡̠̣̭̻̫̗̭͔̏̈́̌ͨͪ͒͆͞ǫ̸̛̛͙̜̤̯ͩͦ͛̒ͫ̽̍̓̿̀͋̕͢_̨̨͊͠v̵̴̯̘͉̪̦̈́͗̽ͣ̋̕̕ w̗̠̠̞̼̬͍̜̯ͫ̈́̐̇̐̀̎͂ͦ̿̃̽͆ͤ͋̍̋͒̏͟͝ḙ̶̸̝̫̙͝ŗ̴̫̞̗̲̙̦͂̐̌̊͐̕͘͞͝͡e̞ͩͨ̍ͦ̚ ē̷̳̭̙̙̣̦̝̹̤ͤ͆ͥ̉ͫͩ́̾ͤ̅͑̄͗͛͢͢x̶͈̻͈̫͛ͨ̂̽am̶̴̶̸̧̛̪̩͉̪̠̮̼̗͚͚͍̖̞̘̖ͭ̎̇͑̎̾̀ͤͤ̒͐͘̚i_̶̢̥̖̗͔̙̜ͣͤ̊͂͗̈̄̓̌ͦ̊̆͊̊n̟i̷͖̤͎̖͉͔͈͖ͪ̉ͭ͆ͥ̈ͤ͋̕n̷͎̰̫̳̙̦ͤͣ̾̒̓͘g̸̵͉͈͈͇͙͚͍͔̓ͭ͋͂̓̔̿ͮ͞_̑͑͋ S̛̳̰̙̪̙̭̭̎̌ͮ̈̆ͧͭ̔̉̊ͯͩ͟ͅa̢͉͔͉̫͇̹̬ͬ̐̄ͭͦ̇͊͟͝m̧̨̘̹̘̦̻̮̺̥̪̰̖͈̈́̓̒̂͒͒ͩ̔̅̒͌͘͢͝͞ͅp̛̥̲̯̭̻̜̙̰̣͕̩̺͚͓̻̝ͮ͆̃̐͐͂̋̌̒̋̌̓ļ̸̯͉͉̠̥̤͈ͯ̏̓͗̅̑ͦ͋͊͊̊̋̿̕̚͞ͅé̵͉͉̪̩̼̙͉̥̪͒̊̇͂́̕̕̚͜͜ Į̴̪̳̼͈̫͉̣̤̝̃ͦ͒ͪ̊̔̾̈̌ͫ͂ͧͩͪ͂̑͐̂̊̀̾̈͢͠͠-̶̵̸̴̪̯̝͎͈̞̜̗͙ͨ̊̀͒ͦ͗̀̾ͭͨ͊̅̃ͬ͟0͋̅͢0̷̧̺̖͚͈̲͒̔͛̋͂͊͆͌̎͟͞1̔̐͌ͨ̈́̿̆̄ͬ,̷̷̸̧̨̲̹̠̪͇̥̯̯͐ͩ͌͆̌͆̑̈͋ͧ̈̽ͬ̇̉̆̓͂͆̕͢͡͞ e̡̧͇͚̜̱̝̤̹̘̣͔̞͇̞̒͑ͪ̇ͬ̓̄ͩ̓̅̾ͫͬ͆̆̐͑̈́̇ͬͭ͗̚͜͜͟͠á̶̺̩̝͟_͚̟̻̈̅ͩ̒̉ͦ͢͝ͅc̴̸̢͎̤̤̙͓̭̖͔̗̬̓͐̉͒͋̄ͦ̎̍h̛͚͓̩͚͙̭̣͍̟̱̘̰̣̥̋̄ͣͦ͊͑ͣ̄̍ͥ̒ͪ́́̾̓̕̚͜͝͠͝ h̵̷̟̞̣̊̋̅̒̌͠͞a̷̺͚̰̣̘͉̬̅̅ͦ͆̈́͗̕͞_̶̰͎̺̬̃͛ͤ̒̀͐̋ͨ͐͘d̢̯͉͛͂͊ͤͭ t̜͡_̵̡̛̣̰̯̗͓̺̥̼̯̙̱̓͆ͥ͐̍̑̆̏̇̆̂ͧ͗̚͠͡͞a̢͙̮̯̺͈̬͓̝̭̍̄ͦ̎̃ͨ̀̿͛̾ͯ̑͊̉͟_̧̤ͯ̚͟͜k̵̵̨̡̨̛̗̩̳̰̗̭̱͇̃̑ͯͦ̊͑̇͗̎ͦ̎ͩ̓͋̏͌ͣ̀̋̂̕͟͜͠e̢̩̦͓ͮ̃ͩ͋ͮ̿͠_̴̤͚̪̱͉̝͙̖̱͋̐̈́ͫ̉̔̊͆̀́̕n̸̵̛̛͖̥͍̞̱̯͍͈̖̦͚͖ͥ͑̆̀̍̽̀̉̽́ͩ͑̆̐ͩ͑̈́ͧͧͪͯ͢͞͝ a̵̵̴̵̘̱̲͙̹͊ͩ̄ͧͦͫ̉ͮ̑̃̏͆͞ t̴͔̬̲̮͒̊̈́ͣͣ͠_̴̸̵̹̠̦̏̎͐̊̚͜͡u̶̘̭͇̮͉̮̟̐̑ͧͮ̑r̢̡͕̥ͭ̉̈́̊ͤ͐n̷ ŏ̵̢̪̱̫̯̻̭͎͍̮̯̰͔ͬ̈̇̋ͩ̀̉̿ͧ̅͊̈͌́̃́̒͊̅̕͢͝͠ͅͅp̶̔̑ͨ̂̒̽_̧̠̰̻͍̼͈͇͚͙̙̱͈̦͆͂̒̀̇̔̾̈́͛͗̎̕_̶̰͊ͤe̢̫̟̍__͉̠̟͎̗̄ͥ̓̎̾̈́͒͜n͓̱̊ͣ̎̀͘i̱͉͔͕̓̄̇̍̈́̈́͞n̒ǵ̸̡̲̬̦̺̜̺̯̜̥̤͎̖͙ͭ̅ͬ͌̎̾͑̾̀͑̆ͫͯ͂ͤ̂̋͘̕͘̕͘͟͞͠ t̴ͣ_̸̥̫̻͌͐̚h̴̢̜̬̜̟̙͔͇̲̺͈̦̔ͩ͐̿͛͂̊̀́̃͗̾̐̿̑͊̾̈̍̉̕͜͝͠ë̸̶̴̡͈̝̣̼̱͖̠̯̗̀̇̐̃͋̌͋͐ͫ̿́͝ m̵̡͇̩̤̺̥͆̀ͣͨ́̃́͛̏̆̚͝_̶̴̷̢͈̙͐̃̓ͬ̆̐͛͌a̧̡̤_̸̴̡̢̧̹̠̦̣̞̮̩̫̱͗̽ͥ͂̿ͣͨͥ̊̌ͩ̈́̈ͫͣͩ̿͛̕͘͘͢͢͠͝i̶̷̧͖͖̩̘̬͔ͭ̀͛̍͊̾ͪ̅ͥ̀ͯ̄ͅn̯ d̡̞̘̤̗̯̜̬̺͉͔̞̟͇̓̅̂̌̉ͬ͛̽̓͐ͫ̑̐͂̕͢͞͡͞r̶͚̻̜͕̹ͪ̓͗ͨͤ̋̈̓̃́̉̌̕ȧ̶̡̯̥͕̼̞̞͌̏͌̈́ͨ̽̀̓̋̚͝_̶̡̲̝͉̺͖͈̓ͧ̇͊ͩ͌̀̎_̧w̤͉̼ͯ̉̇ͧ͠_̤ͥ̀_̶̛̮̦̳͉̥̳̟̹͒̒͒ͪ̀̔̉̉͌͘̕͡͞͝ě̛̬̲̳̲̀̂r̰̝̩̙̜̼̰̯͓͔͍̺͂̅ͩ͗͌ͫ̍́̈́̿ͬ̉̀̚͝͞s̘̠̭͇̺͌͆̊ o̶̪̱͔̱̱͉͖̙̠̳̳͇̿̆ͣ̅ͮ̏̐͜͢f̡̛̳͎͕̺̹̘͔͔̖̝̑̌͆͌̅ͭ͡ t_̷̢͚͈̙̊̎̍͡_̷̶̶̢̢̢̩̰͙͍̝̬̺̘̺̹̺͈͆́ͦ̐ͣͬͦ̑͑ͮ͠͞ͅḥ̵̨̞̫͉̱ͩͧ̔̾̊͟e̷̪͔͚̖͖̻̦̭̭͎̠̹̝̓͊ͬ̏̊̀̅͛͊͋̎̕̚͢ ś̸̢̟͇͉͍̠͂̔̃̇̀́ͫ̕͟ä̢͔̘̋͟_̴̬̮̑͗̋̓͌̎m̷͖̲̘ͯ̅p̴̧̧̢͙̯̳̼̱ͮ̉́̓̎́͋͐̑̕͘͢͠ļ̤͎͋ͥͪ͗e͍̼̮͈̹̥̓̆̑̏͡_̞̥̥̜̫̱͔̪̱͔̣̘̦̌̾̅̄̆ͬ͡ͅ,_̴̵̛̦̬͉̬͉͖̙̱̰͓̺͒̒̔͋ͤ̎̈́̿͒͟ t̷̗̳͉̺̍̇̑̃ͭ̍̄̊ͨ͟͟͞͝h̨̧̡̧̢̗͈̖̲̙͕͍͋̒̓̍ͭ̂̀ͥ̌͐̎͌͛̾̆͘͟ȩ̸̶̵̴̵̷̡͈̮͖̬͖̪͚̣̗̗̰͇̮̏͑͌̿̐ͤ̉́͆̉ͮ̈́̌ͥ̒̆͐̕͘͝ͅ l͍̉̒ͥͬa̫͛̽̍̕͟ş̸͔̮ṱ̐̄ ǫ̶̛̣̱̭̼̥̮̺͇͕̼ͦ̓̅͋̐̿͗̅̈́̅ͯ̅́͌͒͘͡f̹͓͎͑ͦͦ̍̆ͭ̊̈́̑̇̌̈́̃̑͟ th̶̵̶̢̡̨̡̛͕̩̭̯̞̻̫͕͙̥̭ͬͮ̒ͣ̈̓̿̉̇̎̓ͅē̩̞͡ ḑ̵͕͇͙̝̗̙̣̰͑ͧ̈́̓ͦ͒̌̎ͥ̈̚ŗ̲͙͋ͤ̿̿ͩ͡_̧̭̦͆͌̕͡ä̴̵̶̝͇͈̗͈̜͙̲̳̜̰̉̔̏͆̒̎̔͐ͣͯͧͭ̑̒͒̇̕͜͠ẉ̷̸̱͍ͧ̍̋ͪ̚ę̨͈̬̖̺ͫ̐̍ͨ̌̔͘_̵̶̝̤̦̤̲̬͕̞͈̹̀̑̈́ͫͬ̎̃ͧ̄͐̾ͭ͟͜͠͞ͅr͇̘̈ş͓̦͉̞͙ͮͫͭ̉ͤͬ̎̒̿̊͛̀͒̑͌̽̓͂̀͝ ẁ̥̮̙͙͔̝̤̘̣̩͆̌̈̃̉̍͊a̴̷̷̷̢̨̡̛̜̳̳̬̙̟̦͓̩̣̔̓̈̓̇͛̃̊ͩ̃͗̊̀́͒͐ͦͤ̿̓ͣ̈͘͘ş̨̙̘̻͙͕̝̤͇͙͉͕̤͓̹͕ͯ͊̓ͣͤ͑̇ͯ͐̄̉̊ͬͨ̈̇̕͟ ô̴̸̧͚̦͔̬͙̩̫͈̬̜̥̳̘̯̯̝͓ͣ̽͛͋ͨ̚͠͝͡pe̴͚͇͎̠̥͌ͣ͌͐́̂̏͌̈́͜͢n̴̪̺͌̒̽̐ͦ̀̾͋̍͛ͬ̈́͞͝é̢̡̹̟̮̓͢_̸̸̘̱̼̠̦̥̮͔̲̑̿ͫ͌̄͑ͭ͋ͧ͊ͣͭ͛̀͆ͧ̅̓̔̿ͯͧ͢d̸̵̸̶͓̣͖̩̝̬̒̏̎̈̄̄̇̑̋ͫͨ͝ b̵̵̷̡̢̧̧͇̣͖̙̩̼̫̝̪͉̮̩̘̎ͮ̄ͦ͊̽́ͣͩͨ͛͌ͪ̓̕ỷ̎_̵̡͔̪̱̠̖̦ͮ̋͑̌̓͐͌̏̈́̋͡ P̵̦̖͇͙͂́ͩͭ̂̓̑ͨ̄ͩ̕̚͞_̢͙̗͑͊̈i̸̷͕͙̬̭̠̘̰͑͒͛ͬ̿͗͐͋̈̾̀͛̕͡ͅ_̶̗͕̭̉͑́͗̋̓͢͝ǫ̸̷̷̢̥̙̻̝̙͈̣͚̭ͬ̓̈̓̿́ͫͫ̿̌ͦ̾̔̐̓͟͢͞t̢͎̱̠̮̞̹̪̖͔̜̖͍̰̿ͭͩ̐ͨͧͯ̇̎ͭͤ̃̔ͫ͊͘̚̚͟͜͢͟͞͠r̸̵̸̴̸̥̰̙̖̤͙̜̻͍͚̜͎̼̄ͥ́ͥ̾̀ͤͦͥͫ̌̒́͐̾ͥ̑̉͆͘͜͝͡͞͞.̴̧̨̛̬̻̫̞̝̻̠̯̞͖͇̩̻̬̻̰̐ͪ̉͆̓̅̏̈́̀̆̇̌̓̔̓̏ͦ̉̕̕͠ T̸̡̢͈̣͖͓̝̰̣̼̤̺̫̆͊ͧ̿́̏̋ͤ̒̈̔̈́̂̕͞ͅḩ̶̵̢͖̹͙̤̻̱̳̝ͬ̌ͥͬͭͣ̐͊̄̾͛ͅę͈̫̫̹̇ͣ̍̅ͮ͑͡͞ c̴̢̛̯̙̮̟͕̰̫͍̹̠̺̞̏̌̍̒ͩ͊̌ͤ͂̀̾̆͢͜͝͞͝o̴̵̡̫̦̯͍͕̳͔͙͖̞̟ͩ͗̔̉̀̈̚͟͡ͅͅṉ̐͌͜_̴̷̡̡̛̟̞̘̦̦̭͙̟͖̳̃̿̈͛ͪ̅̕t̵̢̛̙̹̟̖͖͖̼̜͔̞̹͓̫͂̂ͪ̌ͨ̾ͣ̍́ͭ̅ͪ̕͜͜͜͞͝͞ͅe̺n̂̍_̵̣̮̟̐̋ͬ͋̂ͦͧ̚t̻̦̞̗̆͌͗͗ͯͫͨ̽̈̉͆̂͗̀͋̑̕͜͟͝s o͒_̶̡̳͚͚͔̗̳̟̳̠͎͕͎̬͇̀ͪ͛͌̑̾́ͦͮ̋̄́ͪ̿̉̾͠͝͞͝f̧̡͉̩͉̫̭́̉̔̂͒ͩ̾͂̔͜͢͡_͎̩̘͕͔̦́̌̽ͤͭ͗̈́͋͂̌ͧ͋̊̑̓͘̕ tͧh̴͓͕̼̅ͫ͊͋̀ͤ̕͢_̲͙̺ͨ́ͣ̌͌͘͞e̸̫̽͒͐ͮ͝ d̢͙͔̳̺̣̙͉̗̫̬̼̜̻̗̱͕͔͎̖̓̒͋̄̃́ͪ̔ͬͧ̈́͂́͠͞͞r̴̵̛̤̦̜̬̙̟͓̥͖̮̿̂̍̑́ͩ͗͌͛̒͒̽̀͒̃̑̽̉̕̚͢͟ą̵̨̨̛̝͕̥̤͍̫̠̱̹̯̜̦̙̖̂ͬ̎̈́̍͐ͨ͆ͤ͆͑̑ͩͬ͝͡ͅw̴̵̷̧̡̡͔̰͚̩̳̦̲̲̣̝͎͚̜ͫͬ͌̅̅̎ͯ̈̂ͭ̿̉͛̋̓͑͗̽ͨ̓͒͘͞͞e̳͍̫̻̺͍͇̥̥͚̫͐̍͌̿ͯ͊́̌̀_̞̤̃́͊ŗ̵͉̳̦̹̳͒ͬ̐͗̂̈s̴̨̼̜̲̟͖̩̬̤͓̹̼̏̂ͦͬ̅̇̆́̽̐̒͘͜͡ w̙͙̔̂ͪ̔ͯ̽̆̎̚͜͠͡e̴̝̦̤̩͕͈̣ͯ̈̊̐̈̍r̴̴̸̵̛͇̲̭̲̖̤̭̞̈́ͩ̾̃̓ͣ̾ͯ̀̅̋̅̇͒͐̓̄͘͘͝e̸̲͚̖ͧ̌̅͑͊̓͘ e̯̖̥ͯ̀͑̌̅̈̀ͯͭ̇̐̾͞m̭̋͛͞͠p̫͙̯̍ͩţ̹̰̱ͫ͛͋ẙ̧̱͙͈̰̀͒̔̔̂͋̈ͯ̿̏̐̔ͭ̀̕͠ͅͅ,̟̰̺̜̻̄̄̊̐̐̚͘͝͝_͕̘̲̤̝͇̝͕͗̃̔̑̇̌̋̏̚͟ f̶̡͍̖̳͍̱̘ͤ͊̂͂̀̓̎ͬ́̒͠͝o̗ͥ̄ř̷̴̴̢̧̰̫̲͈̪̮̗͇̦̱̙͈̩ͧͮ̏ͨ͌̿̾̑͒̕͟͝͞͞͡ t̸̨̙̐ͯ̽ͯ̈́̊ͤh̶̳̻͍ͬ̒͛̆̈͊͟ͅe̸͓̘̲̭͕̹̤͙̹͖͍̱̣̙ͪ̈ͥͤ̎̿͛͒͆͆̊̔ͨ͛͂̄̽͗́̅̑͊͞͝ ṡ̠͗ͦ͐̉̌̍͜e̶̙̟̪͕̟̟̻͇̥͌ͯ͋̂̿̓ͫ̈́̀́̈͘͜͞͞c̷̵̷̴̷̷̛̠͔͇̭͎͙̭͑ͪ͌̄ͧͮ͋̈́͌̉̾̑̚ô̢̙̫̪̳̪̩̮̣͖̣̍̓̂̂͑̐͋̏̾̋́ͯͭͨ͛̓͌͘͢͜ͅͅn_̴͇̐́ͦ͠_̴̵̛̪̭̠̾̔ͮ͂ͮ̈́ͣd͍̩̏ͬ́́ͮͣͩͩ_̏̽͛ͭ a̴̢̛͓̭͖̐̾_̸̢̳̜̪̤̠̎̀ͮͫ̓̉̍͡͝n̮̟ͥͪ̈ͦͥ͠ḏ̦̳̹͈̭̻̱̦ͪͮ̾͂̆̈́̐̈ͤͮ͑̕͠ͅ t̷̢̧̮̤̣̬̩̮̩̙͈̫ͤ͒ͫͣ̄̃͂̃̀ͪ̾̆͛̿̕͢͠ͅh̶̘͖͙͈͚͉̉̏́ͭ̎̈̎ͩ̃̐͌͘͢͝_̻̭͍͐́͢͠_̌͝i̘̼͕̞ͧ̀̅ͣͩ_ͣ_̧̳̖͎̺̹̲̜̗̥̄ͯ̐͌͐͆̆ͦ̒͝r̮ͮ̚dͭẉ̯̖̤̩̦̟̬̗̙̬̣̙͍̫̺̤̪̠͂ͣ̀͆̽̐ͬ̀͋̑ͨ̽̉ͫ͆ͮ̃̚̚͢͞ͅa̘̥͋́͋̇͑ͪ͒š̵̶̢̨̡̨̱̭̙̞͖͈̘̹͖̹͖͓͊̒̈́͗̽́̈̑̊̃̓̅́̓ͩ́́ d̷̡̧̨̛̛̠̜̣̦̬̬̘̗͕͇̫͕̰̪̮ͫͨ̆͌ͤͬͣͩ́̆ͬ̊ͭ͘̕͞ͅę̶̧̯̖̰̠͖̝̜͔͉̮̬̰͉ͪ̏̀̇̈́̅͗ͬͥ͆ͬ̅̇̑͊̌̅̚̕͜͡͞͝ͅs̨̛͍̝̬̣̳ͭ̑͌́̉͂ͥ͜c̸̹̟̹̙̠̰̗͑̋ͬ̈ͯ̌ͥͬ̓͜͡ŕ̸̩͇͉̪̹̱̃̉̀̿̅̈i͌b̸̷̸̙͇̯̯͍͎͔̺̳͔͉͗͗̂͋̂̀̇͂ͬ̿͂ͨͩ̄̐́̎̕̕͝ȩ͍̳̹̝̪̹ͫͦ́́̓_̨̯̜̠̮̙̙̘̈́̑ͯ͑̍͑̃͑̒͌̈ͯ͐̔̓͘̚̕͜͞͠͝d͓͔͕̱͓̤͌̈́̌̍͗ͭ́͘ ă̸̡̹͓̫̠̻̪̘̬͊́̃̓͑̾ͣ̌̆̓ͯ̌ͤ̌̎ͫͩ͞_s̴̛̖͈̞̫̬͒̂̿̀ a̶̡̹̭̻̳̯̘ͥ͐̌̎͒̊̆ͮͧ̿͘͞ͅ <p>̷̧̨̡̠̦̠̻̩̯̎ͭͩ̒͋̐͌̀͋̊̈́̀́̚͟͞͞,̶̧̱̲̥̠͕̣̒ͯ͐ͮ̐̎͗̂̄́͢͠͝ b̵̸̖͊͗ͩ͋ͯ͌̔͡_̷͍͚͎͍̀ͯ̇̎̿̕͠ŭ̵̧̜̮͈͉͖͙̬̺̣́̃ͩ̋̒͊̀̆͛͌͌ͧ͡_t̫̭͈̻̘͚̻̯̟̥̦͔͙͌͋͛͌́̎́ͥ̒̓͋͘͘̕͜͡͝ t̶̢̥̰͔͉̀̏̽ͤ̀h̬̦͎ͩ̒͝ͅę̴̤̖̖̭̣̑̊̈ͥ̿̍̉ͤ̂ͯ̓͢͡͝ͅ_̴̨̦̐_̵̛̦͉̤̐ͥ̀͋͆ b̸̸̛͔̞̗͉̭̼̦̀̄͊̊̀̍̍̂ͦ͑̃ͧͣ͜͢͟o_̴̷̴̞̯̜̜̳̲̙̍̈͒͒̀̓̔̄͡t̛̯̬ͮ̑̈͛͑͘̚t̵͉͇̳̜̮̬̄̆̈́o̸̸̷̞̝͓̰̼̮̻̫̞̦ͨ̄̎͛͂ͮ̌͢͠_͊̾̏m̸̵̴̨̲̗̲̿̌͜ ḿ̛̗͙̭̩̝̫̉̔̆͛̾̓̈̏͡ơ̧̻̰̼̥̹̏ͪ̀ͤ̕͟͢͜͡ͅs̸̡͕̠̲̬̯͚͙͈̮͗ͥ̂̓͋͆͆̍̽ͪͅt͕̊̌̆ d̨̞̺͚͉̜̹͎͇̗̂́͗̌̾ͫ͗ͭ̉̑̚͢ȑ̸̢̠͇̤̩͊͒ͨ̆ą̸̷̷̧̡̛̗͓͈͕̯̖͉̝̻̣̥̱̞͔̺̲ͨͭͣ̄̈͗ͩ̾̀ͩ̍̂ͣ̂ͭͪ͠w̸̜̱ͥ̍͌͐̋ͮ̍̓e̵̷̵̸̳̜̖͇̔ͪ̇͂̾̊ͦͮͪ͟ŗ̵̶͔̟̭̑̀̈ ç̵̣̥̜̙͍̗̭̩̱͎̐͒̅̋͋̌̿͢͠ͅ_̱͕̑ͥͯ͟͢ő̴̺͈̞̮ͥ̏͌̌ͥ͆̉̀̕͡_̞̗̰͙͗͗̈́ͅ_̵̸̪̤͔̖͓̾ͩͨ̽̾ͧ͡ͅn̷̴̡̢̗̗̝̪̦͉̿̆͗̈́̆̔ͪ͊̍̾̌ͪt̶̢̰͖̣͕̼̫̠̪̺͕ͥ͂̒̑ͨ̔͗̒̂̃͌͋̎̕͠ai_̡͈̳̬̙͚̭̣̞ͦ͑͒̈́̒ͫ͊͘͝ͅn̨͈͎̘ͫ͌ͭ́͢͠e̴̢̛̙̫̬͓̙̲ͫͥ́͐̑̄̾́ͤ̒d̢̦̼̯̰͕͚̤͎̪͍͉̫̫͙͇̹͍̮̺ͣ̃͆̂̔͆̓ͣ̾ͫ̊̋ͨ͐ͬ͞͞͝ w̴̛̛̮͇̻̣̳̱̙̼͍̤̩̝͍̘͎̞͙͋́̐ͦ̈́̊ͧ͊͂̆̍̉̄̔̏̚͠͝ͅḩ̷̸̘͚̬̖̟͉͉̪̬̟͔̤̳̺̳̞̯͈̟͊̀̈́̽ͪͨ́ͫ̈͗ͨ̍͘͜͟͝͡a̷̘͇̯̪͇̯͉̻͆͒ͥ_̲̮͕̝̫ͪͬͤ͂ͮ̏͂̆͋́ͨ̔̏̀͘͢t̨̧̫̠̫̙͉͖̯̼͔͖̺ͧ͌ͣ̀̍̉͂ͪͧ́̇̚͟͜ </p>
+        <p></p>
+        <p></p>“̷̸̨̧̛͎͙͇̘̲͖̖̩̋͐ͩ͂͊̀͡D̨̯̲̪̅͘̕_̷̶̤̥͇̥̰̒ͫͤͬ_̰͖̞̹̖̺̐̒͌̅̏ͩ͘͘͢e̸̛͇̠̮̮̥̝͖̻ͦͯ̀̄̃̐̈́̓͂͝ċ̸̻̱̓̉̓̈͒͜a̵̢͙̘̫͚͍̩̣͙̘̰ͩ͗̃͐ͮ͌ͨͪ͐̏̅̈́ͩ͘͘̕͢͡͡y̴̸̶̧̨̜͙̰̞̱͓͉̫͖̳̻̬͈͖̱̪͑ͪ̒̽̊͐̋́̂̆̅̏̍͘̚̕͢͞i̵̸̛̞͚̙̺̥̞̤͙͍̾ͫͭ͛̾͌ͯ́ͮ͑͌̂ͣ̒̒n̡̨̹̮̼̗̞͈̯͕̖̑ͭ̄̆̆ͤͬ̑̒̒̚͞g̶̢̖̭̪̯̟̼̼͒̈́͂̒̐ͧ̌̿ͣ͑̾̈ͬ̉ͩ͊̂̏͂̃̚̕̚̚͟͞͡ͅ ǫ̩͖̗̣͍̿̿̉̀̍̓ͨͪ͐̅͊͜ṟ̵̛̘̰̳̦̹͍͉͎̯͎̭̍́ͤ̆̈̑ͧ̃̓ͩ̉ͬ̉ͣ̌́͋͗ͦ̄̕͘͜͝͞ga̵̢̗͓̳̰͙̻̻̜͍̹͇̜̲͊͆̾ͩ̈̽ͧͪ̒́͋ͮ̑̕̚͜͡n̢̢̲͓̮͇̆̔ͯ͛̈͆̂̀̍̓̚͜i̸̶͎̝̳̙ͧ̉̆͒ͦ̎̐ͣ̄͑ͤ͘͡͞c̢̜͍̪͕̰̗̹͙̠̟͎͈̩̰ͤͤ̏ͣ̌̂͛ͮͥͯ͊̃̋ͤͥ̒͟͠͝ͅ M̵̨̩̥̭̰͓͓̺͚̺͌̿̿ͬ̄ͪ̔ͪ́́̽̍̊̑͂͟͠a̶̴̺̹̪͙̺͎̯̰̟̬̟̺̦̰̼̋̄̽̉ͫ̅̀ͯ̿̒͆̆ͣͬ̿̏̏ͅs͔̰͖ͬṣ”̩.̷̴̨̧̞̹̩̹̫̰̱͑͋ͬ̏͛͋̄ͮ͂̍ <p>̛̪̲̞͍̗̃́̈̄̐̃a͇̹̰̐ͧ̊́͝ṉ̓g̴̶̢̪̮̠̻̫̥͈̟̺͕̤̱̼͓̞̥ͥͮ̃ͯ͊̍͐͆̇͆̎́͊̑́ͪ̚͢͝͞͞ͅe̷̡̨̳͇̥͙̮̻̫̟̭͓͙ͪͦ̀͒͌ͪ̀̎̆̌ͯͤͧ͒͒ͫ̒͗̈͋̑͗̏͋͜͜,̜͚͎ͤ͐͒̕̕͢͡ Ṕ̡̛̭͎̤͉͙̱͙̲̻͈̤͖̥̲̠̲̯̒ͩ͌ͯ͑́̈́̌̽̾ͤ̓ͦ͂̊ͭͦ̃̏̈̕̚͞i̛̛̠̼͍͉̼̺̥͖͕̥̓ͬ̾̐͗̈̐ͤ̂̋͒͊̿́͜͢͠͝o̥̅_̴̸̸̗̭̹͎̃ͣ̊̌͢͠͠t̵̶̨̧̢̖̩̩̰̹̫̭̥̝͉̩̻͇̦̥̤͇ͮ́̋͗̓̓ͩ͒ͬͯ͗̏̾ͪ̍͆͘͢͠ͅͅř̨̨͉̻͖̘̪̮͍̮̂̒ͪ̏̎ͫ͗ͭ̋͟͝ c̵̙̫͔͈̙͗̐̀̄̊̊͝o̧̰̩͕̭͎̅̃ͩ́̾ͪ̑̓̍͌͋̚͢͜͝l̛̝̉̎ͣͯl̷̵̨̘̼̘̝̼̮̤̼̒͗ͫͭͮͬ̾̕̚͝ǎ̸̛̛̪͚̻̰̻̪̲̺͕͈̳̾ͤ̔̓̂̑̓̀͂̅ͬ̏͆̒̚͘̕͘͟͟͟͠ͅ<p></p>
+        <p></p>p̨̧͉̈̊̌_̷̴̢̡̫͉̻̱̬̗͕͍̖̻̘̹̯͔͕̎̎̃̏͂̑ͪͫ̀ͬ̂ͫ̉͟͞͞s̵͔̹̼͚͊̋̓ͮ̈́̕͝͞e̞͟d̹̎ͤ͡_̨̨̤̲ͭ͋ à̏ņ̴̴̢͚̮͈̣͎̳͙̯͉̮͓͎̖̗̯͍͕͋͊ͧͪͯ̾̌͗̐̏ͮ͗͂̓̾̄ͧͣ́̑͡d̢̢̛̺̺̣̤͍͕͎̰̦̠̱̼̦̖̠́̿͑ͫ́̌ͤ̿̋̿ͣ̅̈̓ͬ̽̇͢͢͟͟ S͉̟̼̀ͦͯ́̑̄̆̀͛͟͝_̵͍͉̘ͮͫ̉̔ͬ̔͢͠iͭḿ̴̸̷̡̛̥̲̦̜̮̭̟ͩͯ͊͛̃ͯ̔̿̀̌ͦ̄͡o̵̞̘͔̓ͬ͒̃̅͌ͬ̄̿͛͛̋ͅ_̴̨͉͕̯̞͖͇͓̖̥̥͐ͨ̇ͨ͛ͪ̒ͪ̋̑n̫ͥ̓͒͝</p>M̢͈̬̗͖̳̲̦̰̝̫̹̓̌͒̉̀̏ͫ̊ͫ͋͋ͤͪ̓̎͘͠͠͝ơ̥̙̤͕̟̯̒̀̀ͤ́͂̿́͜͠m̸̭̩̺͓̹͈̩̐ͮ͑ͤ̓̈̓͟͟͜e̻͈ͥͬ͑̓n̵̶̗̱̩̥̱̗͖͔̰̩̺̟̝̗̞͍͚̺̥̣̈́͛ͪ̉ͯͩ͊͌ͮ̿̂ͅţ̴̭͎̲̱̺̳̼̱̉̑ͦ͒͗̋̃̉ͩ̔ͪ̚̚̕̕͞s̶͉͔ͦ͛_̴̴͈͙̟̦̽̀ͣ͊̀ͣ̈́̔͜ af̶̡̧͕͎͖͚͇̫̀ͭ̄͌ţ̢̨̗̩̗͔̥̳͍͔̙̬ͩ̓͐ͪ̾ͭ̈̑̐̈́̕͘̕͜͠é̴̵̷̹̝̖͉̪̯̯͚̬́̃̒́̀̆ͦ̽͑͐͂̕ͅͅr̨̳̓ͩ t̨̫̲̍̑͜_̵͓̺̺̘̲̺̣̟̤͍̠̄̐ͥ̈ͥ̋ͪͤ̓ͥ̀̈́̔̕̚̚͟h̸̰͎̪̞̬̻̯̄ͤ̄ͩ̇ͣ̀i̥͈̖̞̹͖̽̎ͧs̶̛̺̭̭̱̬ͦ̀͌̃͌̎̊̕̕͟ e̻̰͎̬̍ͯ̏́͑̍̌̔x̴̵̢̢͓̻͈̮͑̾̄̂̿̊́͘ç̴̸̨̛̯̟͙̜͎̺̼͍̟̞̫̞̝̮ͥ̄̾̃̓͊̃̀͋ͪ͊̓̓͌̉͐̌̓͋ͤ̽̕ḧ̵͉̰͍̳̣̟̞͈̦͚̟͍̻̦̳̀̊̓̏ͦ͊̈̆̂ͤ̍͂̓̉̿̆ͭ͠͝͝ m̟̿__̢̬͎͚̲̍̂̈́̇͆ͬ͗̅͌̕̕͜ͅò̸̴̡̥̥̝̹̱̘͙̣̜̗͎̼͚ͨ̔ͫ̿̈̎̄͋̍͋͐̏̓͐̆ͥ͂͘͘͘͝͠͠ͅv̵̡̹̪̬̬̘͎̝̦͌̈̇̒͂̌ͤͤ̊͌͑̔̓̈́̋̎̃e_̴̸̸̶̷̡̛̠̟̤̗͚̰̩̠̦̲̟̖̱̭̫ͦ̀ͩ͑ͣ́́ͮͯ͊́ͨ̀͜͢͡ḑ̰̳͍͆ͦ́̈ P̵̩̗̼͓̙͑̈́̋̽̅i̶̴̢̡̯̲̼̭̲̣͖̬̩͈̥͚ͭͬ̇ͭ̐̉̂͒ͤ̇͐̾o̵͚̣̰͍̗͍̳̜͉̞̬͔ͯ̇ͬ̽ͥ̅̏̿́͋̔̒̌̈́̐̏͗ͨ̎ͫͥ͘͝͡͡t̜͕ͤȓ̴̷̸̵̢̡̛͚͇̜͙̘̙̰̦̺̤͚̟̜͕͂ͧͭ͑̍͒ͫ̐ͬͬ̔̔̂ͮ͞͠͠ t͉ͯo̸̧̰̦̍ͭ̿̀̚͢ t̨̛̛̪͍̬̩̘̲̮̖̦̻̮̱̗̖̄̇ͧ̅ͩ̂̀ͧ̐̓̅͘͟ͅh̑e̻̲ͭ̕͡ Ü̶̸̶̳͇̣̲̦͔̳̠̳̲̫̠ͦ̓͌ͧ͆̃ͣ̈͌̐̈̀͢͢͟͝n̵̘̤̻̦ͬ̐͋̓̈́ͬ̋̈̍́ͥ͢i̿͗t̡͔̬̯̍̒̿̉̍͂̂̊͋͛̕ȩ̴̴̧̯̬͍̩̳͇̰̞͎̘̖̺̭̫̓ͣͯ̓̃ͧ̀ͣ̏͊ͤ̐̊̔ͩ̆̎̌̀͠ͅd̶̛̦̱̘̻̊́ͪ̂͊̿͊͑̀͋ͫ̋̇͊̾͠_̴̛͂̐̈̾̾ͨ͞ S_̨͍̜͖̽̎̐̂̋͛̇̚_̷̷̧̡̠͈͎̠͔̺̖͍̗̭̭ͦͩ͊͋̀ͪ̓́͂ͣ̕̚t̟̤̦̩͍̯̺̰̂́͐̈́͛ͬ̅͐̄͐ͪ̍̕͜͢͢͝͡͡ā̞̎ţ̵͎͖̙̱̳͓̝̤̱͗͛ͮ̒ͮ̏͋̆͑́̇̚͟͜_͇̟͔̅͒̒͛ͤ́ͧ͑͢ȩ̳͚̦̪̯̎̀ͬ̅̈ͤ̉̕s̴̛͈̖̻̘͍̲̔̀̒̒̾̎ͮͧ̃͐́͟͡͠ A̵̷̡̡̛̛͙͚̫͖̘̙͗́̈́͒̔ͩͦͮ͋̐͐̔̿̔̑̾ͬ͘̕͟͟͞iͫ͂̐r̸̸̛͙͉̲̞̺͕̪̭͖̺̱̭͓ͬ̆̋͑̓̀̌̕͘͟ḻ̷̷̴̢̢̛̯̪̝͇̝̘̦͙̺̹̹͕̜̬̪̥̗ͭ͆ͭ̇̾ͩͩͧ̐̃ͬ̑ͥ͐͗̽̚͜͟ơ̷̧͉̞̟͍̙̲̹̺̲̺̙̞̿̓͒̏ͦͥ̃͒́̅̋̐̌ͩͯ̈́ͧ̒̓͐̆͋̐̈́́͘͜͡ć̸̷̴̸̡͎̠̞̣̱͓̙̦̫̫̞ͧ̔̔̋ͦ́ͨͮ̈́̀͗ͩ̃̂ͧͣ̃̕͠k̴̴̵̖̣͚̞͔̼̮͈̯̞͕̯ͬ͒̊͆͊̾͋ͩ̂̓̿̍͛̌͜͠͝͞ͅ.̢̹̱͍̉̊̆͛[Ã̴̵̶̢̡͚̳̭͍̳ͯ͂̐̐͑̀ͩ͜ͅư̵̷̶̯̻̩̝̖̺͖̞̼͓͎͕̤̗͈̗͓ͪ̃ͧ̀ͯ̉̃͊́̒ͬ̌̑̊̌̑ͬ͘͘͟͢ͅt̸̡͇͈̓͗̀͠o̳̹̬̬̒̈ͦͤ̍͠p̸͕͈̲͓̥̞͎̳͚͎͎̯̑̉͗̆ͦ͆́͌̌̽́̐̍ͤ͛̄ͧ̀͐͡͝s̷̴̢̡̡̟̬̫̫͈̞͕̗̰͙͚̀ͯ̋̈̉̾̐ͯ̍̋̓̈̌̆̽̈́̎̄͐̓͜͟͞ͅÿ̠̭̬̜͎͕̳́̅̓͐̌ͬͤ͋͜͝ͅ r̼ê̷̤̲̱̖̟̭͢p̢o͎ͭ̎̚͟_̴͚̖̞͒̆ͫ́r̜͎̅̋̅̌͆̈͌ͧ̅̅̆̚|autopsy]</p>
+      </div>
+
+      <div class="government" id="philosophy" title="Science, not philos̡̧̧̡̤͚̺̤͉͈̠͙̗̳̗̜̰͇̟̘̘͗ͮͮͦ̈́͌̋ͥ̄͐̈ͧ͊̽́͜͟͡ophy. - Dr. Eibbel">
+        <h1>Science, not philosophy.</h1>
+        <p>Never in human history have this many world-renowned scientists worked together to solve such a singular mystery, especially in absolute secrecy! I’m honored to be here for this historic moment, but there is something I feel must be said.</p>
+        <p></p>
+        <p>It is becoming clearer each day, with each new discovery, we end up with more questions than answers. To put it simply, the logic we’re tasked with understanding is utterly alien. I am writing this not because I think we cannot find conclusions, rather it is, in an admittedly vain attempt to quiet the constant questions of “Why?” from those in senior positions.</p>
+        <ul>
+        <li>Why does Sample I-001 look like ₳̴̟͛₦̷͔̄ ̸͇̄Ɇ̴̨̒ł̸̋Ι₲̸̢̅Ⱨ̶̧͂₮̸͇̀Ɇ̴̪́Ɇ̶͎́₦̷͔̃₮̶̟̑Ⱨ̵̟̄ ̵̀͜₵̴̖̉Ɇ̷̰̂₦̷͍͝₮̷̫̽Ʉ̸̻͝Ɽ̷͇͑Ɏ̷͍̿ ̵̮̍₩̵̲̏Ɽ̵̛̗ł̸̼̌₮̶̳͝ł̷͍͑₦̸̼̌₲̴̺̈ ̴̨͂Đ̶͓̎Ɇ̶̙͝₴̵̹̇₭̶̫͆?</li>
+        <li>Why did “they” choose to send such a thing to us?</li>
+        <li>Why are there p̵͚̀l̵̬̋a̷͔̒ỷ̷̠ì̵̼ṇ̶̿g̵̪̚ ̸̲̐c̸̖͛á̵̹r̵̯̋d̶̨̽s̴̭̐ ̸̳̔w̴͇̋i̴̫͛t̴͉͠h̵͚̆ị̷͌n̵̫͒ ̸̫̑ǒ̵͖ǹ̴̨e̶̢̽ ̴̯̓o̶͔̽f̴̦́ ̵̲̿t̸͇̋h̷̢̛e̵̥͠ ̷̙̾d̸̯̆r̸̫̄ȧ̴̮w̴̦͋e̷̡̓r̶̪̃s̷͎̔?̴̥͘</li>
+        </ul>
+        <p></p>
+        <p>I do not know. I’m unsure we will ever know the answers to those questions unless “they” make themselves and their motivations known. We are not here to speculate. We are scientists, not philosophers.</p>
+        <p></p>
+        <p>These are the questions my team are currently trying to solve.</p>
+        <ul>
+        <li>What are the full and exact dimensions and material properties of the sample?</li>
+        <li>How does its molecular structure change and shift, even during simple operations?</li>
+        <li>What triggers this behavior?</li>
+        <li>What is behind Kraukov sequence?</li>
+        </ul>
+        
+        <p></p>
+        <p>We are more than ready to look into questions that can be answered through objective measurement and empirical evidence. Though, I fear, this submission will not stop some of my colleagues from mindlessly speculating and submitting it. I ask that you read̶̴̨̺̩͙̹̱͕͔̭̥̯̪ͨ͊̈́̑ͦ͆́ͭͭ̈́ͧ̓͌̔̇̚̚͘͢͞͝͡ w̹͓͔͘i̯̲̝̘͔̤̮͓̭̫͓͆̊̆͂̔͐̓͋̋̓̀̄ͧ̐͒͂̔̕͜͠ͅt̪̹͉͙̬̥̯̯̘̗̳ͬ̑̆͊̌ͣ͊̓́̈̇͂̎͂͑ͤ̉͌͒̅̕͜ͅͅͅ_̡̫̅̊ͥ́̅̄͟͝h̵̶̴̨̨͓͓̱̙̜̲͈͕̘̯̞̹̤̩̫̙̀̒ͭ̽̌ͫ̿ͣ͛̌̑̽ͮͬ́͌̃ͭ̚̚͟͜͠ͅ s̶̵̮͇̣͖͔͈̖̗̙͇̳̮͍̠͎̝̮̽͌̓̑͛̇̾͐͊̋̎̅̐ͮ̾ͦ̍ͪ͆͋̕̕͢͜͟͡ͅͅk̶̵̡̰͔͇̱̪̟̰͕̖͓͋̑̓̎͌̅̋̄̈́̓̾͑̏͛̐ͮ͌͘͜͟ȩ̳̠̲̻̝͇̏́̎ͦ̏̍̋͛̓̑ͣͭͥ́̑ͭ̕͘̚͝p_̧̣̻͔̺̼̘̙̪ͣ͑ͭͧ͐̊̄̌ͨ̉͊͢͡t̮͈̫̥ͧͣ̾̈͡i̙͛c̴̡͉̫͜į̶̴̧̧͍͕̖̗̰̦̱͎̬̫̥̲͓ͭ̈́̒͆ͭ͛ͤͯ̄̑̋̂̓̔͊̓ͣ̐ͧ͐̑̕͘͞͞ş̵̵̸̨̨̗̫̰͎͔̖̟̤̹̤̺̤͓͍̇̈̂̃̔ͫ̆ͨͮ̄ͭ͐͛͗̓ͬ͛͐͒͛͝͞͠m̶̴̞̙̬͐͊̉͘ a̷̷̛̫̟̺̝̞͖̱̺̫̘̝̾́̑ͫͤ͗̋ͣ̀͌ͤ͊͛͑̄ͬ̏̎͘̚͘͢͝͡n̥͎̤̏̄ͪ͊̍̽͠y̴̫̬̥̥̪̻̖͚̱͔̜̖ͩͪ̍̌̅̋̓̿̔ͧ̔́͂͂̅ͪ͛͒̅̅̇̀̇̕͠͡͠ c̹̪͕͎̎̈ͨ͘͟͝ồ̸̯͓̥͎̮̘̈́ͦͩ̈́ͥn̶̡̡̨̢̧̛̰̙̫̲̤͉̣͙̪͈̘̰͖͈̊͒͛ͬ͊̉̇ͣ̐̆̒͒̇̓́̓ͩ͂̑̔́͟͢͠ͅclusion drawn from such an article.</p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p>█▬█ ̳ ̾ ͛ ͒ ̹ ̸ ͪ ̉ ̎ ͜ ͔ ̢ ̵ ̂ ☰ ̑ ͤ ̈ ̶ ͣ ̪ ̴ ͕ ́ ̄ ̶ ͮ ͬ ͎ ̎ ͣ ͝ ̂ ̿ ̿ ̠ Ι ̵ ̪ ͨ ͑ █▄▄ ̌ ̈ ́ ́ ͆ ̯ ͟ ͌ ̨ ͈ ͜ ͔ ̭ Ι ̗ ̢ ͩ ͬ ̷ ̏ ̆ ̈ ́ ͞ ̤ ̻ ̠ ̜ ̗ ̸ ̂ ̌ ͚ ̹ ̩ ͫ ̮ ͣ ͐ ̳ ̳ █▄▄ ̎ ̽ ̲ ̽ ̢ ͢ ̓ ͋ ̮ ̎ ͖ ̾ ͚ ͔ ̞ ͡ ̶ ͒ ̽ ̀ ̻ ̩ ̅ ͆ ̥ ͍ ███ ̊ ͦ ̌ ̎ ̭ ͇ ̀ Ι ̢ ́ ̖ ̤ ̻ ͂ ̡ ̑ ͈ ̲ ̳ ̤ ̘ ͕ ̀ ͊ ̵ ̜ ̡ ͋ ̓ </p>
+      </div>
+
+      <div class="government" id="escritoire" title="Ť͖̼͓͑̆̕_̷̡̦̬̥̭̪͚̟͕̄̐͆͒̈̑̊̿̄̿ͮͧ̄ͮ̌̚h͎͍͇̪̜̪͈͔̻̱͔̊̍̀̆̔͆͂͆ͣ͟͟͡ě͈͇̔̾͜ Ȩ̸͕͙͇̙̙̥͉̲̣̩̼̟̲̝̯͕̿͌̔̔͒̍̐̆͊͗͊̿̍ͪ̀̓ͤͭ̍̓̍͑ͩ͞͝s̵̴̩̻̼̮̣͎͖͒̍̇̃ͪ̇́ͧͤͯ̔̆č̶̶̴̰̟̲̜͇̮̮̮ͩ̒́̇̌̓͆͒̑́̾ͨ̔̕͢͡ř̶̬̬͙̭̜͓͈͂ͣ̊̀̀̿̽̑ͧ̂ͩ̿ͮ̽͘͘͡ȋ̵̢̖̥̤̭͚͕̻̟̰̞̖̅̉̐ͨ̎ͣ̅̽ͬ͌͌̅͊ͤͮ͢͞͡͝͠t̡͙͗̽̑̽ͅơ̢̧̱̩͇͔̖͖̦̪͇̩̪̩̠̦̭̦͈͈ͭ̄̏̌͋ͤ̂ͩ̋̇̃̒̎̾ͮ̎́̔̿͘͘͜͡͡í̀r̝̪̐͋e̢̨̤̙̯̟̤͑ͤͪ̇̅̿͢͝ - Prof. Madel">
+        <h1>Ť͖̼͓͑̆̕_̷̡̦̬̥̭̪͚̟͕̄̐͆͒̈̑̊̿̄̿ͮͧ̄ͮ̌̚h͎͍͇̪̜̪͈͔̻̱͔̊̍̀̆̔͆͂͆ͣ͟͟͡ě͈͇̔̾͜ Ȩ̸͕͙͇̙̙̥͉̲̣̩̼̟̲̝̯͕̿͌̔̔͒̍̐̆͊͗͊̿̍ͪ̀̓ͤͭ̍̓̍͑ͩ͞͝s̵̴̩̻̼̮̣͎͖͒̍̇̃ͪ̇́ͧͤͯ̔̆č̶̶̴̰̟̲̜͇̮̮̮ͩ̒́̇̌̓͆͒̑́̾ͨ̔̕͢͡ř̶̬̬͙̭̜͓͈͂ͣ̊̀̀̿̽̑ͧ̂ͩ̿ͮ̽͘͘͡ȋ̵̢̖̥̤̭͚͕̻̟̰̞̖̅̉̐ͨ̎ͣ̅̽ͬ͌͌̅͊ͤͮ͢͞͡͝͠t̡͙͗̽̑̽ͅơ̢̧̱̩͇͔̖͖̦̪͇̩̪̩̠̦̭̦͈͈ͭ̄̏̌͋ͤ̂ͩ̋̇̃̒̎̾ͮ̎́̔̿͘͘͜͡͡í̀r̝̪̐͋e̢̨̤̙̯̟̤͑ͤͪ̇̅̿͢͝</h1>
+        <p>We’ve managed to narrow down the design language of Sample I-001 tǫ̴̵̬͇̳̙̩̰̜̺̭̀̐̊͌̂ͬ͆͌̅̓̃͊ͦ̾́͡ b̨̧͕͖̮̤̮͆ͮ̐ͭ̓̄̈ͤͤ͊̌͡e̷̩͇ ǫ̨̢̦̝̝̖͖̤̹̱̙͔̃̐̾̌̑ͭ̀̏ͣ̃̒̿ͯ̏͒ͥ̓͟ͅf̢̡̘͇̜̳̩̠̼̳ͩͭͣ̓̑͊̍͐͂̓ͧ̕͜͜͞ á̸̢̛̹̻̦̗͕̤͍̥̯̤̋ͥ̿͆͊ͮͤ̉͐͛ͯ͆͋͋n̴̢̧̡̞͉͓̻̘̼ͤ̋̈́͂̌ͦ̌͋̌̑ͨ̍̕̕͠͞͞ ẽ̶̘͎̩̘̼̤͙͙͇͇̝̩ͬ̀ͯ̒͋̾ͯ́̊͂̾̽ͩ͛̿̌͆̍̑̕̚͜ͅͅi͖͕͇̫̗̼̹̳̼̭̦͎̩̟̤̟͚͍̓ͦ̀͊ͥ̒̂͌̽ͧͩ͒̇̿̀̕̚̚͟͢͠ğ̘̺̜͎̱̥̰̆̾̔ͫ͟͠͝͡_̶̧̢͎̜͓͓̬̙̗̤̆ͯ̾͐ͭ̓͆̈̀ͦ͘h̼̆̇̐̀͡t̨͎̦̥̦̜͙̝̮̭̳̓͂͊̑͒̎̌̾͢͡͞͞é̷̠̥̰̹̰̞͒̂ͦ͑̍̄͟ẻ̢̱͇̻̘͔̱ͬ̅̈́̚ñ̬̄t̳̆ͤ͗̏͟h̗͈̠͗ͯ c̜̑ě̡̪̺̬͐͠_̢̨̛͓̩̩͍̝̣̗̥͙͈͓̰͙̦͈͈̗̋͐̌̄͂͑͛͐̓͐̓͂͟n_̷̨̧̛̙͍̥̼̯̝̦̹͈̪̯̭ͧ̄͊̄̎̏͒̓̔́́̔̔̅ͭ̕͘̕͢͝ͅt̵̡͙̖͍̯̦͖͉́̅̅ͣ̃͌ͥ̎ͯͧų̵̴̢̰͙͎̩̩̎ͦͪͬ̏̓͗́ͨ̄ͅͅṟͣ͂̈́̍͒͠___̷̰̮̝̘͖͔̲͉̺͉͕̃̅̎̓̑ͤ́̄̀̂̋̆͆̃̕͘͝͡͞͞y̴̷̵̪͓̳̯̣̺̗̳̟̞͕̌̍͌́͆̀͂̌̌́ͬ̃̐̀̈́̍͘͢ ơ̵͕͚͇̟͈͚͚͇͔̼͙͈̪ͩ͗̓̆ͮ͋ͩ̂ͩ̅́́̌̈́͌͆̕͜͜r̡͔͊͗͋_̶̡̤̰̝̝̯̞̣͈̬͕̤̗̙ͨͮ̄ͩͪ̊ͪͧ͛̉̄̎ͫ͒͆ͨ͜͝͡i̢̧̛̩̱̹͚̤̟̗̤̾ͧͭ̾̉͛̊ͯ̽͠͠g̞͍̤̖͘i̵̶̸̪̘͎̗͉̦̩̰̫͈̤͇ͭͨ̾̏̀͂ͫͤ͛̈́̈́ͯ͘̕͞_ͪn̴̵̠͕̱̬͈̥̤͎̖ͬͫ͌̆̿ͩͧ̓ͥͭ́͆.̮̘͉̘̘ͤ̃̈́͆̍̑̅̈̄̕͘͢͝Though no exact design has been found to be a duplicate to the sample, there are many motifs that share similar qualities. It’s as if you averaged of all those different designs, it might appear similar to Sample I-001.</p>
+        <p></p>
+        <p>Another interesting observation is that there are signs of wear-and-tear. It looks well-used. Normally one might theorize this type of damage could be from atmospheric entry or the crash landing, but nearly anything would have been vaporized long before it touched the surface, especially at the speed the sample was traveling at.</p>
+        <p></p>
+        <p>Samples of the wood grain have also failed to be conclusive, perhaps, like the design language, the wood grain is averaged across a variety of the species of tree used in carpentry at the time.</p>
+        
+      </div>
+
+      <div class="government" id="weapon" title="A Weapon - Dr. Coll">
+        <h1>A Weapon</h1>
+        <p>I feel the need to emphasize caution. Many are simply assuming this object is somehow sentient in nature because it can recognize its surroundings and react accordingly. </p>
+        <p></p>
+        <p>Firstly, let's just define what is actually happening. The sample's structure seems to change whe͜n̲͓̣̹͑͘͡ d̸̨̬̫̑̐͠ṛ͠ȧ̴̼ͦẅ̞̥̟e̳͘r̓s a͖̐ͧr̺̜̟͘ě̙ o͈̥ͩp̟e̷̿̌ͦ̇̾n͎̬͗̅e̮d͎ͩͨͭ̈́͡͞ o̱͞r̢̬̊͠ c̢͖͇l̺ͧo͖̞͘͟se͓̞̖̞ͫ͠d̴̪̞͑ o̗̺͋ͮͫr th̵̜͎̀ͩ̆͜e̠̖̟͖̿̚ ļi̚d͗ͪ͘͞ i̬͚͒͒ş̻̪́̉ m̟͘a̸̩̾̀͡ni͙͑͊ͮ̓̿̋p̅ͪͧulated. It seems, when the drawers are closed, there are no hollow spaces in the sample, some rudimentary analysis proves this theory likely.</p>
+        <p>This, however interesting it is, does not mean it is a sentient being. Otherwise, by the same standards, bugs and single-celled organisms would qualify for sentience.</p>
+        <p></p>
+        <p>Secondly, many here assume that because it “traveled in a specific manner as to imply an intelligent hand” automatically arrives at the conclusion that it must be some sort of message. It could also be a weapon, a bomb thrown at us, or something more sinister̵̨̛̖̘̦̫̯̙̻̰͍͓̺̳̭̫̀ͬ̌̊ͧ́ͤ̈́ͩ̋ͪ̀̓ͮ͘͟͟,̸̸̴̴̸̨̹͓͚̯͍̭̩̖̳̻̼͓̝͙̎̓ͮ̀̆̀ͪ̓̅ͬ̓̿̈̒̽ͫ͝͝ l̸̯̮̣̬̬͆͊̉́̄̕͢͢ͅ_̨̧͙̦̘̗̱̳̬̤͓̲̼̘͔̰̫̭́͆ͬ̆ͤ̚̚̕͢͞͠͡͞i̺͕̲̞̰̥͚͖̼̻̙̼̗͉ͮͮ̔͆ͫ̓̊̀̄̾̈́̀ͮ̈ͧ͐̏ͣ̈́̽̕͜͡͠k_̘̮̟͍̠̞͙̮ͬ̂̓̂ͩ͡e͇͍̩̬ͨͯ͡ a̙̭͘ͅ_̶̸̷̵͕̱͓͎̻ͦͦ̂̅͂̓́̐̂̋̂̄̂ͧ͜͜ͅ_̢͊ͥ͡ b̵͇̠̪͓̹͚̠ͬ̿ͯ̓͟ǫ̸̨̢̭͓̤̙̣̼͉̈́͋̄̍ͮͫͣ̆͝͠͝x̨ ơ̴̡̮̯̲̄̀ͯ͊̒ͤ̇͞͞_̴͎͖͕̫͊ͨ̅ͮͨ͆̀̒̑͐ͬͥͅf̴̢͚̗͍̖̞͖̩ͯ͑͗̆̓̃̃̌̏͢͜ ṁ̴̧̗̙̕y̴̶̸̡̡̨̡͎͉̠̗̼̗̘̻̳͉͓̙͈̪ͧ̾ͣ͆̊ͩ͛̔ͮ̊͆̈́̎̋͌ͩͪͫͮ̚̚̕͟͜͝ͅs̶̡̲͌̓̽̀_̥̬͆͐_̷̡͔͉̜̼͚̲̙͉̝ͯͫͭͫ̈́ͦ̈́̋͒̄̎̑ͨ̑̇ͤ͑̓͘͜͡t̢̛̩̝̮̯͚̹̭̫͙̗̆̇ͭͥ͂̀̓ͪ͆ȩ̶̷̸̢̛̠̱̙̮̙̦̺̳̙͈͆͆ͩ͊̉͊ͨͤ̍ͧ̈̽̽͟ṙ͇͇ͭ̈ͨͬͯ͝y̵̴̡͉̙͖͖͈̘͕͉̳͎̳̺̽̇ͬ̌ͯ͑̓͒̌̍̕͟͞ d̝͈͒eş̸̴̵̥̦̻̤̝̯̞̟ͯͫ͌͂̋̀͒͆͆̓̌̒ͤ͒̐̽̈ͥ̆͐͛͢i̧͊̄̏͠g̴̵̹͉̱͚̻̳̥̦͖ͬ͐ͭ̋̈́̈̽ͪ͌͘͜͞͡ͅn̸̨̡̡̤̜̖̝̖̜̩̫͇͉̯̠͉̆̇̐͑̏͐͛̈́ͩ̀̔ͬ͛̇ͨͬ̋̇͐ͅȩ̸̣̹͖̪̹̫̤͎͍̪̱͑̌̄ͨͧͥͣ͐́͂̄̊̎͒ͨ͊ͥͣ͂̆͘͞d̢̜͎͚̜̓ͥ͐͛͢ t̡̥̦̹̖̲͖̥͇͙͛ͭͭͪͩ̍͂̈́̈́̂̂͒̆̎͂̓̐̌̾̇͢ơ̵̷̘͓̲͈̝̈́̊ͫͤ̉͌̆͟ d̴̡̦̗̣̘̥̙̠ͥ̉ͬ̑ͫͣ_͖͇̪̟̹̩̞̯̬̯̪̣͔̊́ͧͭ̃̐̀̓̈̊i̢̝̣̪̩̲̺̟̰͍̫ͦ̆̀ͧ͗̄̀̑̂͟͜͡ṡ̴̸̨̧͚͉̰̺͎͈̜̫̼͚̲̝̃ͧͯ̍̈ͦ̄̿͌̌ͣ͟͜͞ṱ̣͖̣̀ͬ̾͡r̭̤͈̳͇̘̽̎ͯ̇̂́̿̎̚͟͜͡͝a̗̤̭ͣ͂͑͜ç̗̪͙͇̼͎͕͇̳ͥ̓́ͧ̀́̀̑̓͐̉ͫ̏͢ţ͖̘͉̪̊͒̃̑͌̀͋̿͗̀̈́͢͞ͅ ų̷̶̘̹͇̖͎͉͊ͦ̊̾́ͨ̽͌͛̾̂͢s̶̶̡̠̺̥͕̗̤͋̎̉̃̋̇̊ͭ̕ f̸̴̡̼̬̜͎̺̖̞̙̱̹͔̖́̾̍͂ͤ̄͗̆̇͗ͦ́́̃̚̚̕͡͡ͅo͂̏ͪȑ̴̴̨̨̛͕͈̭̱̠̲̱̫͇͓̳͊̂ͥ͛̊̏ͭ̂̔̈́̍̽̂̚͘͢͠͞ͅ ŝ̨̛̩̣̣̯̥̖͓̥͂ͨ̚͟ơ̶͙̺̜͍̝̺̖͍̳̩̖̲͕̬̘̫̹̩͍̙̻̯̔̎ͭ̈́́ͦͫͩ́̆̈̿ͩ͒ͬ̏͋͒̍͑͢͞m̨̡̗̹͋̾ͥͭ̓ͮ͑́͊̍͝ȇ̶̸̡̱͖͈̪͙̣͉̥̳̫̲̞̩̞͓͆̀̇̔ͧ́̋̌ͦ̏͡ͅ r̸̨̭̥̰͙̰͎̜̟̓͂̇ͨ̽̑̊̀̊̂ͦ͋́̕̕ͅe̸̩̖̣̩͍͌̔̇̈̀̕_͌͋͛ͬ̔ą̞̬̹̗͖͓͛́ͩ̓ͩ͟͢͠s̵̛̪͚̭̱̗͚̠̗̞̄̀͛ͥ̿͗͛̋͑o̷̤͈̰̣͔͌̽́͊͆̂̒ͩͅn̢͔̞͔͗̈́ͯ̑̃ͦ̓ͥ͠͝_̡̠̩̭̱͑ͧ͝.̛̫͕̠̘̯̾̒ͭ̅ͣͨͧͪ̋͒̕͘</p>
+        
+        
+      </div>
+
+      <div class="news" id="admin-files" title="Admin Files {CLASSIFIED}" data-pinned>
+        <h1>---</h1>
+        <ul>
+          
+            <li>[CODE BLACK ALERT::|code-black]
+              <p></p>
+            </li>
+            <li>[CODE RED ALERT::|code-red]
+              <p></p>
+            </li>
+            <li>[Possible contamination vectors::|quar-list-full]
+              <p></p>
+            </li>
+            <li>[Regarding the Autopsy::|autopsy2]
+              <p></p>
+            </li>
+            <li>[Piotr Drozdov Autopsy unredacted report::|autopsy-full]
+              <p></p>
+            </li>
+            <li>[Dr. Lave's unredacted report::|post-exam-1-open]
+              <p></p>
+            </li>
+            <li>[A measured response::|bomb2]
+              <p></p>
+            </li>
+            <li>[Upgrading security measures::|bomb]
+              <p></p>
+            </li>
+            <li>[Response to: Failing the duck test::|duck2]
+              <p></p>
+            </li>
+            <li>[Failing the duck test::|duck]
+              <p></p>
+            </li>
+            <li>[Collected Photos of Sample I-001::|gallery]
+              <p></p>
+            </li>
+          
+
+
+        </ul>
+        
+        
+      </div>
+      
+      <div class="government" id="watertight" title="The “Watertight” Theory - Dr. Lambert">
+        <h1>The “Watertight” Theory</h1>
+        <p>During exam 002, Simon Rodney, was able to capture two contradicting internal geometries of Sample I-001 by using focal plane tomography both before and after closing the ███ of the sample.</p>
+        <p></p>
+        <p>As the diagram shows, the volume changes when the ███ is in the closed position. The hollow space is inexplicably consumed, and what's more illuminating is that the change seems to happen near instantaneously.</p>
+        <p></p>
+        <p>I propose this behavior suggests the following: The sample is both aware of what it is meant to look like when opened and closed, and is aware that it’s being opened and closed in order to correctly change its internal structure to match.</p>
+        <p></p>
+        <p>Why spend the energy to collapse internal hollows when the lid and drawers are closed?
+          A possible explanation is that the sample is s̷̢̡͕̦͎̘̮̥̠̖̣̹͙͔̏̅̉ͨ̽ͭ̋ͧ̊̋͐̽ͧͧ̆͆̍̽͊́̎̕̚͟͢͝p̰͎ͪ̔͡ę̸̣̪͇̙ͮ̇ͭ͑̈́ͣͭ̔͂̚͟n̵̢̛̝̳͓̖̭̦̰̤̥̰͕̬̬̞ͮ͂ͫ́̈̾̎ͯ͆ͬ̌̾̀̏̽ͤ̋͢͟͡͠͝d͑ȋ̧͕̱̬̲͚̩̭̠ͩ̊ͧ̾ń̴̴̷̺̟̗̘̿ͨ̈̎̒ͧͦg̨̯̠̠͍̳̹͚̹͚̳͉̞̍͆͑͌͋͋̐ͬ̌ͪ̊̊̒ͧ́ͯ̉͒ͥ̓̊̈̈̄̕̚͘͞ͅͅͅ e̥̣̜̩̱̝̗͕̪͔̖̜̟̰̬ͮ͑̈ͦ̽̈́̃ͪ̍̑ͬn̴̸̨͔͈̘̼͚̖͇̝͔̠̬̳̠͎̞͔͙ͧ̿̎̈́̓̄̔̊ͫ̎͒̏̎͛̋ͫͫ̾ͪ͊̍͑͌͘̚͝ͅe͓rg̨͇̱̘͓͌̔ͅy̴̨̘̱̬̼̺̦̳͊̑͋̓̾̏͒͆ͨͤ͗̓́͂ͥ͂͆̚̕͘͡ to maintain its shape, and is optimizing for energy efficiency by removing complexities when they cannot be observed.
+          </p>
+        <p></p>
+        <p>Another question, is the apparent density of the object, by collapsing the hollow spaces, it’s moving its finite matter to fill more space, this should have a noticeable change of the density of the object, a possible avenue for experimentation. Another option is to submerge it in a pool of water to see if water can enter the supposedly nonexistent hollow spaces. Finally, another experiment would be to place an object to take up a significant portion of a hollow space and close it. Would the collapse still occur or would it conform around the object, and where would the “excess” matter go?</p>
+        
+      </div>
+
+      <div class="government" id="dust" title="Examining Samples I-005-015">
+        <h1>Examining Samples I-005-015</h1>
+        <p>After examination 002 of Sample I-001 ten samples of surface dust were collected and analyzed. Most contained simulacrums of the expected particles, paper fibers, soil minerals and skin cells, hair, as well as small particles that appear to be nylon and rubber.</p>
+        <p></p>
+        <p>When discovering the skin cells, our immediate priority became isolating these dead cells and trying to ascertain their origin; it is possible humans may have initially contaminated the Sample. Ultimately it was determined that the amount of time spent interacting with the desk could not have produced the fine layer of surface dust observed on the sample. It was another illusion, a lie. </p>
+        <p>A DNA analysis of the skin cell and hair revelead no genetic structures, there were no amino acids present in the isolated samples at all. They also produced the tell-tale Kraukov sequence, when tested by a mass spectrometer.</p>
+        <p></p>
+        <p>Another type of particle that proved intriguing were the particles of nylon. We could only tell it was attempting to appear as nylon due to the fiber structure observed under an electron microscope. </p>
+        <p>As expected, mass spectrometry produced a Kraukov sequence.</p>
+        <p><img src="assets/nylon-fibre.jpg" alt="HELLO?"/></p>
+        <p></p>
+        <p>Volcanic ash was also present in the samples collected, we are still determining the best way to analyze these samples. </p>
+        <p></p>
+        <p>Professor Madel suggested that if the dust samples feel like a mixing and averaging of dust from across the world, he is working on a similar theory regarding the design of the desk itself. More research needs to be conducted.</p>
+        
+      </div>
+      <div class="government" id="alternatives" title="Alternative research structure for faster turnaround">
+        <h1>Alternative research structure for faster turnaround</h1>
+        <p>These bureaucratic “examination proposals” and the subsequent nitpicking involved is heavily slowing down critical research. There is so much we don’t know, the sample could b_̵̦͉̫̙͍͚̲̬̩͂̔̂̀ͯͥ̇̒ͮ͜͢͞_̙ȇ_̵̡͚̼̥͎̝͉̫̦̲̟̜̬͉̖̬̏͗̐̈̏̌͛ͥ̽́ͬͨ̌̀ͩ̈́ͥ̌ͪ̑̚͢͞͞ͅ p̷̶̢̡͖͔̱̞̪̝͉̞͙̝͇̔̓ͪ̈́̂̽̋̒ͥͨͭ͊͐́ͣ̉̏ͫ̿̂ͬ̀̕͜͜͢͟͝͝ͅͅe_̸̥̪̗̘̬͔͉̺͍̲̝ͦ̅ͬͨͮ͒͋̓̑ͪ̈́͢͝ȓ̸̸̩̩̯̼̫̪̺̮̠͍͈͕̼͚̬̀͑̽̉͂̿ͪ̒̋͋̎̍́̂̕̕͢͟͡ishable or there may be other time-sensitive elements at play. I understand the need for caution, and the cold war can’t just be “put on hold” for something like this, but I implore leadership to consider the following changes.</p>
+        <p>-</p>
+        <p>Firstly, allow both agencies to share data. It’s a waste of everyone’s time and energy if both sides need to learn the same lessons twice. If we pool our resources and experience together, we would see an enormous boost in progress.</p>
+        <p>-</p>
+        <p>Second, allow unfettered access to Sample I-001. We don’t know what we are dealing with, or how long this opportunity will be here for, we should be capitalizing on every waking moment, researchers should be working around the clock. Instead we need to wait days and days just to examine the sample for mere hours. Any other research institute would balk at the inefficiency displayed here.</p>
+        <p>-</p>
+        <p>Lastly, let us eat our own food. I can’t tell you how many colleagues are struggling to sleep well when their stomachs are figuring out how to digest beef kidney, pickled cucumbers and jellied meat. Tired researchers are prone to making mistakes and we can’t afford to make mistakes right now.</p>
+        
+
+        
+      </div>
+      <div class="news" id="admin-no-code" title="Access Violation">
+        <p>Your passcode was rejected.</p>
+        
+      </div>
+
+
+      <div class="government credits" id="gallery" title="Photographs of Sample I-001">
+        <p><img src="assets/cabinet1.jpg" alt="HELLO?"/></p>
+        <p><img src="assets/cabinet2.jpg" alt="HELLO?"/></p>
+        <p><img src="assets/cabinet3.jpg" alt="HELLO?"/></p>
+        <p><img src="assets/cabinet4.jpg" alt="HELLO?"/></p>
+        <p><img src="assets/cabinet5.jpg" alt="HELLO?"/></p>
+        
+      </div>
+      <div class="news" id="admin-code" title="Access Granted">
+        <p>Your passcode was accepted.</p>
+        
+      </div>
+
+      <div class="government" id="Flagged" title="Flagged Communication Logs {REVIEW PENDING}">
+        <h1>A list of flagged messages sent through internal communications system at JBAK</h1>
+        <ul>
+          <ul>
+            <li>[Message̶̷̵̬̗͈̲̣̹̜̟̟̠̫̫͇ͬ́̒ͬͤ́̊͒̔ͣͧ̃̇̐͞ Nͪ̓͞ov̙̮͍ͫͩe̅̃m̠͟b̃ͩė̪̣̈͟r̨͗́͛́ 5͚ -1989 - 00:05|msg4]
+              <p></p>
+            </li>
+            <li>[Message July 29 -1989 - 21:35|msg5]
+              <p></p>
+            </li>
+            <li>[Message July 21 - 1989 - 21:10|msg2]
+              <p></p>
+            </li>
+            <li>[Message July 17 -1989 - 13:23|msg3]
+              <p></p>
+            </li>
+            <li>[Message July 14 -1989 - 07:36|msg1]
+              <p></p>
+            </li>
+            <li>[Message July 12 - 1989 - 17:56|msg6]
+              <p></p>
+            </li>
+            
+
+
+          </ul>
+        </ul>
+        
+      </div>
+
+      <div class="news" id="autopsy2" title="Regarding the Autopsy">
+        <p>When Dr. Schofield_̛͍͙͎ͣͥ͐͑ f̷̰͓̯̭̩̣̳̩̦̤̻̝̿̈̊̍̈́̃͗͜͞i̓͗͘͝nished the autopsy of Piotr Drozdov, he took several samples of brain and tissue matter to a nearby research lab. There, he tasked junior research assistant Reginold Warren to perform a variety of tests on the samples. When he performed a mass spectrometry test, the brain and tissue samples of Piotr Drozdov produced the Kraukov sequence.</p>
+        <p></p>
+        <p>This information is highly classified, both Schofield and Warren have been moved to isolation as a security measure. We are currently tracking down any personnel who have left JBAK and isolating them. We are also discreetly collecting blood and tissue samples of all US personnel.</p>
+        <p></p>
+        <p>As of this moment, no personnel from JBAK may leave the premises, all leave of absences are hereby canceled.</p>
+        <p></p>
+        <p>It is also imperative to share this information with the Soviets. We need to have a comprehensive understanding of what’s going on and our staff is eating food they’ve prepared.
+          We are preparing a meeting now.
+          </p>
+        
+      </div>
+
+
+      <div class="news" id="bomb2" title="A measured response">
+        <p>I completely understand your willingness to blow everything up, but may I suggest a stepped response?</p>
+        <p></p>
+        <p>If a positive detection occurs, flood the facility with chlorine dioxide, that should kill everything and preserve the data on the machines. Even if the sample is destroyed, the fact is that we can continue to learn new things for decades just from the data we’ve collected already.</p>
+        <p></p>
+        <p>If those detectors continue to produce positive results after a few hours, then we can take the “nuclear” option.</p>
+       
+        
+      </div>
+
+      <div class="news" id="bomb" title="Upgrading security measures">
+        <p>Dr. Coll has convinced me that this thing is dangerous that we originally anticipated. I’ve filed an armament acquisition report for twelve Radio-Decontaminant devices. A single one of those devices should be enough to vaporize everything at that base, but since we’re dealing with some strange type of matter, we might as well over-do it.</p>
+        <p></p>
+        <p>Additionally I want those Kraukov signature detectors placed all across the facility. In every room, in every air-duct. Hook them up to an automated interface. I think everyone will sleep much better with those in place.</p>
+        
+        
+      </div>
+
+      <div class="news" id="duck2" title="Response to: Failing the duck test">
+        <p>Administrator Gladwell, I completely understand the logic you’re guided by, it’s often true that if it looks like a duck, swims like a duck, and quacks like a duck, then it probably is a duck. </p>
+        <p>I must remind you, before you decide to cut funding on this project, that a duck cannot survive a collision with earth's atmosphere traveling at 2800 km/s.</p>
+        <p>A duck’s matter can be measured by mass spectrometry and produce expected results.</p>
+        <p>A duck’s stomach and other internal hollows remain hollow even if its orifices are closed.</p>
+        <p></p>
+        <p>As silly as the comparison is, we are not looking at a duck anymore. We are looking at something trying very hard to be something it is not. Please, trust us on the numbers here. You wanted the world’s best and brightest, believe us when we tell you this is not a duck.</p>
+        <p></p>
+        <p>If it is a trick by the USSR, then that means they have far surpassed us in the material sciences and there are still critical things we can learn from this sample.</p>
+      </div>
+        <div class="news" id="duck" title="Failing the duck test">
+          <p>It’s been a week and a half since JBAK became fully operational and I'm still looking at the damn desk! I feel the need to reiterate how expensive this operation is, we are literally bleeding cash and support by the day for this top secret naval gazing.</p>
+          <p></p>
+          <p>I feel you all are smart enough to know what the duck test is. Right?</p>
+          <p></p>
+          <p>I’m half convinced that the Soviets are behind all of this, their entire half of the base is just empty, full of people laughing as we marvel over a piece of junk they dragged all the way out here.</p>
+          <p>If we don’t see some real results soon, I’m going to pull the plug on this operation and get back to serious work.</p>
+      </div>
+
+      <div class="news" id="msg1" title="Message July 14 -1989 - 07:36">
+        <p>Apparently Louis has managed a way to pass messages to the soviets. Still on his quest for some actual American food, he’s hoping he can make a trade. I have my doubts though, apparently this is through an air-vent in a restroom. Not exactly where one hopes to chow down. Plus, he’s delusional if he thinks they’ll willingly give up a burger for some jellied meat.</p>
+      </div>
+
+      <div class="news" id="msg2" title="Message July 21 - 1989 - 21:10">
+        <p>Cat, this is Arnold. I hope this message manages to reach you. I’m still in quarantine, I’m not showing any signs of sickness or anything, so I should be able to return to work soon. Man, we were so stupid, how were we supposed to know we were dealing with something alien when it looks like something you would find in my grandma's house.</p>
+      </div>
+
+      <div class="news" id="msg3" title="Message July 17 -1989 - 13:23">
+        <p>I’m re-submitting the proposal for sample examination 002 now. They rejected it because of a typo. Can you believe that? A single typo. It’s like they’ve forgotten we’re making literal history here. Perhaps the single greatest discovery of mankind and we have to wait a few more days because I typed “topography” instead of “tomography”. Give me a break.</p>
+      </div>
+
+      <div class="news" id="msg4" title="Message November 5 -1989 - 00:05">
+        <p>H̛̒͑E̢̟̟̹̲̊̀ͣͭ̏ͫ̌͘͜͡͞ͅL̴̷̤̦̙̰̠̤̥̼̹̞̘ͥͬ̔ͫ̃̃̎̓̂̑̒̈́̽͑͡L̨̛̲̥̤̦̺̞͕̀͒̏́ͩ͗̇̓̑̑ͫ̔̅͗̅͑͋͆̚̕͘͢͡͝O̳͎̣͖͕̐̂ͭ͑̕͟͝</p>
+      </div>
+
+      <div class="news" id="msg5" title="Message July 29 -1989 - 21:35">
+        <p>John, I’m leaving, did you fucking see that russian? I helped move him to the medical wing, that was not normal, and his suit wasn’t punctured or anything. If that can happen, no one is safe. I’m leaving and you should too.</p>
+      </div>
+
+      <div class="news" id="msg6" title="Message July 12 - 1989 - 17:56">
+        <p>Found a weird piece of paper with some numbers on it under a desk. I'm not sure if it’s important or not, but I figured I should tell someone. The number: </p>
+        <p></p>
+          <ul>
+            <ul>
+              <ul>
+                <ul>
+                  <q>190-877-232-F99</q>
+                </ul>
+                
+              </ul>
+            </ul>
+          </ul>
+      </div>
+
+      <div class="news creditsnew" id="end1" title="Radio-Decontaminant">
+        <p><img src="assets/machine2.jpg" alt="HELLO?"/></p>
+      </div>
+      <div class="news" id="end2" title="H̤̻̬̯̖̬̮̜̠͐́̏ͥ͊͗̆E̍L̸̗̱̈́̆̑̌͝L̵̷̨̖̟̘̺̲̩̝͉̖͇̖͈̮͌ͪ͒ͤͤͯͦ̕͜͝ͅȌ̷̡̘͈͍̱̖̖̻̳͈̓̄͂̓͒̈́̑̂̈̉̓̓ͩ̉̏̂͠?̸̜͇̥̭̘̦̰͕̪̟̥̯̰̠̯̻̫̅̓ͮ̍ͦ͒͗ͯ̎ͧͥͣ̃̔͋͂͗͑̏̀̚̚͟͢͝͡͞͡">
+        <ul>
+          <ul>
+
+            <ul>
+
+              <ul>
+
+                H̷̨̖͓͕̻͕̖͉͙̠̹̾͊͊͌̋̀͛́ͬͨ͑̍͋ͣͭͩ͂͑ͫ͘͟͠ͅͅ Ȅ̸̳͓̤̖̹̯̽͊̽̅̀͘̚Ļ̶̸̛̖̣̝̼̰͍͍̼̘̇ͫ̉̐͊͑ͮͮͪ͆̇͌ͫͨ͐̎̑̓̾̕̚̚͜͝ͅ L̴̴̷̡̺̼̫͇̗͉̼̳̼̯̘̜̟̥̟̄̌ͭͭ̃̾̇ͥ̓̓̍͂ͪ̂̇͗͂͒̌͌̇͑ͬ͜͟͠͞ͅ Ơ̷̸̛̲͍͉͇̠̣̫͇̩̖͓̔ͥ͑͗͗̈̎̿ͦ͗͐ͮ͆̾̓̚͜͞͝͞͝͠?͎̤̞ͬͫ̒͌
+      
+
+
+              </ul>
+            </ul>
+          </ul>
+
+        </ul></div>
+        <div class="news creditsnew" id="end2-clean" title="Hello">
+          <ul>
+            <ul>
+  
+              <ul>
+  
+                <ul>
+                  Hello
+  
+  
+                </ul>
+              </ul>
+            </ul>
+  
+          </ul>
+        </div>
+      <div class="news creditsnew" id="end3" title="Kraukov Detector">
+        <p><img src="assets/machine3.jpg" alt="HELLO?"/></p>
+      </div>
+
+      <div class="news creditsnew" id="end4" title="c̻̄̃͠ä̶̢̢̛̜̙̭̰̻͈͙̘͈͕̼̦̹̺͍̺ͯͩ́ͥ̊ͥ̏ͩͮ̀͆ͤ͊͒̿̆̈́ͮͥ͜͢͠͡ͅn̴̼̦̮̮͚̝̹̖̟̪͙̥̺̪͕̜̋̓̉̐̾̆̌ͦ́ͦ̂̾̑ͦ̄̆ͯͅ y̭͈͐̅͋̍͘͞o̷̪̙̞ͣu̴̧̝͎̬̗̺̠̹͖̙̲͎̩͈̰̹̦̲ͥͦͧ̔̆ͯ̒̅͛̆ͭ͛́͆ͩ̄̕̚͘͟͝͝ s̢̠͓̘̭̗̀ͬ̿͑̊̎̈́͆́̽͘͡͝ͅę̛̛̹̲̤͖͉̭̤̲̮́ͮ̑ͨ͛ͭ́͋̃ͯ̄́ͬ͞_̷̡͖̺͂ͭ̽̅ͥ̑͋ͥͣ͟ḛ̷̵̘̖̫̞ͨ̀̒̓ͧ̚_͕ͬ͞?̶̷̴͈͖̖̲͓̙̰̦ͧ̀ͥ̿̂̃̇̀͑ͤ͢͟_"̸̜͇̥̭̘̦̰͕̪̟̥̯̰̠̯̻̫̅̓ͮ̍ͦ͒͗ͯ̎ͧͥͣ̃̔͋͂͗͑̏̀̚̚͟͢͝͡͞͡">
+      
+        i̶̷̧̺͙͕͉̗̲͚̰̟̹̒͆̉͒̉̚͢_̷̷͎̬̜̭̟̫̿ͦ̍ͩ͂ͪ́ͩ͟_̎ w̴̸̡͙̯̻̾ͅ_̪͉̦̽͒̒̔̾ͤ͂̿͜ͅơ̸̡̰̽ͫ̐̅̇̆ͥ̀͛͜͜n̨͛͂ͅ d̠̥̱͇̗̿ͯ͑ͩ͛̃̉̄̿̆̕̕e̩̤͚͆̾͆̿̏̕ȓ̡̡̧͕͈̦̺͉ͣ̂ͨ̀ͫ̒͆ͭ̀ͭ͢͝ i̢̦̝̠̊̒̇͘f̵̴̷̡̨̙͙͍̝̞͍͇͚̳͖̗̲̝͎̞̼̾ͮ̃͒́̄̉̊ͤͫ̽́͂́̓̚͜͟͢ͅͅ y̸̙͈͚̺͙̺̤̜̥̖̬̞̘̮͖̟̲͇̙̣̲͌͂͆͂̋ͥͯͬͪ̓͛͆͋͑͐̊̈́̚o̢̞͉̯͍̥̳̙̦͙̮͇̮͆̃̓̆̌͢͞_̫̋͟ṵ̢̜͓̭̤͇͚ͨͩ͒͐̀̌̊̓̓̔̈́̐ͮ͑͗̕̕͟͠͝ͅ c̵̴̨̡̨̳̰̟̩̺̪̪̭̝̪̤̘͂ͪ͆̔̆̿́̾̈́͂̓̀́ͣͧ͐ͧ̇͋ͧ̚͜ǎ̖̹̼̖͔̬͚̜͂̄̿̐̍ͦ̉̀͘͞_͔͙͍̺͇ͫ̊̊͝n̹̙̅́̄́̂ͬͩ̚ s̢̹̱̱̠̬͖͔̪͚̫̞̮͓͙̆̓ͫ̌͌ͤ̐̈́ͨ̾͌̃͠͝ͅe̢̡͇̻̗̻̪̫̝̽̀ͩͭ͛͆̊͘͝_̧̜̳̮̱ͧ̈́͒̉̎ͨ͒ͪ̔͑͡e̵̷̡̢̧̛͈̫̼̰͕͚̫̝̲͍̳̪ͩ̽͆̍́̈́̃ͨͨͮ͋̏̑̅̈̄̄ͅ,̵̷̸̡̨͕͔̦̣̹͖̓ͪ̈́̐̀̃̓ͪ̿̑̀̿̒͢͟ th̸̷̛̛̖̥̩̹̭̳͎̟̪̫̣̊̇͆͒́͒̐̋ͪͦ̿́ͫ̑̔̀̇̈́̌̀̓̉ͮͯ͠e̶͍̜̩̩̲̠̗ͪ͂͑ͥ̂͞ͅ ö̸̶̯̙͚̠́͆̾̌ṭ̴̵̵̨̡̛͙̩͓̜̠̪̰̭̞̟̟̲̺̬̜̄̆̑͆̅̉ͨ̃̓̊͒̃͑̃ͫ̈̓̉ͮ́͜͡ͅḧ̷̨͍̱̥̗̖̤́̆̓̑̑ͨ̌́ͣe̴̷͐̋_̱̤͈̤̅̆̊̀ͣ̌ͤ͒̑̾ͣͥ̒̽̊̿_̸̢̢̗͎͔̎͊r͙̫̳̫̘̪̘̥̜̀̓̋́̀̃̈́ͬͭ͟͠s̶̷̡̢̲̭̙̥̲̺ͧͫ̈̑́́̈́͋ͩ͒̏̎ͩ͂ͦ͘͠͠͡ͅ d̶͍̱̦̮͙̜̮̤͇̣̝͌ͬͨ̆ͥ̑͐ͨͥ̀͆͂͐̂̓͜͡i̟͓̯̝̘̞̲̥̍ͤͨ͂͊͆̍̅̿̕̚d̵̵̴̵̶̢̢̛̝̯̺͈̩͖͓̜̭̣̩͕̯͈ͭͤ̅̈́̑̈́̀ͬ̽̓̽́́͒ͪ͐͟ͅ n̷̴̷̦͇̪̻̝̯̦̮͙̤̝̓̏ͦ̀̋ͥͦ̈̍̈͐́͛̓̔͢͢ơ̧͎̝̜̐̍ͯͩ̊̄ͤt̶̴̨̛̻̺̠͇̥̯͇̜̟̀ͪ̐ͭͦ̊́͑̄̂ͤ̾̍́̏̑̒̋ͥ́̓͡͠ͅͅ ṡ̴̴̛̮͖͉͙̝͉͔͍̭̻̝͊̀ͧͯ̐̐͌̀́́ͬ͌ͣ͘͘͟͟͡͞ẹ̴̶̱̹͔̮͓͛͂́ę̳̘ͬ̔̄̌͒̓ͅ, t̴̶̷̶̡̧̢͙͕͉̪̖͉̣̻͗͊ͮ̉ͯ̀͂̆ͥ̕h̸̛̗̦͇̫͕̑̀͞e̗̭̗͕̱̙̯̔̑́͑̕ ó̷̧̆̅t̸̡̛̛̺̭̹͙̫̎ͨ̂ͬ́ͣ̔ͬͪ̄̃͊͝͡_̴̷̨̢̥̝̜̳͍̳̘͚ͧ̇̄ͭͮ̏͌̅͡ḥ̣̰͔͓͙͙͔̣̝̯̭̣̈ͤ͛̐̅ͧ̀͋ͥ̋̚ͅe̴̩͔̭̫̱̞̊̿͒̀̀ͥ̀̈́̄͆̄̈r̻̼̅ͦ͗̆̏͢͠s̶̛͓̹̪͇̭̜͇͇͇͔̓̾̌͌ͮͤͯ̓͊͆̇̅͌͂̃̇̍̕̕͝ d̶̷̢͎͔̱͊͗̀̌ͩͩ̋̅́_̸̸̧̢̜͙̲̻̰͇̙̓ͥ̽ͧ͒ͫ͛͊̍ͮ͜ͅì̺̬͕̫͆͛̌ͮ̋ͮ̍̐̃̕_͗d_̡͙͍̫̠͖̙̻̘͙̻̥͇̗̇̎̀͂͗ͩ̌ͨ͆ͯ̔̄ͫͭ̄ͪ͌͑̌̔͢͜ n̡̟͕̱͇̳̮͕̞̗̅͒͂͆ͪ̑͒̾̇̔͆̆ͦ̓̋̕͘͢ͅó͉͔͕́_̛̝̯̣̹̮͈̣͎ͩ̑̇́̆͂ͦ̌̔͑̿͊͛ͥ̊̀̚͜ẗ͎̪́̀ͯ̇ͮ̉͘ ḩ̖͖͙͚͗̑̐ͨ̀̇̇̓̂̆̉̕͟͠ē̵̸͇͘a͉̍r̴̢̛͖̥̗̖͂ͥ͗ͮͦ̔̑̍ͪ͂͆ͅͅ</div>
+
+      <div class="news creditsnew" id="end5" title="g̵̡̛̍l̡̗̪͓̼̙͎̼͇͍͈̬͙̥ͫ̾ͧ́̀̈́ͥ̾ͤ̎̐̅͒̐͆͆̚̚a̵̷̸̸̧̢̭͔̼̹̫̗̲͙̥̰̳ͣͨͯ̀͗̈́̒ͣͬ̈́͢͞ͅd̶̴̡̨̢̩̮̝͈̠͔͚͇͇ͬ̽ͦͦͫ̆̈́ͮ̍̈̕͟͞͞ẃ̛̯̗̤̙͍̙̪̞͈͓͖ͬ̇̏ͣͯ͒ͥ͋͘͞ē̤̻̼͔̳̳͚̜̓̇̿ͧ͌͋͌̍͋̓ͥ̇̚l̴̮̫̲̩͔̰̖̬͉̺̳̺̜̆͒̉͂̏ͪ̆͋͟͟ľ̢̠͎̤͙̩̙̜̺ͩ̃͌̐͑̋̇͟͞_̴̦̻̥͕̗͍̥̫͇̫́ͭ̉̌ͦͨ̓̈̚͘͜͞͞">
+        <p><img src="assets/Machine1.jpg" alt="HELLO?"/></p>
+      </div>
+
+      <div class="news creditsnew" id="end6" title="">
+        <p><img src="assets/machine4.jpg" alt="HELLO?"/></p>
+      </div>
+
+      <div class="news creditsnew" id="end7" title="s̊o͖͖͔̞̬̰͎̩̰̟͂ͨ̃̒͗͆͋ͥ̂͘͠͝ͅ_̛̟̹̆͊ ļ̷̶̡̼̪̰̟̮̝̉̿̆̏̔ͣ̂̔͗̄͛͊͜͞_̴͖̤̯̫̱̱̘ͧ̇ͣ̈͛ͫ̃̚̕͞͡ȏ̦ͯņ̷̸̵̹̥̜͈̤͓̲̩̮ͬͣ͑͌͌ͭ͂̑̂̍ͭ̿̕͘͠͞_ḛ̳̹͕͍̣͕̳͚̩͓ͪ̾̆̽̔̑͐̽̔ͦ̿̋͑ͫ̈́ḷͧͥ̀ͬ͡y͖̭̑̄ͭ̈̆ͯ͘">
+        <p><img src="assets/machine5.jpg" alt="HELLO?"/></p>
+      </div>
+
+      <div class="news creditsnew" id="end8" title="į̙͙̻̗̖̰̎̈́̂̐̌̋͋̏̕͘͜͜s̵̶͓͎̥̯̰̱ͭ̈́̍ͣ̿̕͢ ą̷͖̟̯͚̟̗̀̋̀ͅͅn̶͚͓̫̯ͧ̀̋̓͐̿̚͝_̬͕͎͖͕̝̠̪̠̹̼̫̽̈̆ͫ̌̓̄ͬ͌ͫͮ͗̎͡ȳ̼̼̥̥̖̗͈ͯ̋ͬ̄ͧơ̷̟̖͎͙̍͐̿ͩͬͤ̚͜ņ̨̛̮̊͊ͯ̉̈́e̷̵̷͇͓̦̮̻̥͈̮͇͉̣̹̤̯̤ͭ̈́̄͌ͥ͆̂̅͌͒̒ͤ̑̃ͮ͘͘͢͢͜͠͡ t̺̤̭̼̰̦͉̗̟͈͎͋ͣ͐̀̇̋ͨ̓͢ͅḩͧ_̴̷̳̤̳̻̘͛̓̓́e̡̝͚͎̎̂̌̅͢͡r̴̶̶̝̦̠̠̯̩̥̮͔͖̼̲̬̭͚̻̟͇̉ͤ̆ͣͦ͛̑́͗̽ͤ̂̉̃̔́̀ͩͨ͂͜͞ĕ̶̶̛͖͙͕͈̠̠̗̹̲̩̮̱̲͌̉̽̍̆̿̽̎ͯ̓̂̊ͫ͊͢͝͝͡͝͝">
+        <p><img src="assets/machine6.jpg" alt="HELLO?"/></p>
+      </div>
+
+      <div class="news creditsnew" id="end9" title="c̷̜̳̤̖͕̃͐͘͢͝_̷̸̨̱̩͇̉ͥ̓̑̚͠ó̷̶̷̢̢̢̹̘̦̞̯̻̥̜͓̰̦̏̑ͭ̊̈ͮ̚͢͝͡o̢̖͕͍̰͎͈̠̻̟̣̬͔̭͔͑̃̏̿͂́̈͒̾̚̚͘͜l̲̳̙͔̅͂͆̿͊̋ ę̵̛͈͙ͥ̾̃̋͌̄͛̅͜ͅn̨͔̄͌g̖̳̳̩̠͊ͤ̓̎ͦͣ̏_̷̢̧̬͓̺̤̮͙͇̝͒̒̀ͮ̔̀ͩ̅̐͜͡ỉ̸̶̯̰̱̬̘̠ͤͦ̀ͧ̿̕̚͠͡n̝̮̜̽ͧͯ̎̓̏͛e̶͙͙̹̹̲̤͚̗͙̩̣̹̯ͧ̍̉̉ͮͩͣͦ͋ͪ̂̉ͤ͜͡͝͞">
+        <p><img src="assets/machine7.jpg" alt="HELLO?"/></p>
+      </div>
+
+      <div class="news creditsnew" id="end1" title="It̴̵̨̢̺̼̹̠̼̥̹͓͈͙̖͓̟̖͑̈̄͒̽ͥ̍̐̊͗ͯ̄ͪ̿͋̏̀ͬ͊ͮ͠͠'̡̗̟̞͍̳̹̗̝͐ͤ͊̅̽̈͐̄̓ͭ̓͋̀͘̚͢s̵̨̢̛̲̦̠̖̱̬͍̞̳̖̠̤̯̻̪̍͛̈́̾̔̀ͯ̇ͤ̌̈̔́̾̚͘͘͞͡_ b̴̧̞͔͓̱̼̖ͮͫ͂ͬ̍͛͌̑̐̆͂ͦ͛ͪ̚e̸̺̖̰̖̪̣̔ͨ̑̆͜͡e̷̵̳̅̍̀̓̈͢͝͠n̴̶̷̴̸̶̜̘̤͚̞̠̙̙͚͇̤̬͗̍͂͂ͮͮͫͥ̾͒̓̒͢͝͡͡͡ f̷̣̰̪͒͠_̡̛̱̳̭͍̩̣̳̟ͩ̿͂͋̅̂͢͜ư̴̵̶̢̡͔͇̳̦̫̰͉̥͍̟͔͕̞͕͐̄̿ͧͣͫ͌ͤ̑͒ͤ̅ͤ̂̏͒̎̄͘̚͢͡͠n̵_͊̈́ͥ">
+        <p><img src="assets/machine2.jpg" alt="HELLO?"/></p>
+      </div>
+
+      <div class="government creditsnew" id="thanks" title="T_̴̝̥̤̞͚̥̼͎̲͎̺͌̉̓͋̀ͩ͂͛̉͘͘͜h̷̜̑̂͠_̵͎̥̫̠͔̺̩ͦ̊̿́a̧̤̥̥̰̒ͨ̈́̿̐ͧ̐̆͐̊ͪ͋͢͠n͓̖̍ḳ̠̲͚͈̹̯ͯͧ͆̋̈̕͡͠ͅs̴̡͖̖̭̻̼̀͑͗͛͡͠">
+        <p></p>
+        <p></p>
+        <p></p>
+        <ul>
+          <ul>
+            <ul>
+              <p>Thanks for playing!</p>
+            </ul>
+          </ul>
+        </ul>
+      
+      </div>
+
+      <div class="government creditsnew" id="thanks2" title="">
+        
+        
+        <p><img src="assets/GrubwallLogo_old.jpg" alt="HELLO?"/></p>
+      </div>
+
+      <div class="government credits" id="credits" title="Credits">
+        <h1>Made with the Jupiter Engine</h1>
+        <h1>Jupiter engine was created by <a href="https://dominoclub.itch.io/sssm-in-the-shadow-of-jupiter"target="_blank">candle</a></h1>
+        
+
+        <ul>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Exercise_Little_Bear_1959-60_(52908033750).jpg" target="_blank">Expedition Image</a></li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:C74112s5_Ant.Map_Martin_Peninsula_context.jpg" target="_blank">Martin Peninsula Image</a></li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Discovery_of_neon_isotopes.JPG" target="_blank">Neon Isotopes</a></li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Colossus_7_(1329944836).jpg" target="_blank">OCR Valve</a></li>
+            <li><a href="https://wcs.smartdraw.com/crime-scene-report/examples/autopsy-report.png?bn=15100111767" target="_blank">Autopsy Template</a></li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Document_ID-_W_98_-_DPLA_-_1e24eba5a8399a4c1c5cd5dd4525881b.jpg" target="_blank">Exam proposal</a></li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Building_105,_close_view_of_ion_return_RF_balance_tube_adjustment_controls._-_Clear_Air_Force_Station,_Ballistic_Missile_Early_Warning_System_Site_II,_One_mile_west_of_mile_marker_HAER_AK-30-A-56.tif" target="_blank"> Chamber Photo</a></li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Spanish_deck_printed_in_Valencia,_in_1778.jpg" target="_blank"> Card Face</a></li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Letter_highlighting_David%27s_scholarly_work.jpg" target="_blank"> Corrupted report</a></li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Nylon_fibre_SEM.tif?page=1" target="_blank"> Nylon Fibre</a></li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Tethysbaena_ophelicola,_sub-adults.jpg"target="_blank"> Tethysbaena ophelicola, sub-adults</a></li>
+
+            <li><a href="https://commons.wikimedia.org/wiki/File:ARCTIC_ICE_RIDGE_TRIP_TO_ALASKA_-_NARA_-_17425018.jpg"target="_blank"> ARCTIC ICE RIDGE TRIP TO ALASKA - NARA - 17425018.jpg</a></li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Building_102,_view_showing_waveguide_control_switch_used_to_achieve_equal_length_adjustments_and_frequency_control_between_separate_Klystron_tube_radion_frequency_(RF)_generators._-_HAER_AK-30-A-46.tif"target="_blank"> HAER AK-30-A-46.tif</a></li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Building_102,_view_of_Klystron_tube_amplifier_housing_with_tube_removed_and_showing_waveguide_entrances_at_top_of_photograph._-_Clear_Air_Force_Station,_Ballistic_Missile_Early_Warning_HAER_AK-30-A-64.tif"target="_blank"> HAER AK-30-A-64.tifs</a></li>
+            
+            <li><a href="https://commons.wikimedia.org/wiki/File:ARCTIC_ICE_RIDGE_TRIP_TO_ALASKA_-_NARA_-_17425015.jpg"target="_blank"> ARCTIC ICE RIDGE TRIP TO ALASKA - NARA - 17425015.jpg</a></li>
+
+            <li><a href="https://commons.wikimedia.org/wiki/File:View_of_test_system_showing_Klystron_tube_installed_in_test_position_on_first_floor_of_transmitter_building_no._102._-_Clear_Air_Force_Station,_Ballistic_Missile_Early_Warning_System_HAER_AK-30-A-72.tif"target="_blank"> Clear Air Force Station, Ballistic Missile Early Warning System</a></li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Building_102,_view_from_mezzanine_looking_down_to_first_floor_showing_Klystron_tube_equipment_vaults_with_dual_waveguides_leaving_top_of_vaults_through_bifurcation_combiner_system_at_HAER_AK-30-A-44.tif"target="_blank">  Klystron tube equipment vaults</a></li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:KLYSTRON_CALORIM_E_ANAL_ASSEMBLY_IN_HUGHES_CHAMBER_AND_THE_UNITED_STATES_AIR_FORCE_USAF_TEST_BENCH_-_NARA_-_17424157.jpg"target="_blank"> KLYSTRON CALORIM E ANAL ASSEMBLY IN HUGHES CHAMBER AND THE UNITED STATES AIR FORCE USAF TEST BENCH</a></li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:BSL-4_Data-_Hands-On_Training_(5350)_(17790506319).jpg"target="_blank"> BSL-4 Suit</a></li>
+
+            <li><a href="https://www.londonfine.co.uk/products/georgian-antique-bureau-english-oak-writing-desk-c-1800?variant=522108305428"target="_blank"> Sample I-001 raw picture source - (heavily edited)</a></li>
+
+            <li><a href="https://commons.wikimedia.org/wiki/File:LOFT,_TAN-650._Interior_taken_within_reactor_chamber._Camera_westerly_toward_airlock._Date-_May_2004._INEEL_negative_no._HD-39-18-2_-_Idaho_National_Engineering_Laboratory,_Test_Area_HAER_ID-33-E-339.tif"target="_blank"> Airlock BG - (heavily edited)</a></li>
+
+            <li><a href="https://commons.wikimedia.org/wiki/File:A_Cucumber_(99209794).jpg"target="_blank"> ruler and a cucumber lol - (heavily edited)</a></li>
+          </ul>
+          <p></p>
+          <p></p>
+          <p></p>
+          <h1>sound credits</h1>
+          <ul>
+          <li><a href="https://freesound.org/people/deleted_user_4772965/sounds/256455/" target="_blank">deleted_user_4772965 - Mouse Click</a></li>
+          <li><a href="https://freesound.org/people/survivalbag/sounds/156088/" target="_blank">survivalbag - electrical hum G slightly sharp</a></li>
+          <li><a href="https://freesound.org/people/IENBA/sounds/545495/" target="_blank">IENBA - Notification</a></li>
+          <li><a href="https://freesound.org/people/complex_waveform/sounds/213148/" target="_blank">complex_waveform - Hardrive Click</a></li>
+          <li><a href="https://freesound.org/people/newlocknew/sounds/515837/" target="_blank">newlocknew - Hardrive Installed Click</a></li>
+          <li><a href="https://incompetech.com/music/royalty-free/music.html" target="_blank">"SCP-x7x (6th Floor)" Kevin MacLeod (incompetech.com)
+            Licensed under Creative Commons: By Attribution 4.0 License
+            http://creativecommons.org/licenses/by/4.0/</a></li>
+            <li><a href="https://freesound.org/people/Rob_Marion/sounds/542040/" target="_blank">nob_Marion -GASP_UI_Reject.wav</a></li>
+            </ul>
+            <h1><a href="https://glyphy.io/font-generator" target="_blank">Glitchy Text Generator</a></h1>
+        
+        
+      </div>
+      
+      
+      
+    </template>
+    <template id="event-data">
+      <script id="events/start">
+        OPEN_WINDOW("inbox");
+        await DELAY (1);
+        //RUN_EVENT("events/ch1/begin");
+      </script>
+      <script id="events/silence">
+        FADE_MUSIC(1);
+      </script>
+
+      <script id="events/code">
+        REPLACE_WINDOW("jbak-security-drive","jbak-security-drive-2");
+        await DELAY (2);
+        PLAY_CLIP("audio/clips/click2");
+      </script>
+
+<script id="events/openerror">
+  RUN_EVENT("events/error")
+</script>
+
+<script id="events/error">
+  PLAY_CLIP("audio/clips/error");
+</script>
+
+
+      <script id="events/files">
+        await DELAY (2);
+        CLOSE_WINDOW("admin-code");
+        PLAY_MUSIC("audio/music/credits");
+        OPEN_WINDOW("admin-files");
+        PLAY_CLIP("audio/clips/blip");
+        PLAY_MUSIC("audio/music/credits");
+        await DELAY (170);
+
+        </script>
+      <script id="events/blipclick">
+        CLOSE_WINDOW("email-1");
+        await DELAY (2);
+        REPLACE_WINDOW("installing-hd","installing-hd-2");
+        PLAY_CLIP("audio/clips/click2");
+        await DELAY (2);
+        REPLACE_WINDOW("installing-hd","installing-hd-3");
+        PLAY_CLIP("audio/clips/click2");
+        await DELAY (2);
+        REPLACE_WINDOW("installing-hd","installing-hd-4");
+        PLAY_CLIP("audio/clips/click2");
+        await DELAY (0.1);
+        CLOSE_WINDOW("installing-hd");
+        PLAY_CLIP("audio/clips/click2");
+        await DELAY (0.1);
+        PLAY_CLIP("audio/clips/click2");
+        await DELAY (0.1);
+        PLAY_CLIP("audio/clips/click2");
+        PLAY_CLIP("audio/clips/blip");
+        await DELAY (0.1);
+        OPEN_WINDOW("jbak-security-drive");
+      </script>
+
+      <script id="events/ch1/begin">
+        await DELAY (5);
+        REPLACE_WINDOW("inbox", "inbox-update-1");
+        PING_WINDOW("inbox");
+        </script>
+
+<script id="events/pre-end">
+  REPLACE_WINDOW("inbox", "inbox-update-2");
+  PING_WINDOW("inbox");
+  
+</script>
+      <script id="events/end">
+        OPEN_WINDOW("end1");
+        PLAY_CLIP("audio/clips/click2");
+        await DELAY (.7);
+        OPEN_WINDOW("end9");
+        PLAY_CLIP("audio/clips/click2");
+        await DELAY (.7);
+        OPEN_WINDOW("end3");
+        PLAY_CLIP("audio/clips/click2");
+        await DELAY (.7);
+        OPEN_WINDOW("end4");
+        PLAY_CLIP("audio/clips/click2");
+        await DELAY (.7);
+        OPEN_WINDOW("end5");
+        PLAY_CLIP("audio/clips/click2");
+        await DELAY (.7);
+        OPEN_WINDOW("end6");
+        PLAY_CLIP("audio/clips/click2");
+        await DELAY (.7);
+        OPEN_WINDOW("end7");
+        PLAY_CLIP("audio/clips/click2");
+        await DELAY (.7);
+        OPEN_WINDOW("end8");
+        PLAY_CLIP("audio/clips/click2");
+        await DELAY (5);
+        //await SHOW_TITLE("");
+        await FADE_ALL_EXCEPT();
+        FADE_MUSIC(1);
+        await DELAY (4);
+        OPEN_WINDOW("end2");
+        PLAY_CLIP("audio/clips/click2");
+        await DELAY (2);
+        REPLACE_WINDOW("end2", "end2-clean");
+        PLAY_CLIP("audio/clips/blip");
+        await DELAY (3.7);
+        CLOSE_WINDOW("end2");
+        await SHOW_TITLE("looking ḡ̶̨̢̛̻̹̦̤̲̥̼̣͍̝̲̥͎͇͙̣ͥͬ̈́ͤ̀͗ͭͣ͛̈́̀̇̽̾̈́͛̈̌̕͞l̠͉̙̗̩̜̐͡_̵̨̖̝̩̼͉̱̜̺̲͉̣̺͂ͯ̈̾́̀͆̈́̓̽̔̎͛̏ͯ̓̽̔͝a̴̴̧͓͍̼͕͚̯̣̠ͪ́̅ͦ̓̂ͧ̽̏̚͝_̸̺͎̭͉̹͑ͤͣ̊́̍ͨ̒̎͆͜s̵̴̴̵̡̳̺̯̣̬͖͖̤͇̗̗̖̯̩͇͌̆̀̉̃ͮ̈ͬ̈̒͋ͥͬ͝͠͠͡s̵̹̫̲̖̩̗͕̋͛̔ͩ̒̆");
+        await DELAY (3);
+        OPEN_WINDOW("thanks");
+        await DELAY (1);
+        OPEN_WINDOW("thanks2");
+        await DELAY (1);
+        OPEN_WINDOW("credits");
+      </script>
+
+      <event-trigger opened="email-2 email-3"  event="events/ch1/begin"></event-trigger>
+      <event-trigger opened="gallery code-black"  event="events/pre-end"></event-trigger>
+      <event-trigger closed="email-4" event="events/end"></event-trigger>
+      <event-trigger opened="msg6" event="events/code"></event-trigger>
+      <event-trigger opened="missingfile" event="events/openerror"></event-trigger>
+      <event-trigger opened="admin-code" event="events/files"></event-trigger>
+      <event-trigger opened="installing-hd" event="events/blipclick"></event-trigger>
+    </template>
+  </body>
+</html>
